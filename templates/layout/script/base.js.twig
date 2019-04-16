@@ -1,0 +1,18 @@
+<script>
+    <!--CONFIGURACION DE LA GESTION DE SONIDO!-->
+    window.error_sound = '{{ asset('sound/error.wav','milab') }}';
+   // createjs.Sound.registerPlugins([createjs.WebAudioPlugin, createjs.FlashAudioPlugin]);
+   // createjs.Sound.alternateExtensions = ["mp3"];
+    //createjs.Sound.registerSound(window.error_sound, "sound");
+    <!--FIN DE LA CONFIGURACION DE LA GESTION DE SONIDO!-->
+
+    <!--DEFINICION DE LA VARIABLE GLOBAL _locale PARA LA INTERNACIONALIZACION-->
+    var _locale='{{ app.request.locale }}';
+    <!--PERSONALIZACION DE BlockUI-->
+    window.loadingMessage='{{ 'loading'|trans }}';
+    <!--INTERNACIONALIZACION DE JQUERY-DATATABLE-->
+    var datatable_url='{{ asset('plugins/datatable/language/'~app.request.locale~'.json','milab') }}';
+    <!--INTERNACIONALIZACION DE LOS MENSAJES DE ERROR-->
+    window.errormessaje_title='{{ 'errormessaje_title'|trans }}';
+    window.errormessaje_body='{{ 'errormessaje_body'|trans }}';
+</script>

@@ -1,0 +1,62 @@
+{{form_start(form,{'attr':{
+                            'id': form_id|default('usuario_new')
+}})}}
+<div class="modal-body" id="modal-body">
+
+    <div class="row">
+        <div class="col-md-6">
+            {{form_row(form.nombre)}}
+        </div>
+        <div class="col-md-6">
+            {{form_row(form.apellido)}}
+        </div>
+    </div>
+
+    <div class="row margin-top-20">
+        <div class="col-md-6">
+            {{form_row(form.facultad)}}
+        </div>
+    </div>
+    <div class="row margin-top-20">
+        <div class="col-md-6">
+            {{form_row(form.correo)}}
+        </div>
+    </div>
+
+        <div class="row margin-top-20 margin-bottom-20">
+            <div class="col-md-6">
+                {{form_row(form.usuario)}}
+            </div>
+            <div class="col-md-6">
+                {{form_label(form.activo)}}<br/>
+                {{form_widget(form.activo,{'attr':{
+                    'data-size':'small',
+                    'data-on-text': 'yes'|trans,
+                    'data-off-text':'no'|trans ,
+                }})}}
+                <br/>
+               {{form_errors(form.activo)}}</div>
+        </div>
+        <div class="row margin-top-20 margin-bottom-20">
+            <div class="col-md-6">
+                {{form_row(form.idrol)}}
+            </div>
+        </div>
+
+        <div class="row">
+             <div class="col-md-6">
+                  {{form_row(form.password.first)}}
+             </div>
+             <div class="col-md-6">
+                 {{form_row(form.password.second)}}
+             </div>
+        </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal">{{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary ladda-button" data-style="expand-right" type="submit">
+        <span class="ladda-label">{{ action |default('save_button') |trans}}</span>
+        <span class="ladda-spinner"></span>
+    </button>
+</div>
+{{form_end(form)}}

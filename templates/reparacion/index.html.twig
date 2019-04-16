@@ -1,0 +1,9 @@
+<h5>{{ 'reparations'|trans }}</h5>
+{% if is_granted('ROLE_JEFETECNICO') %}
+<a class="btn btn-sm btn-primary edicionreparacion tooltips btn-sm m--margin-bottom-20 text-uppercase font-weight-bold" data-placement="bottom"
+   data-original-title="{{ 'reparationpc_register_tooltip'|trans }}"
+   data-href="{{ path('reparacion_new',{'id':pc}) }}"><i class="fa fa-plus-circle"></i> {{ 'register'|trans }}
+</a>
+{% endif %}
+
+{% include 'reparacion/_table.html.twig' %}

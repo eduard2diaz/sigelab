@@ -1,0 +1,34 @@
+div.m-content {
+    background-color: white !important;
+    padding: 0px !important;
+}
+
+div#behind {
+    text-align: center;
+    color: white;
+    height: 500px;
+    background-image: url('../../milab/img/behind_the_mac_large.jpg') !important;
+    background-position: 12% 0% !important;
+    background-repeat: no-repeat;
+}
+div#behind ul li{
+    color: white !important;
+}
+div#behind h2,h3{
+    font-family: "Merienda_One";
+}
+
+ul.promo li {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+div.promo h3 {
+    color: black;
+    margin-left: 12%;
+    font-family: "Roboto_Condensed";
+}

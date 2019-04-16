@@ -1,0 +1,67 @@
+{{form_start(form,{'attr':{
+    'id': form_id|default('pc_new'),
+    'class': 'm-form m-form--state'
+}})}}
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.numero) }}
+                </label>
+                <div>
+                    {{ form_widget(form.numero) }}
+                    {{ form_errors(form.numero) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.mac) }}
+                </label>
+                <div>
+                    {{ form_widget(form.mac) }}
+                    {{ form_errors(form.mac) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.estado) }}
+                </label>
+                <div>
+                    {{ form_widget(form.estado) }}
+                    {{ form_errors(form.estado) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if form.laboratorio is defined %}
+    <div class="row m--margin-top-20">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.laboratorio) }}
+                </label>
+                <div>
+                    {{ form_widget(form.laboratorio) }}
+                    {{ form_errors(form.laboratorio) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{{form_errors(form)}}
+{{form_rest(form)}}
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary  mt-ladda-btn ladda-button" data-style="expand-right" type="submit">
+        <i class="flaticon-edit"></i>
+        <span class="ladda-label">{{ action |default('save_button')|trans }}</span>
+        <span class="ladda-spinner"></span>
+    </button>
+</div>
+{{form_end(form)}}

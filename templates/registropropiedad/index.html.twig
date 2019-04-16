@@ -1,0 +1,4 @@
+<h5>{{ 'properties' |trans }} </h5>
+<a class="btn btn-sm btn-primary edicionpropiedad tooltips btn-sm text-uppercase font-weight-bold m--margin-bottom-20" data-placement="bottom" data-original-title="{{ 'property_register_tooltip' | trans }}" data-href="{{ path('registropropiedad_new',{'pc':pc.id}) }}"><i
+            class="fa fa-plus-circle"></i> {{ 'register'|trans }}</a>
+{% include 'registropropiedad/_table.html.twig' %}

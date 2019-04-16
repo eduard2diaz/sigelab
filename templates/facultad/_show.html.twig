@@ -1,0 +1,29 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">{{ 'faculty_details_title' |trans }}</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        </div>
+        <div>
+            <table class="table" style="margin-bottom: 0px">
+                <tr>
+                    <th>{{ 'name_field'| trans }}</th>
+                    <td>{{ facultad.nombre }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'laboratory_access_field'| trans }}</th>
+                    <td>
+                        <ul>
+                        {% for lab in facultad.idlaboratorio.toArray() %}
+                            <li>{{ lab }}</li>
+                        {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary btn-sm active" data-dismiss="modal">{{ 'close'| trans }}</a>
+        </div>
+    </div>
+</div>

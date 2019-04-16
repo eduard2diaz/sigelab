@@ -1,0 +1,50 @@
+{% extends 'layout/anonimo.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+   <link rel="stylesheet" type="text/css" href="{{ asset('assets/milab/css/login.min.css') }}"/>
+    <!--<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bangers|Chela+One|Cinzel|Dancing+Script|Lobster|Lobster+Two|Merienda|Playfair+Display" rel="stylesheet">-->
+
+{% endblock %}
+{% block body %}
+    <div id="behind">
+        <div class="col-md-offset-1 margin-top-40 col-md-6" style="padding-top:2%">
+            <h2>{{ 'promo1_title1' |trans }}</h2>
+            <h3>{{ 'promo1_title2' |trans }}</h3>
+            <ul class="list-inline margin-top-40 promo">
+                <li>{{ 'promo1_ad1' |trans }}<i class="fa fa-bolt"></i></li>
+                <li>{{ 'promo1_ad2' |trans }} <i class="fa fa-angle-right"></i></li>
+            </ul>
+            <hr/>
+            <form action="{{ path('check') }}"  method="POST">
+                {% if error is defined and error is not empty %}
+                    <div class="alert alert-danger">
+                        <button class="close" data-close="alert"></button>
+                        <span>{{ error.message |trans }} </span>
+                    </div>
+                {% endif %}
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input class="form-control bordered" placeholder="{{ 'loginform_username_placeholder' | trans}}" id="_username" name="_username"
+                               required="required" aria-required="true" type="text"></div>
+                    <div class="col-xs-6">
+                        <input class="form-control bordered" placeholder="{{ 'loginform_password_placeholder' | trans}}" name="_password"
+                               required="required" type="password">
+                    </div>
+                </div>
+                <div class="row margin-top-20">
+                    <div class="col-sm-4">
+                        <div class="rem-password">
+                            <label class="rememberme mt-checkbox mt-checkbox-outline uppercase bold">
+                                <input name="remember" value="1" type="checkbox"> {{ 'loginform_rememberme_placeholder' | trans}}
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 text-right">
+                        <button class="btn green" type="submit">{{ 'loginform_submit_button' |trans }}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

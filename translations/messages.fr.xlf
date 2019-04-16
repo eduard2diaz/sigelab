@@ -1,0 +1,1015 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="bad_credentials">
+                <source>Bad credentials.</source>
+                <target>Nom d'utilisateur ou mot de passe incorrect.</target>
+            </trans-unit>
+
+            <!--INICIO DEL HEADER-->
+                        <trans-unit id="profile_link">
+                            <source>profile_link</source>
+                            <target>Profil</target>
+                        </trans-unit>
+                        <trans-unit id="faculty">
+                            <source>faculty</source>
+                            <target>Faculté</target>
+                        </trans-unit>
+                        <trans-unit id="user">
+                            <source>user</source>
+                            <target>Utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="logout_link">
+                            <source>logout_link</source>
+                            <target>Fermer la session</target>
+                        </trans-unit>
+                        <trans-unit id="pc">
+                            <source>pc</source>
+                            <target>Ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pcs">
+                            <source>pcs</source>
+                            <target>Ordinateurs</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory">
+                            <source>laboratory</source>
+                            <target>Laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="property">
+                            <source>property</source>
+                            <target>Propriété</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral">
+                            <source>peripheral</source>
+                            <target>Périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="piece">
+                            <source>piece</source>
+                            <target>Pièce</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair">
+                            <source>typeofrepair</source>
+                            <target>Type de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="reservations">
+                            <source>reservations</source>
+                            <target>Réservations</target>
+                        </trans-unit>
+                        <!--INICIO DEL FOOTER-->
+                        <trans-unit id="account">
+                            <source>account</source>
+                            <target>compte</target>
+                        </trans-unit>
+                        <trans-unit id="account_management">
+                            <source>account_management</source>
+                            <target>Gérer votre compte</target>
+                        </trans-unit>
+                        <trans-unit id="principles">
+                            <source>principles</source>
+                            <target>Principes de Milab</target>
+                        </trans-unit>
+                        <trans-unit id="accesibility">
+                            <source>accesibility</source>
+                            <target>Accessibilité</target>
+                        </trans-unit>
+                        <trans-unit id="scalability">
+                            <source>scalability</source>
+                            <target>Évolutivité</target>
+                        </trans-unit>
+                        <trans-unit id="privacy">
+                            <source>privacy</source>
+                            <target>Confidentialité</target>
+                        </trans-unit>
+                        <trans-unit id="discover">
+                            <source>discover</source>
+                            <target>Découvrir</target>
+                        </trans-unit>
+                        <trans-unit id="university_site">
+                            <source>university_site</source>
+                            <target>Portail de l'université</target>
+                        </trans-unit>
+                        <trans-unit id="email_field">
+                            <source>email_field</source>
+                            <target>Mail</target>
+                        </trans-unit>
+                        <trans-unit id="news">
+                            <source>news</source>
+                            <target>informations</target>
+                        </trans-unit>
+                        <trans-unit id="about">
+                            <source>about</source>
+                            <target>À propos de Milab</target>
+                        </trans-unit>
+                        <trans-unit id="aboutus">
+                            <source>aboutus</source>
+                            <target>Près de nous</target>
+                        </trans-unit>
+                        <trans-unit id="services">
+                            <source>services</source>
+                            <target>Services</target>
+                        </trans-unit>
+                        <trans-unit id="serviceterms">
+                            <source>serviceterms</source>
+                            <target>Conditions d'utilisation</target>
+                        </trans-unit>
+                        <trans-unit id="cookiespolicy">
+                            <source>cookiespolicy</source>
+                            <target>Politiques de cookies</target>
+                        </trans-unit>
+                        <trans-unit id="language_select">
+                            <source>language_select</source>
+                            <target>Sélectionnez votre langue</target>
+                        </trans-unit>
+                        <trans-unit id="privacypolicy">
+                            <source>privacypolicy</source>
+                            <target>Politique de confidentialité</target>
+                        </trans-unit>
+                        <!--FIN DEL FOOTER-->
+
+                        <!--INICIO DE INDEX.HTML-->
+                        <trans-unit id="loginform_username_placeholder">
+                            <source>loginform_username_placeholder</source>
+                            <target>Utilisateur ou email</target>
+                        </trans-unit>
+                        <trans-unit id="loginform_password_placeholder">
+                            <source>loginform_password_placeholder</source>
+                            <target>Password</target>
+                        </trans-unit>
+                        <trans-unit id="loginform_rememberme_placeholder">
+                            <source>loginform_rememberme_placeholder</source>
+                            <target>Se souvenir de moi</target>
+                        </trans-unit>
+                        <trans-unit id="loginform_submit_button">
+                            <source>loginform_submit_button</source>
+                            <target>Accès</target>
+                         </trans-unit>
+                        <trans-unit id="promo1_title1">
+                            <source>promo1_title1</source>
+                            <target>Découvrez un nouveau monde</target>
+                        </trans-unit>
+                        <trans-unit id="promo1_title2">
+                            <source>promo1_title2</source>
+                            <target>Au-delà de votre ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="promo1_ad1">
+                            <source>promo1_ad1</source>
+                            <target>Plus de puissance pour toi</target>
+                        </trans-unit>
+                        <trans-unit id="promo1_ad2">
+                            <source>promo1_ad2</source>
+                            <target>Plus d'informations sur Milab</target>
+                        </trans-unit>
+                        <!--FIN DE INDEX.HTML-->
+
+                        <!--INICIO PROPOSITO GENERAL-->
+                        <trans-unit id="yes">
+                            <source>yes</source>
+                            <target>OUI</target>
+                        </trans-unit>
+                        <trans-unit id="no">
+                            <source>no</source>
+                            <target>NO</target>
+                        </trans-unit>
+                        <trans-unit id="register">
+                            <source>register</source>
+                            <target>S'enregistrer</target>
+                        </trans-unit>
+                        <trans-unit id="refresh">
+                            <source>refresh</source>
+                            <target>Actualiser</target>
+                        </trans-unit>
+                        <trans-unit id="edit">
+                            <source>edit</source>
+                            <target>Modifier</target>
+                        </trans-unit>
+                        <trans-unit id="delete">
+                            <source>delete</source>
+                            <target>Supprimer</target>
+                        </trans-unit>
+                        <trans-unit id="export">
+                            <source>export</source>
+                            <target>Exporter</target>
+                        </trans-unit>
+                        <trans-unit id="general">
+                            <source>general</source>
+                            <target>Général</target>
+                        </trans-unit>
+                        <trans-unit id="visualize">
+                            <source>visualize</source>
+                            <target>Visualizar</target>
+                        </trans-unit>
+                        <trans-unit id="row_number">
+                            <source>row_number</source>
+                            <target>No.</target>
+                        </trans-unit>
+                        <trans-unit id="name_field">
+                            <source>name_field</source>
+                            <target>Nom</target>
+                        </trans-unit>
+                        <trans-unit id="state_field">
+                            <source>state_field</source>
+                            <target>Statut</target>
+                        </trans-unit>
+                        <trans-unit id="type_field">
+                            <source>type_field</source>
+                            <target>Type</target>
+                        </trans-unit>
+                        <trans-unit id="date_field">
+                            <source>date_field</source>
+                            <target>Date</target>
+                        </trans-unit>
+                        <trans-unit id="description_field">
+                            <source>description_field</source>
+                            <target>Description</target>
+                        </trans-unit>
+                        <trans-unit id="value_field">
+                            <source>value_field</source>
+                            <target>Valeur</target>
+                        </trans-unit>
+                        <trans-unit id="mac_field">
+                            <source>mac_field</source>
+                            <target>MAC</target>
+                        </trans-unit>
+                        <trans-unit id="price_field">
+                            <source>price_field</source>
+                            <target>Prix</target>
+                        </trans-unit>
+                        <trans-unit id="registerby_field">
+                            <source>registerby_field</source>
+                            <target>Enregistré par</target>
+                        </trans-unit>
+                        <trans-unit id="username_field">
+                            <source>username_field</source>
+                            <target>Utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="role_field">
+                            <source>role_field</source>
+                            <target>Rôle</target>
+                        </trans-unit>
+                        <trans-unit id="password_field">
+                            <source>password_field</source>
+                            <target>Password</target>
+                        </trans-unit>
+                        <trans-unit id="confirm_password_field">
+                            <source>confirm_password_field</source>
+                            <target>Confirmer mot de passe</target>
+                        </trans-unit>
+                        <trans-unit id="active_field">
+                            <source>active_field</source>
+                            <target>Actif</target>
+                        </trans-unit>
+                        <trans-unit id="active_yes">
+                            <source>active_yes</source>
+                            <target>Oui</target>
+                        </trans-unit>
+                        <trans-unit id="active_no">
+                            <source>active_no</source>
+                            <target>No</target>
+                        </trans-unit>
+                        <trans-unit id="close">
+                            <source>close</source>
+                            <target>Fermer</target>
+                        </trans-unit>
+                        <trans-unit id="save_button">
+                            <source>save_button</source>
+                            <target>Sauvegarder</target>
+                        </trans-unit>
+                        <trans-unit id="update_button">
+                            <source>update_button</source>
+                            <target>Mettre</target>
+                        </trans-unit>
+                        <trans-unit id="cancel_button">
+                            <source>cancel_button</source>
+                            <target>Annuler</target>
+                        </trans-unit>
+                        <trans-unit id="confirm_button">
+                            <source>confirm_button</source>
+                            <target>Oui, j'en suis sûr</target>
+                        </trans-unit>
+                        <trans-unit id="student">
+                            <source>student</source>
+                            <target>Étudiant</target>
+                        </trans-unit>
+                        <trans-unit id="professor">
+                            <source>professor</source>
+                            <target>Professeur</target>
+                        </trans-unit>
+                        <trans-unit id="startdate_field">
+                            <source>startdate_field</source>
+                            <target>Date de début</target>
+                        </trans-unit>
+                        <trans-unit id="enddate_field">
+                            <source>enddate_field</source>
+                            <target>Date de fin</target>
+                        </trans-unit>
+                        <trans-unit id="loading">
+                            <source>loading</source>
+                            <target>Chargement</target>
+                        </trans-unit>
+                        <trans-unit id="errormessaje_title">
+                            <source>errormessaje_title</source>
+                            <target>Erreur</target>
+                        </trans-unit>
+                        <trans-unit id="errormessaje_body">
+                            <source>errormessaje_body</source>
+                            <target>Une erreur est survenue, appuyez sur Actualiser ('f5') pour recharger la page</target>
+                        </trans-unit>
+                        <trans-unit id="list">
+                            <source>list</source>
+                            <target>Liste</target>
+                        </trans-unit>
+                        <!--FIN PROPOSITO GENERAL-->
+
+                        <!--INICIO FACULTAD-->
+                        <trans-unit id="facultys">
+                            <source>facultys</source>
+                            <target>Facultés</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_register_tooltip">
+                            <source>faculty_register_tooltip</source>
+                            <target>Enregistrer une nouvelle faculté</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_details_title">
+                            <source>faculty_details_title</source>
+                            <target>Détails de la faculté</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_access_field">
+                            <source>laboratory_access_field</source>
+                            <target>Laboratoires avec accès</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_new_title">
+                            <source>faculty_new_title</source>
+                            <target>Nouvelle faculté</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_edit_title">
+                            <source>faculty_edit_title</source>
+                            <target>Modifier la faculté</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_name_placeholder">
+                            <source>faculty_name_placeholder</source>
+                            <target>Ecrire le nom de la faculté</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_laboratory_help">
+                            <source>faculty_laboratory_help</source>
+                            <target>Quels sont ces laboratoires?</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_laboratory_explain">
+                            <source>faculty_laboratory_explain</source>
+                            <target>Ce sont les laboratoires que les étudiants et les enseignants peuvent utiliser dans leur faculté ou dans tout autre</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_register_successfully">
+                            <source>faculty_register_successfully</source>
+                            <target>La faculté a été enregistrée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_update_successfully">
+                            <source>faculty_update_successfully</source>
+                            <target>La faculté a été mise à jour avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_delete_successfully">
+                            <source>faculty_delete_successfully</source>
+                            <target>La faculté a été éliminée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_delete_title">
+                            <source>faculty_delete_title</source>
+                            <target>Supprimer faculté</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_delete_message">
+                            <source>faculty_delete_message</source>
+                            <target>Vous êtes sûr de vouloir éliminer cette capacité?</target>
+                        </trans-unit>
+                        <!--FIN FACULTAD-->
+
+                        <!--INICIO LABORATORIO-->
+                        <trans-unit id="laboratories">
+                            <source>laboratories</source>
+                            <target>Laboratoires</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_register_tooltip">
+                            <source>laboratory_register_tooltip</source>
+                            <target>Enregistrer un nouveau laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_new_title">
+                            <source>laboratory_new_title</source>
+                            <target>Nouveau laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_edit_title">
+                            <source>laboratory_edit_title</source>
+                            <target>Modifier le laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="functioning_field">
+                            <source>functioning_field</source>
+                            <target>En fonctionnement</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_name_placeholder">
+                            <source>laboratory_name_placeholder</source>
+                            <target>Ecrire le nom du laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_register_successfully">
+                            <source>laboratory_register_successfully</source>
+                            <target>Le laboratoire a été enregistré avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_update_successfully">
+                            <source>laboratory_update_successfully</source>
+                            <target>Le laboratoire a été mis à jour avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_delete_successfully">
+                            <source>laboratory_delete_successfully</source>
+                            <target>Le laboratoire a été éliminé avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_delete_title">
+                            <source>laboratory_delete_title</source>
+                            <target>Supprimer le laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="laboratory_delete_message">
+                            <source>laboratory_delete_message</source>
+                            <target>¿Vous êtes sûr de vouloir éliminer ce laboratoire?</target>
+                        </trans-unit>
+                        <!--FIN LABORATORIO-->
+
+
+                        <!--INICIO PC-->
+                        <trans-unit id="pc_register_tooltip">
+                            <source>pc_register_tooltip</source>
+                            <target>Enregistrer un nouvel ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pc_new_title">
+                            <source>pc_new_title</source>
+                            <target>Nouvel ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pc_edit_title">
+                            <source>pc_edit_title</source>
+                            <target>Modifier l'ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pc_register_successfully">
+                            <source>pc_register_successfully</source>
+                            <target>L'ordinateur a été enregistré avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="pc_update_successfully">
+                            <source>pc_update_successfully</source>
+                            <target>L'ordinateur a été mis à jour avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="pc_delete_successfully">
+                            <source>pc_delete_successfully</source>
+                            <target>L'ordinateur a été supprimé avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="pc_delete_title">
+                            <source>pc_delete_title</source>
+                            <target>Supprimer l'ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pc_delete_message">
+                            <source>pc_delete_message</source>
+                            <target>¿Êtes-vous sûr de vouloir supprimer cet ordinateur?</target>
+                        </trans-unit>
+                        <trans-unit id="pc_name">
+                            <source>pc_name</source>
+                            <target>Numéro/nom</target>
+                        </trans-unit>
+                        <trans-unit id="pc_name_placeholder">
+                            <source>pc_name_placeholder</source>
+                            <target>Ecrire le numéro de l'ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pc_state_exploitation">
+                            <source>pc_state_exploitation</source>
+                            <target>Exploitation</target>
+                        </trans-unit>
+                        <trans-unit id="pc_state_pendingmaintenance">
+                            <source>pc_state_pendingmaintenance</source>
+                            <target>Maintenance en attente</target>
+                        </trans-unit>
+                        <trans-unit id="pc_state_pendingcancel">
+                            <source>pc_state_pendingcancel</source>
+                            <target>Faible</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details">
+                            <source>pc_details</source>
+                            <target>Détails de l'ordinateur</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_header">
+                            <source>pc_details_header</source>
+                            <target>Propriétés et périphériques</target>
+                        </trans-unit>
+
+                        <trans-unit id="pc_details_loadproperties_button">
+                            <source>pc_details_loadproperties_button</source>
+                            <target>Charger les propriétés</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadproperties_message">
+                            <source>pc_details_loadproperties_message</source>
+                            <target>Enregistrer les propriétés de l'ordinateur: nom, adresse IP, modèle, etc.</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadpieces_button">
+                            <source>pc_details_loadpieces_button</source>
+                            <target>Charger les pièces</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadpieces_message">
+                            <source>pc_details_loadpieces_message</source>
+                            <target>Enregistrez les parties de l'ordinateur: RAM, disque dur, processeur, etc.</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadperipherals_button">
+                            <source>pc_details_loadperipherals_button</source>
+                            <target>Charger les périphériques</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadperipherals_message">
+                            <source>pc_details_loadperipherals_message</source>
+                            <target>Enregistrer les périphériques de l'ordinateur: imprimantes, haut-parleurs, moniteurs, etc.</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadreparations_button">
+                            <source>pc_details_loadreparations_button</source>
+                            <target>Charger les réparations</target>
+                        </trans-unit>
+                        <trans-unit id="pc_details_loadreparations_message">
+                            <source>pc_details_loadreparations_message</source>
+                            <target>Enregistrer les réparations de l'ordinateur, tout changement de pièce ou de composant.</target>
+                        </trans-unit>
+                        <!--FIN PC-->
+
+
+                        <!--INICIO PROPIEDAD-->
+                        <trans-unit id="property_register_tooltip">
+                            <source>property_register_tooltip</source>
+                            <target>Enregistrer une nouvelle propriété</target>
+                        </trans-unit>
+                        <trans-unit id="properties">
+                            <source>properties</source>
+                            <target>Propriétés</target>
+                        </trans-unit>
+                        <trans-unit id="property_new_title">
+                            <source>property_new_title</source>
+                            <target>Nouvelle propriété</target>
+                        </trans-unit>
+                        <trans-unit id="property_name_placeholder">
+                            <source>property_name_placeholder</source>
+                            <target>Entrez le nom de la propriété</target>
+                        </trans-unit>
+                        <trans-unit id="property_edit_title">
+                            <source>property_edit_title</source>
+                            <target>Modifier la propriété</target>
+                        </trans-unit>
+                        <trans-unit id="property_register_successfully">
+                            <source>property_register_successfully</source>
+                            <target>La propriété a été enregistrée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="property_update_successfully">
+                            <source>property_update_successfully</source>
+                            <target>La propriété a été mise à jour avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="property_delete_successfully">
+                            <source>property_delete_successfully</source>
+                            <target>La propriété a été supprimée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="property_delete_title">
+                            <source>property_delete_title</source>
+                            <target>Supprimer la propriété</target>
+                        </trans-unit>
+                        <trans-unit id="property_delete_message">
+                            <source>property_delete_message</source>
+                            <target>¿Vous êtes sûr de vouloir supprimer cette propriété?</target>
+                        </trans-unit>
+                        <!--FIN DE PROPIEDAD-->
+
+                        <!--INICIO DE TIPO DE PREPARACION-->
+                        <trans-unit id="typeofrepair_register_tooltip">
+                            <source>typeofrepair_register_tooltip</source>
+                            <target>Enregistrer un nouveau type de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepairs">
+                            <source>typeofrepairs</source>
+                            <target>Types de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_new_title">
+                            <source>typeofrepair_new_title</source>
+                            <target>Nouveau type de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_name_placeholder">
+                            <source>typeofrepair_name_placeholder</source>
+                            <target>Écrivez le nom du type de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_edit_title">
+                            <source>typeofrepair_edit_title</source>
+                            <target>Modifier le type de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_register_successfully">
+                            <source>typeofrepair_register_successfully</source>
+                            <target>Le type de réparation a été enregistré de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_update_successfully">
+                            <source>typeofrepair_update_successfully</source>
+                            <target>Le type de réparation a été mis à jour de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_delete_successfully">
+                            <source>typeofrepair_delete_successfully</source>
+                            <target>Le type de réparation a été éliminé de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_delete_title">
+                            <source>typeofrepair_delete_title</source>
+                            <target>Supprimer le type de réparation</target>
+                        </trans-unit>
+                        <trans-unit id="typeofrepair_delete_message">
+                            <source>typeofrepair_delete_message</source>
+                            <target>Vous êtes sûr de vouloir éliminer ce type de réparation?</target>
+                        </trans-unit>
+                        <!--FIN DE TIPO DE PREPARACION-->
+
+
+                        <!--INICIO PIEZA-->
+                        <trans-unit id="piece_register_tooltip">
+                            <source>piece_register_tooltip</source>
+                            <target>Enregistrer une nouvelle pièce</target>
+                        </trans-unit>
+                        <trans-unit id="pieces">
+                            <source>pieces</source>
+                            <target>Pièces</target>
+                        </trans-unit>
+                        <trans-unit id="piece_new_title">
+                            <source>piece_new_title</source>
+                            <target>Nouvelle pièce</target>
+                        </trans-unit>
+                        <trans-unit id="piece_name_placeholder">
+                            <source>piece_name_placeholder</source>
+                            <target>Écrivez le nom de la pièce</target>
+                        </trans-unit>
+                        <trans-unit id="piece_edit_title">
+                            <source>piece_edit_title</source>
+                            <target>Modifier la pièce</target>
+                        </trans-unit>
+                        <trans-unit id="piece_register_successfully">
+                            <source>piece_register_successfully</source>
+                            <target>La pièce a été enregistrée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="piece_update_successfully">
+                            <source>piece_update_successfully</source>
+                            <target>La pièce a été mise à jour de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="piece_delete_successfully">
+                            <source>piece_delete_successfully</source>
+                            <target>La pièce a été retirée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="piece_delete_title">
+                            <source>piece_delete_title</source>
+                            <target>Supprimer la pièce</target>
+                        </trans-unit>
+                        <trans-unit id="piece_delete_message">
+                            <source>piece_delete_message</source>
+                            <target>¿Vous êtes sûr de vouloir supprimer cette pièce?</target>
+                        </trans-unit>
+                        <trans-unit id="piece_details">
+                            <source>piece_details</source>
+                            <target>Détails de la pièce</target>
+                        </trans-unit>
+                        <trans-unit id="piece_form_property_error">
+                            <source>piece_form_property_error</source>
+                            <target>Sélectionnez une propriété</target>
+                        </trans-unit>
+                        <!--FIN DE PIEZA-->
+
+                        <!--INICIO PERIFERICO-->
+                        <trans-unit id="peripheral_register_tooltip">
+                            <source>peripheral_register_tooltip</source>
+                            <target>Enregistrer un nouveau périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="peripherals">
+                            <source>peripherals</source>
+                            <target>Périphériques</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_new_title">
+                            <source>peripheral_new_title</source>
+                            <target>Nouveau périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_name_placeholder">
+                            <source>peripheral_name_placeholder</source>
+                            <target>Entrez le nom du périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_edit_title">
+                            <source>peripheral_edit_title</source>
+                            <target>Modifier le périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_register_successfully">
+                            <source>peripheral_register_successfully</source>
+                            <target>Le périphérique a été enregistré avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_update_successfully">
+                            <source>peripheral_update_successfully</source>
+                            <target>Le périphérique a été mis à jour avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_delete_successfully">
+                            <source>peripheral_delete_successfully</source>
+                            <target>Le périphérique a été éliminé avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_delete_title">
+                            <source>peripheral_delete_title</source>
+                            <target>Supprimer le périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_delete_message">
+                            <source>peripheral_delete_message</source>
+                            <target>Êtes-vous sûr de vouloir supprimer ce périphérique?</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_type_in">
+                            <source>peripheral_type_in</source>
+                            <target>Entrance</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_type_out">
+                            <source>peripheral_type_out</source>
+                            <target>Quitter</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_type_inout">
+                            <source>peripheral_type_inout</source>
+                            <target>Entrée-Quitter</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_type_storage">
+                            <source>peripheral_type_storage</source>
+                            <target>Stockage</target>
+                        </trans-unit>
+                        <trans-unit id="peripheral_details">
+                            <source>peripheral_details</source>
+                            <target>Détails du périphérique</target>
+                        </trans-unit>
+                        <!--FIN DE PERIFERICO-->
+
+                        <!--INICIO  DE RESERVACION-->
+                        <trans-unit id="reservation_register_tooltip">
+                            <source>reservation_register_tooltip</source>
+                            <target>Enregistrer une nouvelle réservation</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_new_title">
+                            <source>reservation_new_title</source>
+                            <target>Nouvelle réservation</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_edit_title">
+                            <source>reservation_edit_title</source>
+                            <target>Modifier la réservation</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_register_successfully">
+                            <source>reservation_register_successfully</source>
+                            <target>La réservation a été enregistrée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_update_successfully">
+                            <source>reservation_update_successfully</source>
+                            <target>La réservation a été mise à jour de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_delete_successfully">
+                            <source>reservation_delete_successfully</source>
+                            <target>La réservation a été supprimée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_delete_title">
+                            <source>reservation_delete_title</source>
+                            <target>Supprimer la réservation</target>
+                        </trans-unit>
+                        <trans-unit id="reservation_delete_message">
+                            <source>reservation_delete_message</source>
+                            <target>Vous êtes sûr de vouloir supprimer cette réservation?</target>
+                        </trans-unit>
+                        <!--FIN DE RESERVACION-->
+
+                        <!--INICIO  DE RESERVACION LABORATORIO-->
+                        <trans-unit id="reservationlaboratorio_error_laboratorio_blank">
+                            <source>reservationlaboratorio_error_laboratorio_blank</source>
+                            <target>S´il vous plaît,il/elle sélectionne un laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="reservationlaboratorio_error_startdate_superior">
+                            <source>reservationlaboratorio_error_startdate_superior</source>
+                            <target>La date de fin débit etre plus grande ou égale que la date de commencement</target>
+                        </trans-unit>
+                        <trans-unit id="reservationlaboratorio_error_time_check">
+                            <source>reservationlaboratorio_error_time_check</source>
+                            <target>Vérifie l´heure.</target>
+                        </trans-unit>
+                        <trans-unit id="reservationlaboratorio_error_range_existe">
+                            <source>reservationlaboratorio_error_range_existe(%laboratorio%,%from%,%to%)</source>
+                            <target>Il existe une réservation pour le laboratoire %laboratorio% entre les dates %from% et %to%</target>
+                        </trans-unit>
+                        <!--FIN  DE RESERVACION LABORATORIO-->
+
+                        <!--INICIO  DE RESERVACION PC-->
+                        <trans-unit id="reservation_error_noavailablepc">
+                            <source>reservation_error_noavailablepc</source>
+                            <target>Aucun ordinateur n'a été trouvé</target>
+                        </trans-unit>
+                        <trans-unit id="reservacionpc_error_userjustreserv">
+                            <source>reservacionpc_error_userjustreserv</source>
+                            <target>Puisque a une réservation pour aujourd´hui</target>
+                        </trans-unit>
+                        <!--FIN  DE RESERVACION PC-->
+
+                        <!--INICIO  DE REGISTRO PIEZA-->
+                         <trans-unit id="pieceregister_form_piece_placeholder">
+                             <source>pieceregister_form_piece_placeholder</source>
+                             <target>Sélectionnez une pièce</target>
+                         </trans-unit>
+                         <trans-unit id="pieceregister_form_piece_error">
+                             <source>pieceregister_form_piece_error</source>
+                             <target>S'il vous plaît, sélectionnez un morceau</target>
+                         </trans-unit>
+                         <trans-unit id="loading_properties">
+                             <source>loading_properties</source>
+                             <target>Propriétés de chargement</target>
+                         </trans-unit>
+                        <!--FIN  DE REGISTRO PIEZA-->
+
+                        <!--INICIO  DE REGISTRO PERIFERICO-->
+                        <trans-unit id="peripheralregister_form_peripheral_placeholder">
+                            <source>peripheralregister_form_peripheral_placeholder</source>
+                            <target>Sélectionnez un périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="peripheralregister_form_peripheral_error">
+                            <source>peripheralregister_form_peripheral_error</source>
+                            <target>Veuillez sélectionner un périphérique</target>
+                        </trans-unit>
+                        <trans-unit id="loading_pieces">
+                            <source>loading_pieces</source>
+                            <target>Pièces de chargement</target>
+                        </trans-unit>
+                        <trans-unit id="loading_pieceproperties">
+                            <source>loading_pieceproperties</source>
+                            <target>Chargement des propriétés de la pièce</target>
+                        </trans-unit>
+                        <!--FIN  DE REGISTRO PERIFERICO-->
+
+                        <!--INICIO  DE REPARACION PC-->
+                        <trans-unit id="reparations">
+                            <source>reparations</source>
+                            <target>Réparations</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_register_tooltip">
+                            <source>reparationpc_register_tooltip</source>
+                            <target>Enregistrer une nouvelle réparation</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_new_title">
+                            <source>reparationpc_new_title</source>
+                            <target>Nouvelle réparation</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_edit_title">
+                            <source>reparationpc_edit_title</source>
+                            <target>Modifier la réparation</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_register_successfully">
+                            <source>reparationpc_register_successfully</source>
+                            <target>La réparation a été enregistrée avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_update_successfully">
+                            <source>reparationpc_update_successfully</source>
+                            <target>La réparation a été mise à jour de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_delete_successfully">
+                            <source>reparationpc_delete_successfully</source>
+                            <target>La réparation a été éliminée de manière satisfaisante</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_delete_title">
+                            <source>reparationpc_delete_title</source>
+                            <target>Supprimer la réparation</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_delete_message">
+                            <source>reparationpc_delete_message</source>
+                            <target>Vous êtes sûr de vouloir supprimer cette réparation?</target>
+                        </trans-unit>
+                        <trans-unit id="reparationpc_details">
+                            <source>reparationpc_details</source>
+                            <target>Détails de réparation</target>
+                        </trans-unit>
+                        <!--FIN  DE REPARACION PC-->
+
+
+
+                        <!--INICIO USUARIO-->
+                        <trans-unit id="users">
+                            <source>users</source>
+                            <target>Utilisateurs</target>
+                        </trans-unit>
+                        <trans-unit id="user_register_tooltip">
+                            <source>user_register_tooltip</source>
+                            <target>Enregistrer un nouvel utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="user_new_title">
+                            <source>user_new_title</source>
+                            <target>Nouvel utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="user_edit_title">
+                            <source>user_edit_title</source>
+                            <target>Modifier l'utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="user_details">
+                            <source>user_details</source>
+                            <target>Détails de l'utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="surname_field">
+                            <source>surname_field</source>
+                            <target>Le nom</target>
+                        </trans-unit>
+                        <trans-unit id="email_field_help">
+                            <source>email_field_help</source>
+                            <target>Assurez-vous d'enregistrer un e-mail valide</target>
+                        </trans-unit>
+                        <trans-unit id="faculty_field_select">
+                            <source>faculty_field_select</source>
+                            <target>Sélectionnez une faculté</target>
+                        </trans-unit>
+                        <trans-unit id="confirm_password_field_error">
+                            <source>confirm_password_field_error</source>
+                            <target>Les deux mots de passe doivent correspondre</target>
+                        </trans-unit>
+                        <trans-unit id="user_register_successfully">
+                            <source>user_register_successfully</source>
+                            <target>L'utilisateur s'est enregistré avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="user_update_successfully">
+                            <source>user_update_successfully</source>
+                            <target>L'utilisateur a été mis à jour avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="user_delete_successfully">
+                            <source>user_delete_successfully</source>
+                            <target>L'utilisateur a été supprimé avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="user_delete_title">
+                            <source>user_delete_title</source>
+                            <target>Supprimer l'utilisateur</target>
+                        </trans-unit>
+                        <trans-unit id="user_delete_message">
+                            <source>user_delete_message</source>
+                            <target>Êtes-vous sûr de vouloir supprimer cet utilisateur?</target>
+                        </trans-unit>
+                        <trans-unit id="user_form_rol_error_blank">
+                            <source>user_form_rol_error_blank</source>
+                            <target>Sélectionnez un ou plusieurs rôles</target>
+                        </trans-unit>
+                        <trans-unit id="user_form_rol_error_incompatibility">
+                            <source>user_form_rol_error_incompatibility</source>
+                            <target>L'utilisateur peut être technicien ou chef de techniciens mais pas les deux</target>
+                        </trans-unit>
+                        <!--FIN USUARIO-->
+                        <!--INICIO MENSAJE-->
+                        <trans-unit id="message">
+                            <source>message</source>
+                            <target>Message</target>
+                        </trans-unit>
+                        <trans-unit id="messages">
+                            <source>messages</source>
+                            <target>Messages</target>
+                        </trans-unit>
+                        <trans-unit id="viewall">
+                            <source>viewall</source>
+                            <target>voir tous</target>
+                        </trans-unit>
+                        <trans-unit id="sendmessage">
+                            <source>sendmessage</source>
+                            <target>envoyer un message</target>
+                        </trans-unit>
+                        <trans-unit id="message_register_tooltip">
+                            <source>message_register_tooltip</source>
+                            <target>Enregistrer un nouveau message</target>
+                        </trans-unit>
+                        <trans-unit id="message_inbox_received">
+                            <source>message_inbox_received</source>
+                            <target>Reçu</target>
+                        </trans-unit>
+                        <trans-unit id="message_inbox_sended">
+                            <source>message_inbox_sended</source>
+                            <target>Envoyé</target>
+                        </trans-unit>
+                        <trans-unit id="message_new_title">
+                            <source>message_new_title</source>
+                            <target>Nouveau message</target>
+                        </trans-unit>
+                        <trans-unit id="message_fromfield">
+                            <source>message_fromfield</source>
+                            <target>De</target>
+                        </trans-unit>
+                        <trans-unit id="message_tofield">
+                            <source>message_tofield</source>
+                            <target>Pour</target>
+                        </trans-unit>
+                        <trans-unit id="message_tofield_placeholder">
+                            <source>message_tofield_placeholder</source>
+                            <target>Entrez le nom des destinataires</target>
+                        </trans-unit>
+                        <trans-unit id="message_messagefield_placeholder">
+                            <source>message_messagefield_placeholder</source>
+                            <target>Ecrire le contenu du message</target>
+                        </trans-unit>
+                        <trans-unit id="message_details">
+                            <source>message_details</source>
+                            <target>Détails du message</target>
+                        </trans-unit>
+                        <trans-unit id="message_register_successfully">
+                            <source>message_register_successfully</source>
+                            <target>Le message a été envoyé avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="message_delete_successfully">
+                            <source>message_delete_successfully</source>
+                            <target>Le message a été supprimé avec succès</target>
+                        </trans-unit>
+                        <trans-unit id="message_delete_title">
+                            <source>message_delete_title</source>
+                            <target>Supprimer un message</target>
+                        </trans-unit>
+                        <trans-unit id="message_delete_message">
+                            <source>message_delete_message</source>
+                            <target>¿Vous êtes sûr de vouloir supprimer ce message?</target>
+                        </trans-unit>
+                        <trans-unit id="message_header">
+                            <source>Tienes 1 mensaje nuevo | Tienes %total% mensajes nuevos</source>
+                            <target>Tu as 1 message neuf | Tu as %total% message neuf</target>
+                        </trans-unit>
+                        <!--FIN MENSAJE-->
+        </body>
+    </file>
+</xliff>

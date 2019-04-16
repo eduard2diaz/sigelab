@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="contact_link">
+                <source>contact_link</source>
+                <target>Contact avec Milab</target>
+            </trans-unit>
+            <trans-unit id="refresh_link">
+                <source>refresh_link</source>
+                <target>Retente</target>
+            </trans-unit>
+            <trans-unit id="_403.error_title">
+                <source>_403.error_title</source>
+                <target>Accés refusé</target>
+            </trans-unit>
+            <trans-unit id="_403.error_details">
+                <source>_403.error_details</source>
+                <target>Vous n´as pas les permissions pour le visualizar l´information, devant n´importe quel doubte ou rends difficile contacte avec I´ou les administrateurs seront enchantés de lui aider.</target>
+            </trans-unit>
+            <trans-unit id="_404.error_title">
+                <source>_404.error_title</source>
+                <target>Page non opposée</target>
+            </trans-unit>
+            <trans-unit id="_404.error_details">
+                <source>_404.error_details</source>
+                <target>I´asseyons la pagine sollcité par voud ne vis pas ou est allé éliminé,  devant n´importe quel doubte ou rends difficile contacte avec I´ou les administrateurs seront enchantés de lui aider.</target>
+            </trans-unit>
+            <trans-unit id="_500.error_title">
+                <source>_500.error_title</source>
+                <target>Erreur interne du domestique</target>
+            </trans-unit>
+            <trans-unit id="_500.error_details">
+                <source>_500.error_details</source>
+                <target>Le domestique a trouvé une erreur interne ou donnes configuration et est allé incapable de compléter sa sollicitude, devant n´importe quel doubte ou rends difficile contacte avec I´ou les administrateurs seront enchantés de lui aider.</target>
+            </trans-unit>
+            <trans-unit id="_503.error_title">
+                <source>_503.error_title</source>
+                <target>I´asseyons sommes dans la subsistance</target>
+            </trans-unit>
+            <trans-unit id="_503.error_details">
+                <source>_503.error_details</source>
+                <target>Actuellement nous rencontrons réalisant améliore au systéme, devant n´importe quel doubte ou rends difficile contacte avec I´ou les administrateurs seront enchantés de lui aider.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

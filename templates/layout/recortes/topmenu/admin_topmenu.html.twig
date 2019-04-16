@@ -1,0 +1,85 @@
+<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  m-menu-submenu-toggle="click" aria-haspopup="true">
+    <a  href="javascript:;" class="m-menu__link m-menu__toggle header">
+        <span class="m-menu__item-here"></span>
+        <i class="m-menu__link-icon flaticon-dashboard"></i>
+        <span class="m-menu__link-text">
+														Nomencladores
+													</span>
+        <i class="m-menu__hor-arrow la la-angle-down"></i>
+        <i class="m-menu__ver-arrow la la-angle-right"></i>
+    </a>
+    <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+
+        <span class="m-menu__arrow m-menu__arrow--adjust"></span>
+        <ul class="m-menu__subnav">
+            <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
+                <a  href="{{ path('autor_index',{'id':app.user.id}) }}" class="m-menu__link ">
+                    <i class="m-menu__link-icon flaticon-users"></i>
+                    <span class="m-menu__link-text">
+																				Usuarios
+																			</span>
+                </a>
+            </li>
+            <li class="m-menu__item  m-menu__item--submenu"  m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true">
+                <a  href="javascript:;" class="m-menu__link m-menu__toggle">
+                    <i class="m-menu__link-icon flaticon-cogwheel-1"></i>
+                    <span class="m-menu__link-text">
+																	General
+																</span>
+                    <i class="m-menu__hor-arrow la la-angle-right"></i>
+                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                </a>
+                <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
+                    <span class="m-menu__arrow "></span>
+                    <ul class="m-menu__subnav">
+                        <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
+                            <a  href="{{ path('revista_index') }}" class="m-menu__link ">
+																			<span class="m-menu__link-text">
+																				Revista
+																			</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
+                            <a  href="{{ path('area_index') }}" class="m-menu__link ">
+																			<span class="m-menu__link-text">
+																				Área
+																			</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="m-menu__item  m-menu__item--submenu"  m-menu-submenu-toggle="hover" m-menu-link-redirect="1" aria-haspopup="true">
+                <a  href="javascript:;" class="m-menu__link m-menu__toggle">
+                    <i class="m-menu__link-icon flaticon-file"></i>
+                    <span class="m-menu__link-text">
+																	Publicación
+																</span>
+                    <i class="m-menu__hor-arrow la la-angle-right"></i>
+                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                </a>
+                <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
+                    <span class="m-menu__arrow "></span>
+                    <ul class="m-menu__subnav">
+                        <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
+                            <a  href="{{ path('editorial_index') }}" class="m-menu__link ">
+																			<span class="m-menu__link-text">
+																				Editorial
+																			</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
+                            <a  href="{{ path('organizador_index') }}" class="m-menu__link ">
+																			<span class="m-menu__link-text">
+																				Organizador de encuentros
+																			</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</li>

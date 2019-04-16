@@ -1,0 +1,44 @@
+<br class="m--margint-top-20"/>
+<table class="table m--margin-top-20" id="tablepropiedad">
+    <thead>
+    <tr>
+        <th>{{ 'property'|trans }}</th>
+        <th>{{ 'value_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for registro in registros %}
+        <tr>
+            <td>{{ registro.propiedad }}</td>
+            <td>{{ registro.valor }}</td>
+            {% if readonly is not defined %}
+            <td>
+                <ul class="nav nav-pills" >
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicionpropiedad" data-href="{{ path('registropropiedad_edit', { 'id': registro.id }) }}">
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-danger eliminar_registropropiedad" data-href="{{ path('registropropiedad_delete', { 'id': registro.id }) }}">
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
+                        </a>
+                    </li>
+                </ul>
+            </td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'property'|trans }}</th>
+        <th>{{ 'value_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>
+
+
+

@@ -1,0 +1,45 @@
+<table class="table table-hover" id="facultadtable">
+    <thead>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {%set i=1%}
+    {% for facultad in facultades %}
+        <tr>
+            <td>{{ i }}</td>
+            <td>{{ facultad.nombre }}</td>
+            <td>
+                <ul class="nav nav-pills" >
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-default edicion" data-href="{{ path('facultad_show', { 'id': facultad.id }) }}">
+                            <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicion" data-href="{{ path('facultad_edit', { 'id': facultad.id }) }}">
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-danger eliminar_facultad" data-href="{{ path('facultad_delete', { 'id': facultad.id }) }}">
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
+                        </a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        {%set i=1+i%}
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'row_number'| trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>

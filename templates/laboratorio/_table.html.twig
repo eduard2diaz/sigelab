@@ -1,0 +1,56 @@
+<table class="table table-hover" id="laboratoriotable">
+    <thead>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th>{{ 'faculty' |trans }}</th>
+        <th>{{ 'functioning_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% set i=1 %}
+    {% for laboratorio in laboratorios %}
+        <tr>
+            <td>{{ i }}</td>
+            <td>{{ laboratorio.nombre }}</td>
+            <td>{{ laboratorio.facultad }}</td>
+            <td>{{ laboratorio.enfuncionamiento| trans | estado_color }}</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-default"
+                           href="{{ path('laboratorio_show', { 'id': laboratorio.id }) }}">
+                            <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicion"
+                           data-href="{{ path('laboratorio_edit', { 'id': laboratorio.id }) }}">
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item m-tabs__item">
+                            <a class="btn btn-sm btn-danger eliminar_laboratorio"
+                               data-href="{{ path('laboratorio_delete', { 'id': laboratorio.id }) }}">
+                                <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </td>
+        </tr>
+        {% set i=1+i %}
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th>{{ 'faculty' |trans }}</th>
+        <th>{{ 'functioning_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>

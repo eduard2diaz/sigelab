@@ -1,0 +1,35 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">{{ 'reparationpc_details'|trans }}</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        </div>
+        <div>
+            <table class="table">
+                <tr>
+                    <th>{{ 'date_field'|trans }}</th>
+                    <td>{{ reparacion.fecha |date('d-m-Y')}}</td>
+                    <th>{{ 'price_field'|trans }}</th>
+                    <td>{{ reparacion.precio }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'pc'|trans }}</th>
+                    <td>{{ reparacion.pc }}</td>
+                    <th>{{ 'laboratory'|trans }}</th>
+                    <td>{{ reparacion.pc.laboratorio }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'registerby_field'|trans }}</th>
+                    <td colspan="3">{{ reparacion.usuario }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'description_field'|trans }}</th>
+                    <td colspan="3">{{ reparacion.descripcion }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-sm btn-primary" data-dismiss="modal">{{ 'close'|trans }}</a>
+        </div>
+    </div>
+</div>

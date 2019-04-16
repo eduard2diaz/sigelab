@@ -1,0 +1,46 @@
+<table class="table m--margin-top-40" id="tableperiferico">
+    <thead>
+    <tr>
+        <th>{{ 'peripheral'|trans }}</th>
+        <th>{{ 'piece'|trans }}</th>
+        <th>{{ 'property'|trans }}</th>
+        <th>{{ 'value_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for registro in registros %}
+        <tr>
+            <td>{{ registro.periferico }}</td>
+            <td>{{ registro.pieza }}</td>
+            <td>{{ registro.propiedad }}</td>
+            <td>{{ registro.valor }}</td>
+            {% if readonly is not defined %}
+            <td>
+                <ul class="nav nav-pills">
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicionperiferico" data-href="{{ path('registroperiferico_edit', { 'id': registro.id }) }}">
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-danger eliminar_registroperiferico" data-href="{{ path('registroperiferico_delete', { 'id': registro.id }) }}">
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
+                        </a>
+                    </li>
+                </ul>
+            </td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'peripheral'|trans }}</th>
+        <th>{{ 'piece'|trans }}</th>
+        <th>{{ 'property'|trans }}</th>
+        <th>{{ 'value_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>

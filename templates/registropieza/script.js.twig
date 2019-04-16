@@ -1,0 +1,277 @@
+<script>
+    var registropieza = function () {
+    tablepieza = null;
+    pieza = null;
+    registropieza_loading_properties='{{ 'loading_properties'|trans }}';
+
+    var cargarRegistrosRegistroPieza=function(){
+        $('div#basicmodal').on('click', 'a#cargar_registropieza', function (evento)
+        {
+            evento.preventDefault();
+            var link = $(this).attr('data-href');
+            var padre=$(this).parent();
+            var l = Ladda.create(document.querySelector( 'div#basicmodal a#cargar_registropieza' ) );
+            $.ajax({
+            type: 'get', //Se uso get pues segun los desarrolladores de yahoo es una mejoria en el rendimineto de las peticiones ajax
+            dataType: 'html',
+            url: link,
+            beforeSend: function (data) {
+                l.start();
+            },
+            success: function (data) {
+                if(padre.html(data)) {
+                    configurarDataTableRegistroPieza();
+                    $('div#basicmodal a.tooltips').tooltip();
+                }
+            },
+            error: function ()
+            {
+                //base.Error();
+            },
+            complete: function () {
+                l.stop();
+            }
+            });
+        });
+    }
+
+    var configurarDataTableRegistroPieza = function () {
+        tablepieza = $('table#tablepieza').DataTable({
+            "pagingType": "simple_numbers",
+            "language": {
+                url: datatable_url
+            },
+            columns: [
+                {data: 'pieza'},
+                {data: 'propiedad'},
+                {data: 'valor'},
+                {data: 'acciones'}
+            ]}
+        );
+    }
+
+    var configurarFormularioRegistroPieza = function () {
+        $('select#registro_pieza_pieza').select2({
+            dropdownParent: $("#extramodal"),
+            //allowClear: true
+        });
+        $('select#registro_pieza_propiedad').select2({
+            dropdownParent: $("#extramodal"),
+            //allowClear: true
+        });
+
+         $("div#extramodal form").validate({
+            rules:{
+                'registro_pieza[valor]': {required:true},
+                'registro_pieza[pieza]': {required:true}
+            }
+         });
+    }
+
+    var edicionRegistroPieza = function () {
+        $('div#basicmodal').on('click', 'a.edicionpieza', function (evento)
+        {
+            evento.preventDefault();
+            var link = $(this).attr('data-href');
+            pieza = $(this);
+            $.ajax({
+            type: 'get', //Se uso get pues segun los desarrolladores de yahoo es una mejoria en el rendimineto de las peticiones ajax
+            dataType: 'html',
+            url: link,
+            beforeSend: function (data) {
+                mApp.block("div#basicmodal div.modal-body", {overlayColor:"#000000",type:"loader",state:"success",message:window.loadingMessage});
+            },
+            success: function (data) {
+                if ($('div#extramodal').html(data)) {
+                    configurarFormularioRegistroPieza();
+                    $('div#extramodal').modal('show');
+                }
+            },
+            error: function ()
+            {
+                //base.Error();
+            },
+            complete: function () {
+                mApp.unblock('div#basicmodal div.modal-body');
+            }
+            });
+        });
+    }
+
+
+
+    var newActionRegistroPieza = function () {
+        $('div#extramodal').on('submit', 'form#registropieza_new', function (evento)
+        {
+            evento.preventDefault();
+            var padre = $(this).parent();
+            var l = Ladda.create(document.querySelector( 'div#extramodal button.ladda-button' ) );
+            $.ajax({
+            url: $(this).attr("action"),
+            type: "POST",
+            data: $(this).serialize(), //para enviar el formulario hay que serializarlo
+            beforeSend: function () {
+                l.start();
+            },
+            complete: function () {
+                l.stop();
+            },
+            success: function (data) {
+                if (data['error']) {
+                    padre.html(data['form']);
+                    configurarFormularioRegistroPieza();
+                } else {
+                    if (data['mensaje'])
+                        toastr.success(data['mensaje']);
+
+                    $('div#extramodal').modal('hide');
+                    var pagina = tablepieza.page();
+                    pieza = tablepieza.row.add({
+                    "pieza":  data['pieza'],
+                    "propiedad":  data['propiedad'],
+                    "valor": data['valor'],
+                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicionpieza' data-href="+ Routing.generate('registropieza_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_registropieza' data-href="+ Routing.generate('registropieza_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
+                    });
+                    pieza.draw();
+                    tablepieza.page(pagina).draw('page');
+                }
+            },
+            error: function ()
+            {
+                //base.Error();
+            }
+            });
+        });
+    }
+
+
+
+    var edicionActionRegistroPieza = function () {
+        $('div#extramodal').on('submit', 'form#registropieza_edit', function (evento)
+        {
+            evento.preventDefault();
+            var padre = $(this).parent();
+            var l = Ladda.create(document.querySelector( 'div#extramodal form#registropieza_edit button.ladda-button' ) );
+            $.ajax({
+            url: $(this).attr("action"),
+            type: "POST",
+            data: $(this).serialize(), //para enviar el formulario hay que serializarlo
+            beforeSend: function () {
+                l.start();
+            },
+            complete: function () {
+                l.stop();
+            },
+            success: function (data) {
+                if (data['error']) {
+                    padre.html(data['form']);
+                    configurarFormularioRegistroPieza();
+                } else {
+                    if (data['mensaje'])
+                    toastr.success(data['mensaje']);
+                    $('div#extramodal').modal('hide');
+                    var pagina = tablepieza.page();
+                    pieza.parents('tr').children('td:nth-child(1)').html(data['pieza']);
+                    pieza.parents('tr').children('td:nth-child(2)').html(data['propiedad']);
+                    pieza.parents('tr').children('td:nth-child(3)').html(data['valor']);
+                }
+            },
+            error: function ()
+            {
+                //base.Error();
+            }
+            });
+        });
+    }
+
+    var eliminarRegistroPieza = function () {
+        $('div#basicmodal').on('click', 'table#tablepieza a.eliminar_registropieza', function (evento)
+        {
+            evento.preventDefault();
+            var pieza = $(this);
+            var link = $(this).attr('data-href');
+
+            bootbox.confirm({
+            title: "{{ 'piece_delete_title'|trans }}",
+            message: "<p>{{ 'piece_delete_message'|trans }}</p>",
+            buttons: {
+                confirm: {
+                    label: '{{ 'confirm_button'|trans }}',
+                    className: 'btn-sm btn-primary'
+                },
+                cancel: {
+                    label: '{{ 'cancel_button'|trans }}',
+                    className: 'btn-sm btn-metal'
+                }
+            },
+            callback: function (result) {
+                if (result == true)
+                $.ajax({
+                type: 'get', //Se uso get pues segun los desarrolladores de yahoo es una mejoria en el rendimineto de las peticiones ajax
+                url: link,
+                beforeSend: function () {
+                    mApp.block("div#basicmodal div.modal-body", {overlayColor:"#000000",type:"loader",state:"success",message:window.loadingMessage});
+                },
+                complete: function () {
+                    mApp.unblock('div#basicmodal div.modal-body');
+                },
+                success: function (data) {
+                    tablepieza.row(pieza.parents('tr'))
+                    .remove()
+                    .draw('page');
+                    toastr.success(data['mensaje']);
+                },
+                error: function ()
+                {
+                    //base.Error();
+                }
+                });
+            }
+            });
+        });
+    }
+
+    var piezaListener = function () {
+        $('div#extramodal').on('change', 'select#registro_pieza_pieza', function (evento)
+        {
+        if ($(this).val() > 0)
+                $.ajax({
+                type: 'get', //Se uso get pues segun los desarrolladores de yahoo es una mejoria en el rendimineto de las peticiones ajax
+                dataType: 'html',
+                url: Routing.generate('propiedad_searchbypieza.es', {'pieza': $(this).val()}),
+                beforeSend: function (data) {
+                    mApp.block("div#basicmodal div.modal-body", {overlayColor:"#000000",type:"loader",state:"success",message:window.loadingMessage});
+                },
+                success: function (data) {
+                    var cadena="";
+                    var array=JSON.parse(data);
+                    for(var i=0;i<array.length;i++)
+                    cadena+="<option value="+array[i]['id']+">"+array[i]['nombre']+"</option>";
+                    $('select#registro_pieza_propiedad').html(cadena);
+                },
+                error: function () {
+                    //base.Error();
+                },
+                complete: function () {
+                    mApp.unblock('div#basicmodal div.modal-body');
+                }
+            });
+        });
+    }
+
+    return {
+        init: function () {
+            $().ready(function () {
+                cargarRegistrosRegistroPieza();
+                newActionRegistroPieza();
+                edicionRegistroPieza();
+                edicionActionRegistroPieza();
+                eliminarRegistroPieza();
+                piezaListener();
+        });
+        }
+    }
+}();
+</script>
+
+

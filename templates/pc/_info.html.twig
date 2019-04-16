@@ -1,0 +1,18 @@
+<table class="table m--margin-top-20">
+    <tr>
+        <th>{{ 'pc_name'|trans }}</th>
+        <td>{{ pc.numero }}</td>
+    </tr>
+    <tr>
+        <th>{{ 'mac_field'|trans }}</th>
+        <td>{{ pc.mac }}</td>
+    </tr>
+    <tr>
+        <th>{{ 'laboratory'|trans }}</th>
+        <td>{{ pc.laboratorio }}</td>
+    </tr>
+    <tr>
+        <th>{{ 'state_field'|trans }}</th>
+        <td colspan="3">{{ pc.getEstadoToString()|trans }}</td>
+    </tr>
+</table>

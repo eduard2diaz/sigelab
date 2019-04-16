@@ -1,0 +1,6 @@
+<h5>{{ 'peripherals'|trans }} </h5>
+<a class="btn btn-sm btn-primary edicionperiferico tooltips btn-sm text-uppercase font-weight-bold m--margin-bottom-20" data-placement="bottom" data-original-title="{{ 'peripheral_register_tooltip'|trans }}" data-href="{{ path('registroperiferico_new',{'pc':pc.id}) }}"><i
+            class="fa fa-plus-circle"></i> {{ 'register'|trans }}</a>
+{% include 'registroperiferico/_table.html.twig' %}
+
+

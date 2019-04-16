@@ -1,0 +1,122 @@
+{% extends "layout/base.html.twig" %}
+{% block subheader %}
+    <div class="m-subheader">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title ">
+                    {% block page_title %}{% endblock page_title %}
+                </h3>
+            </div>
+            <div>
+                {% block rightoptions_block %}{% endblock rightoptions_block %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css"
+          href="{{ asset('vendors/custom/datatables/datatables.bundle.css','template') }}"/>
+    <link rel="stylesheet" type="text/css"
+          href="{{ asset('vendors/custom/fullcalendar/fullcalendar.bundle.css','template') }}"/>
+{% endblock %}
+{% block header %}
+    {% embed "layout/recortes/header.html.twig" %}
+        {% block top_menu %}
+            {% if is_granted('ROLE_PROFESOR') %}
+                <li class="m-menu__item m-menu__item--submenu m-menu__item--rel m-menu__item--open-dropdown m-menu__item--hover">
+                    <a href="{{ path('reservacion_laboratorio_index') }}" class="m-menu__link">
+                        <i class="m-menu__link-icon flaticon-add"></i><span
+                                class="m-menu__link-text">{{ 'reservations' | trans }}</span>
+                    </a>
+                </li>
+            {% elseif is_granted('ROLE_ESTUDIANTE') %}
+                <li class="m-menu__item m-menu__item--submenu m-menu__item--rel m-menu__item--open-dropdown m-menu__item--hover">
+                <a href="{{ path('reservacion_pc_index') }}" class="m-menu__link">
+                    <i class="m-menu__link-icon flaticon-add"></i><span
+                            class="m-menu__link-text">{{ 'reservations' | trans }}</span>
+                </a>
+            {% endif %}
+            {% if is_granted("ROLE_TECNICO") %}
+                <li class="m-menu__item m-menu__item--submenu m-menu__item--rel m-menu__item--open-dropdown m-menu__item--hover"
+                    m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:;"
+                                                                                                   class="m-menu__link m-menu__toggle"
+                                                                                                   title="Non functional dummy link"><i
+                                class="m-menu__link-icon flaticon-computer"></i><span class="m-menu__link-title"> <span
+                                    class="m-menu__link-wrap"> <span class="m-menu__link-text">{{ 'pc' | trans }}</span> <span
+                                        class="m-menu__link-badge"></span>
+												</span></span><i class="m-menu__hor-arrow la la-angle-down"></i><i
+                                class="m-menu__ver-arrow la la-angle-right"></i></a>
+                    <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a
+                                        href="{{ path('laboratorio_index') }}" class="m-menu__link "><i
+                                            class="m-menu__link-icon flaticon-business"></i><span
+                                            class="m-menu__link-text">{{ 'laboratory' | trans }}</span></a></li>
+                            {% if is_granted("ROLE_JEFETECNICO") %}
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a
+                                            href="{{ path('propiedad_index') }}" class="m-menu__link "><i
+                                                class="m-menu__link-icon flaticon-map"></i><span
+                                                class="m-menu__link-text">{{ 'property' | trans }}</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a
+                                            href="{{ path('periferico_index') }}" class="m-menu__link "><i
+                                                class="m-menu__link-icon flaticon-map"></i><span
+                                                class="m-menu__link-text">{{ 'peripheral' | trans }}</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a
+                                            href="{{ path('pieza_index') }}" class="m-menu__link "><i
+                                                class="m-menu__link-icon flaticon-map"></i><span
+                                                class="m-menu__link-text">{{ 'piece' | trans }}</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a
+                                            href="{{ path('tiporeparacion_index') }}" class="m-menu__link "><i
+                                                class="m-menu__link-icon flaticon-map"></i><span
+                                                class="m-menu__link-text">{{ 'typeofrepair' | trans }}</span></a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </li>
+            {% endif %}
+        {% endblock top_menu %}
+        {% block user_shortcut_menu %}
+            {{ include('layout/recortes/topmenu/search_topmenu.html.twig') }}
+            {{ include('layout/recortes/topmenu/notification_topmenu.html.twig') }}
+            {{ include('layout/recortes/topmenu/message_topmenu.html.twig') }}
+            {{ include('layout/recortes/topmenu/language_topmenu.html.twig') }}
+            {{ include('layout/recortes/topmenu/user_topmenu.html.twig') }}
+        {% endblock %}
+    {% endembed %}
+{% endblock header %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+    </script>
+    <script type="text/javascript"
+            src="{{ asset('vendors/custom/datatables/datatables.bundle.js','template') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('vendors/custom/fullcalendar/fullcalendar.bundle.js','template') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/bootbox/bootbox.min.js','milab') }}"></script>
+    <script src="{{ asset('scripts/interface/authenticated.js','milab') }}"></script>
+    <script>
+        {% if not is_granted('ROLE_SUPERADMIN') %}
+        authenticated.init();
+        {% endif %}
+    </script>
+{% endblock %}

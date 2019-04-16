@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="contact_link">
+                <source>contact_link</source>
+                <target>Contact with Milab</target>
+            </trans-unit>
+            <trans-unit id="refresh_link">
+                <source>refresh_link</source>
+                <target>Refresh</target>
+            </trans-unit>
+            <trans-unit id="_403.error_title">
+                <source>_403.error_title</source>
+                <target>Acces denied</target>
+            </trans-unit>
+            <trans-unit id="_403.error_details">
+                <source>_403.error_details</source>
+                <target>Sorry, you have not the permissions to visualize the information, in the presence of any doubt or difficulty contact with the manager will be glad to help you.</target>
+            </trans-unit>
+            <trans-unit id="_404.error_title">
+                <source>_404.error_title</source>
+                <target>Page not found</target>
+            </trans-unit>
+            <trans-unit id="_404.error_details">
+                <source>_404.error_details</source>
+                <target>Sorry, the page that you request not exist or was deleted,  in the presence of any doubt or difficulty contact with the manager will be glad to help you.</target>
+            </trans-unit>
+            <trans-unit id="_500.error_title">
+                <source>_500.error_title</source>
+                <target>Internal server error</target>
+            </trans-unit>
+            <trans-unit id="_500.error_details">
+                <source>_500.error_details</source>
+                <target>Server found an internal error and was unable to complete your request,  in the presence of any doubt or difficulty contact with the manager will be glad to help you.</target>
+            </trans-unit>
+            <trans-unit id="_503.error_title">
+                <source>_503.error_title</source>
+                <target>Sorry, we are in maintenance</target>
+            </trans-unit>
+            <trans-unit id="_503.error_details">
+                <source>_503.error_details</source>
+                <target>At present find us by carrying out improve to the system,  in the presence of any doubt or difficulty contact with the manager will be glad to help you.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

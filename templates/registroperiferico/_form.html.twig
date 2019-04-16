@@ -1,0 +1,63 @@
+{{ form_start(form,{'attr':{
+    'id': form_id|default('registroperiferico_new'),
+    'class': 'm-form m-form--state'
+}}) }}
+<div class="modal-body" id="modal-body">
+    <div class="row m--margin-top-20">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.periferico) }}
+                </label>
+                <div>
+                    {{ form_widget(form.periferico) }}
+                    {{ form_errors(form.periferico) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.pieza) }}
+                </label>
+                <div>
+                    {{ form_widget(form.pieza) }}
+                    {{ form_errors(form.pieza) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m--margin-top-20">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.propiedad) }}
+                </label>
+                <div>
+                    {{ form_widget(form.propiedad) }}
+                    {{ form_errors(form.propiedad) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.valor) }}
+                </label>
+                <div>
+                    {{ form_widget(form.valor) }}
+                    {{ form_errors(form.valor) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary ladda-button" data-style="expand-right" type="submit">
+        <i class="flaticon-edit"></i>
+        <span class="ladda-label">{{ action |default('save_button')|trans }}</span>
+        <span class="ladda-spinner"></span>
+    </button>
+</div>
+{{ form_end(form) }}

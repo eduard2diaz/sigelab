@@ -1,0 +1,39 @@
+<li class="m-nav__item m-topbar__languages m-dropdown m-dropdown--small m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--mobile-full-width" m-dropdown-toggle="click" aria-expanded="true">
+    <a href="#" class="m-nav__link m-dropdown__toggle">
+												<span class="m-nav__link-text">
+													<img class="m-topbar__language-selected-img" src="{{ asset('assets/template/app/media/img/flags/'~app.request.locale~'.svg') }}">
+												</span>
+    </a>
+    <div class="m-dropdown__wrapper" style="z-index: 101;">
+        <span class="m-dropdown__arrow" style="left: auto; right: 5px;"></span>
+        <div class="m-dropdown__inner">
+            <div class="m-dropdown__header m--align-center user_notification">
+                <span class="m-dropdown__header-subtitle">{{ 'language_select'|trans }}</span>
+            </div>
+            <div class="m-dropdown__body">
+                <div class="m-dropdown__content">
+                    <ul class="m-nav m-nav--skin-light">
+                        <li class="m-nav__item">
+                            <a href="{{ path('translate',{'language':'en'}) }}" class="m-nav__link">
+                                <span class="m-nav__link-icon"><img class="m-topbar__language-img" src="{{ asset('assets/template/app/media/img/flags/en.svg') }}"></span>
+                                <span class="m-nav__link-title m-topbar__language-text m-nav__link-text">English</span>
+                            </a>
+                        </li>
+                        <li class="m-nav__item">
+                            <a href="{{ path('translate',{'language':'es'}) }}" class="m-nav__link">
+                                <span class="m-nav__link-icon"><img class="m-topbar__language-img" src="{{ asset('assets/template/app/media/img/flags/es.svg') }}"></span>
+                                <span class="m-nav__link-title m-topbar__language-text m-nav__link-text">Español</span>
+                            </a>
+                        </li>
+                        <li class="m-nav__item">
+                            <a href="{{ path('translate',{'language':'fr'}) }}" class="m-nav__link">
+                                <span class="m-nav__link-icon"><img class="m-topbar__language-img" src="{{ asset('assets/template/app/media/img/flags/fr.svg') }}"></span>
+                                <span class="m-nav__link-title m-topbar__language-text m-nav__link-text">Français</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

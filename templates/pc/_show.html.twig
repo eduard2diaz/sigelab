@@ -1,0 +1,85 @@
+<div class="modal-dialog modal-full">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">{{ 'pc_details'|trans }}</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        </div>
+        <div class="modal-body">
+            <div class="portlet light bordered">
+                <div class="portlet-title tabbable-line">
+                    <div class="caption">
+                        <i class="icon-share font-dark"></i>
+                        <span class="caption-subject font-dark bold uppercase">{{ 'pc_details_header'|trans }}</span>
+                    </div>
+                    <ul class="nav nav-tabs m-tabs-line m-tabs-line--primary m-tabs-line--2x" role="tablist">
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link active show" data-toggle="tab" href="#portlet_tab2"><i class="la la-info-circle"></i>{{ 'general'|trans }}</a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#portlet_tab1"><i class="la la-list"></i>{{ 'properties'|trans }}</a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#portlet_tab3"><i class="la la-battery-three-quarters"></i>{{ 'pieces'|trans }}</a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#portlet_tab4"><i class="la la-keyboard-o"></i>{{ 'peripherals'|trans }}</a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#portlet_tab5"><i class="la la-gear"></i>{{ 'reparations'|trans }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="portlet-body">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="portlet_tab5">
+                            <div>
+                                <p class="text-center">{{ 'pc_details_loadreparations_message'|trans }}</p>
+                                <a class="btn btn-primary active ladda-button text-uppercase font-weight-bold" data-style="expand-right" style="margin-left: 40%" id="cargar_reparacion" data-href="{{ path('reparacion_index.'~app.request.locale,{'id':pc.id}) }}"><i class="fa fa-wrench"></i> {{ 'pc_details_loadreparations_button'|trans }}</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="portlet_tab3">
+                            <div>
+                                <p class="text-center">{{ 'pc_details_loadpieces_message'|trans }}</p>
+                                <a class="btn btn-primary active ladda-button text-uppercase font-weight-bold" data-style="expand-right" style="margin-left: 40%" id="cargar_registropieza" data-href="{{ path('registropieza_index.'~app.request.locale,{'pc':pc.id}) }}"><i class="fa fa-microchip"></i> {{ 'pc_details_loadpieces_button'|trans }}</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="portlet_tab1">
+                            <div>
+                                <p class="text-center">{{ 'pc_details_loadproperties_message'|trans }}</p>
+                                <a class="btn btn-primary active ladda-button text-uppercase font-weight-bold" data-style="expand-right" style="margin-left: 40%" id="cargar_registropropiedad" data-href="{{ path('registropropiedad_index.'~app.request.locale,{'pc':pc.id}) }}"><i class="fa fa-th"></i> {{ 'pc_details_loadproperties_button'|trans }}</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="portlet_tab4">
+                            <div>
+                                <p class="text-center"> {{ 'pc_details_loadperipherals_message'|trans }}</p>
+                                <a class="btn btn-primary active ladda-button text-uppercase font-weight-bold" data-style="expand-right" style="margin-left: 40%" id="cargar_registroperiferico" data-href="{{ path('registroperiferico_index.'~app.request.locale,{'pc':pc.id}) }}"><i class="fa fa-print"></i> {{ 'pc_details_loadperipherals_button'|trans }}</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id="portlet_tab2">
+                            <ul class="nav nav-pills">
+                                    <li class="nav-item m-tabs__item">
+                                        <a class="btn btn-sm btn-primary text-uppercase font-weight-bold active" id="editar_pc" data-href="{{ path('pc_edit',{'id':pc.id}) }}">
+                                            <i class="flaticon-edit-1"></i> {{ 'edit' |trans }}
+                                        </a>
+                                    </li>
+                                <li class="nav-item m-tabs__item">
+                                    <a class="btn btn-sm btn-default" href="{{ path('pc_exportar',{'id':pc.id}) }}">
+                                        <i class="flaticon-file-1"></i>{{ 'export' |trans }}
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <div id="pc_info">
+                                {% include 'pc/_info.html.twig' %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-sm btn-primary" data-dismiss="modal">{{ 'close'|trans }}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+{{ form_start(form,{'attr':{
+    'id': form_id|default('laboratorio_new'),
+    'class': 'm-form m-form--state'
+}}) }}
+<div class="modal-body" id="modal-body">
+    <div class="row pull-right">
+        <span class="m-switch m-switch--icon m-switch--success">
+				<label>
+					{{ form_widget(form.enfuncionamiento) }}
+                <span></span>
+			</label>
+			</span>
+        {{ form_errors(form.enfuncionamiento) }}
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.nombre) }}
+                </label>
+                <div>
+                    {{ form_widget(form.nombre) }}
+                    {{ form_errors(form.nombre) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.facultad) }}
+                </label>
+                <div>
+                    {{ form_widget(form.facultad) }}
+                    {{ form_errors(form.facultad) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary ladda-button" data-style="expand-right"
+            type="submit"><i class="flaticon-edit"></i> {{ action |default('save_button')|trans }}</button>
+</div>
+{{ form_end(form) }}
+

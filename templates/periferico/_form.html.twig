@@ -1,0 +1,62 @@
+{{ form_start(form,{'attr':{
+    'id': form_id|default('periferico_new'),
+    'class': 'm-form m-form--state'
+}}) }}
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.nombre) }}
+                </label>
+                <div>
+                    {{ form_widget(form.nombre) }}
+                    {{ form_errors(form.nombre) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.tipo) }}
+                </label>
+                <div>
+                    {{ form_widget(form.tipo) }}
+                    {{ form_errors(form.tipo) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m--margin-top-20">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.idpropiedad) }}
+                </label>
+                <div>
+                    {{ form_widget(form.idpropiedad) }}
+                    {{ form_errors(form.idpropiedad) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.idpieza) }}
+                </label>
+                <div>
+                    {{ form_widget(form.idpieza) }}
+                    {{ form_errors(form.idpieza) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary  ladda-button" data-style="expand-right" type="submit"><i class="flaticon-edit"></i> {{ action |default('save_button')|trans }}</button>
+</div>
+{{ form_end(form) }}
+
+
+

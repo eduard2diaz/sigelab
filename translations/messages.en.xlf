@@ -1,0 +1,1010 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <!--INICIO DEL HEADER-->
+            <trans-unit id="profile_link">
+                <source>profile_link</source>
+                <target>Profile</target>
+            </trans-unit>
+            <trans-unit id="faculty">
+                <source>faculty</source>
+                <target>Faculty</target>
+            </trans-unit>
+            <trans-unit id="user">
+                <source>user</source>
+                <target>User</target>
+            </trans-unit>
+            <trans-unit id="logout_link">
+                <source>logout_link</source>
+                <target>Logout</target>
+            </trans-unit>
+            <trans-unit id="pc">
+                <source>pc</source>
+                <target>Pc</target>
+            </trans-unit>
+            <trans-unit id="pcs">
+                <source>pcs</source>
+                <target>Pcs</target>
+            </trans-unit>
+            <trans-unit id="laboratory">
+                <source>laboratory</source>
+                <target>Laboratory</target>
+            </trans-unit>
+            <trans-unit id="property">
+                <source>property</source>
+                <target>Property</target>
+            </trans-unit>
+            <trans-unit id="peripheral">
+                <source>peripheral</source>
+                <target>Peripheral</target>
+            </trans-unit>
+            <trans-unit id="piece">
+                <source>piece</source>
+                <target>Piece</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair">
+                <source>typeofrepair</source>
+                <target>Type of repair</target>
+            </trans-unit>
+            <trans-unit id="reservations">
+                <source>reservations</source>
+                <target>Reservations</target>
+            </trans-unit>
+            <!--INICIO DEL FOOTER-->
+            <trans-unit id="account">
+                <source>account</source>
+                <target>Account</target>
+            </trans-unit>
+            <trans-unit id="account_management">
+                <source>account_management</source>
+                <target>Manage your account</target>
+            </trans-unit>
+            <trans-unit id="principles">
+                <source>principles</source>
+                <target>Milab principles</target>
+            </trans-unit>
+            <trans-unit id="accesibility">
+                <source>accesibility</source>
+                <target>Accesibility</target>
+            </trans-unit>
+            <trans-unit id="scalability">
+                <source>scalability</source>
+                <target>Scalability</target>
+            </trans-unit>
+            <trans-unit id="privacy">
+                <source>privacy</source>
+                <target>Privacy</target>
+            </trans-unit>
+            <trans-unit id="discover">
+                <source>discover</source>
+                <target>Discover</target>
+            </trans-unit>
+            <trans-unit id="university_site">
+                <source>university_site</source>
+                <target>University site</target>
+            </trans-unit>
+            <trans-unit id="email_field">
+                <source>email_field</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="news">
+                <source>news</source>
+                <target>News</target>
+            </trans-unit>
+            <trans-unit id="about">
+                <source>about</source>
+                <target>About Milab</target>
+            </trans-unit>
+            <trans-unit id="aboutus">
+                <source>aboutus</source>
+                <target>About us</target>
+            </trans-unit>
+            <trans-unit id="services">
+                <source>services</source>
+                <target>Services</target>
+            </trans-unit>
+            <trans-unit id="serviceterms">
+                <source>serviceterms</source>
+                <target>Service Terms</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy">
+                <source>cookiespolicy</source>
+                <target>Cookies Policy</target>
+            </trans-unit>
+            <trans-unit id="language_select">
+                <source>language_select</source>
+                <target>Select your language</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy">
+                <source>privacypolicy</source>
+                <target>Privacy policy</target>
+            </trans-unit>
+            <!--FIN DEL FOOTER-->
+
+            <!--INICIO DE INDEX.HTML-->
+            <trans-unit id="loginform_username_placeholder">
+                <source>loginform_username_placeholder</source>
+                <target>User or email</target>
+            </trans-unit>
+            <trans-unit id="loginform_password_placeholder">
+                <source>loginform_password_placeholder</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="loginform_rememberme_placeholder">
+                <source>loginform_rememberme_placeholder</source>
+                <target>Remember me</target>
+            </trans-unit>
+            <trans-unit id="loginform_submit_button">
+                <source>loginform_submit_button</source>
+                <target>Log in</target>
+             </trans-unit>
+            <trans-unit id="promo1_title1">
+                <source>promo1_title1</source>
+                <target>Discovering a new world</target>
+            </trans-unit>
+            <trans-unit id="promo1_title2">
+                <source>promo1_title2</source>
+                <target>beyond your computer</target>
+            </trans-unit>
+            <trans-unit id="promo1_ad1">
+                <source>promo1_ad1</source>
+                <target>More power for you</target>
+            </trans-unit>
+            <trans-unit id="promo1_ad2">
+                <source>promo1_ad2</source>
+                <target>More information about Milab</target>
+            </trans-unit>
+            <!--FIN DE INDEX.HTML-->
+
+            <!--INICIO PROPOSITO GENERAL-->
+            <trans-unit id="yes">
+                <source>yes</source>
+                <target>YES</target>
+            </trans-unit>
+            <trans-unit id="no">
+                <source>no</source>
+                <target>NO</target>
+            </trans-unit>
+            <trans-unit id="register">
+                <source>register</source>
+                <target>Register</target>
+            </trans-unit>
+            <trans-unit id="refresh">
+                <source>refresh</source>
+                <target>Refresh</target>
+            </trans-unit>
+            <trans-unit id="edit">
+                <source>edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="delete">
+                <source>delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="export">
+                <source>export</source>
+                <target>Export</target>
+            </trans-unit>
+            <trans-unit id="general">
+                <source>general</source>
+                <target>General</target>
+            </trans-unit>
+            <trans-unit id="visualize">
+                <source>visualize</source>
+                <target>Visualize</target>
+            </trans-unit>
+            <trans-unit id="row_number">
+                <source>row_number</source>
+                <target>No.</target>
+            </trans-unit>
+            <trans-unit id="name_field">
+                <source>name_field</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="state_field">
+                <source>state_field</source>
+                <target>State</target>
+            </trans-unit>
+            <trans-unit id="type_field">
+                <source>type_field</source>
+                <target>Type</target>
+            </trans-unit>
+            <trans-unit id="date_field">
+                <source>date_field</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="description_field">
+                <source>description_field</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="value_field">
+                <source>value_field</source>
+                <target>Value</target>
+            </trans-unit>
+            <trans-unit id="mac_field">
+                <source>mac_field</source>
+                <target>MAC</target>
+            </trans-unit>
+            <trans-unit id="price_field">
+                <source>price_field</source>
+                <target>Price</target>
+            </trans-unit>
+            <trans-unit id="registerby_field">
+                <source>registerby_field</source>
+                <target>Register by</target>
+            </trans-unit>
+            <trans-unit id="username_field">
+                <source>username_field</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="role_field">
+                <source>role_field</source>
+                <target>Role</target>
+            </trans-unit>
+            <trans-unit id="password_field">
+                <source>password_field</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="confirm_password_field">
+                <source>confirm_password_field</source>
+                <target>Confirm password</target>
+            </trans-unit>
+            <trans-unit id="active_field">
+                <source>active_field</source>
+                <target>Active</target>
+            </trans-unit>
+            <trans-unit id="active_yes">
+                <source>active_yes</source>
+                <target>Yes</target>
+            </trans-unit>
+            <trans-unit id="active_no">
+                <source>active_no</source>
+                <target>No</target>
+            </trans-unit>
+            <trans-unit id="close">
+                <source>close</source>
+                <target>CLOSE</target>
+            </trans-unit>
+            <trans-unit id="save_button">
+                <source>save_button</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="update_button">
+                <source>update_button</source>
+                <target>Update</target>
+            </trans-unit>
+            <trans-unit id="cancel_button">
+                <source>cancel_button</source>
+                <target>Cancel</target>
+            </trans-unit>
+            <trans-unit id="confirm_button">
+                <source>confirm_button</source>
+                <target>Yes, I am sure</target>
+            </trans-unit>
+            <trans-unit id="student">
+                <source>student</source>
+                <target>Student</target>
+            </trans-unit>
+            <trans-unit id="professor">
+                <source>professor</source>
+                <target>Professor</target>
+            </trans-unit>
+            <trans-unit id="startdate_field">
+                <source>startdate_field</source>
+                <target>Start date</target>
+            </trans-unit>
+            <trans-unit id="enddate_field">
+                <source>enddate_field</source>
+                <target>End date</target>
+            </trans-unit>
+            <trans-unit id="loading">
+                <source>loading</source>
+                <target>Loading</target>
+            </trans-unit>
+            <trans-unit id="errormessaje_title">
+                <source>errormessaje_title</source>
+                <target>Error</target>
+            </trans-unit>
+            <trans-unit id="errormessaje_body">
+                <source>errormessaje_body</source>
+                <target>An error has occurred, press Refresh ('f5') to reload the page</target>
+            </trans-unit>
+            <trans-unit id="list">
+                <source>list</source>
+                <target>List</target>
+            </trans-unit>
+            <!--FIN PROPOSITO GENERAL-->
+
+            <!--INICIO FACULTAD-->
+            <trans-unit id="facultys">
+                <source>facultys</source>
+                <target>Facultys</target>
+            </trans-unit>
+            <trans-unit id="faculty_register_tooltip">
+                <source>faculty_register_tooltip</source>
+                <target>Register a new faculty</target>
+            </trans-unit>
+            <trans-unit id="faculty_details_title">
+                <source>faculty_details_title</source>
+                <target>Faculty details</target>
+            </trans-unit>
+            <trans-unit id="laboratory_access_field">
+                <source>laboratory_access_field</source>
+                <target>Laboratories with access</target>
+            </trans-unit>
+            <trans-unit id="faculty_new_title">
+                <source>faculty_new_title</source>
+                <target>New faculty</target>
+            </trans-unit>
+            <trans-unit id="faculty_edit_title">
+                <source>faculty_edit_title</source>
+                <target>Edit faculty</target>
+            </trans-unit>
+            <trans-unit id="faculty_name_placeholder">
+                <source>faculty_name_placeholder</source>
+                <target>Write the name of faculty</target>
+            </trans-unit>
+            <trans-unit id="faculty_laboratory_help">
+                <source>faculty_laboratory_help</source>
+                <target>What are these laboratories?</target>
+            </trans-unit>
+            <trans-unit id="faculty_laboratory_explain">
+                <source>faculty_laboratory_explain</source>
+                <target>They are these laboratories that students and profesors can use in this or other faculty</target>
+            </trans-unit>
+            <trans-unit id="faculty_register_successfully">
+                <source>faculty_register_successfully</source>
+                <target>The faculty was register successfully</target>
+            </trans-unit>
+            <trans-unit id="faculty_update_successfully">
+                <source>faculty_update_successfully</source>
+                <target>The faculty was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="faculty_delete_successfully">
+                <source>faculty_delete_successfully</source>
+                <target>The faculty was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="faculty_delete_title">
+                <source>faculty_delete_title</source>
+                <target>Delete faculty</target>
+            </trans-unit>
+            <trans-unit id="faculty_delete_message">
+                <source>faculty_delete_message</source>
+                <target>Are you sure that you want delete this faculty?</target>
+            </trans-unit>
+            <!--FIN FACULTAD-->
+
+            <!--INICIO LABORATORIO-->
+            <trans-unit id="laboratories">
+                <source>laboratories</source>
+                <target>Laboratories</target>
+            </trans-unit>
+            <trans-unit id="laboratory_register_tooltip">
+                <source>laboratory_register_tooltip</source>
+                <target>Register a new laboratory</target>
+            </trans-unit>
+            <trans-unit id="laboratory_new_title">
+                <source>laboratory_new_title</source>
+                <target>New laboratory</target>
+            </trans-unit>
+            <trans-unit id="laboratory_edit_title">
+                <source>laboratory_edit_title</source>
+                <target>Edit laboratory</target>
+            </trans-unit>
+            <trans-unit id="functioning_field">
+                <source>functioning_field</source>
+                <target>Functioning</target>
+            </trans-unit>
+            <trans-unit id="laboratory_name_placeholder">
+                <source>laboratory_name_placeholder</source>
+                <target>Write the name of laboratory</target>
+            </trans-unit>
+            <trans-unit id="laboratory_register_successfully">
+                <source>laboratory_register_successfully</source>
+                <target>The laboratory was register successfully</target>
+            </trans-unit>
+            <trans-unit id="laboratory_update_successfully">
+                <source>laboratory_update_successfully</source>
+                <target>The laboratory was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="laboratory_delete_successfully">
+                <source>laboratory_delete_successfully</source>
+                <target>The laboratory was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="laboratory_delete_title">
+                <source>laboratory_delete_title</source>
+                <target>Delete laboratory</target>
+            </trans-unit>
+            <trans-unit id="laboratory_delete_message">
+                <source>laboratory_delete_message</source>
+                <target>Are you sure that you want delete this laboratory?</target>
+            </trans-unit>
+            <!--FIN LABORATORIO-->
+
+
+            <!--INICIO PC-->
+            <trans-unit id="pc_register_tooltip">
+                <source>pc_register_tooltip</source>
+                <target>Register a new pc</target>
+            </trans-unit>
+            <trans-unit id="pc_new_title">
+                <source>pc_new_title</source>
+                <target>New pc</target>
+            </trans-unit>
+            <trans-unit id="pc_edit_title">
+                <source>pc_edit_title</source>
+                <target>Edit pc</target>
+            </trans-unit>
+            <trans-unit id="pc_register_successfully">
+                <source>pc_register_successfully</source>
+                <target>The pc was register successfully</target>
+            </trans-unit>
+            <trans-unit id="pc_update_successfully">
+                <source>pc_update_successfully</source>
+                <target>The pc was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="pc_delete_successfully">
+                <source>pc_delete_successfully</source>
+                <target>The pc was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="pc_delete_title">
+                <source>pc_delete_title</source>
+                <target>Delete pc</target>
+            </trans-unit>
+            <trans-unit id="pc_delete_message">
+                <source>pc_delete_message</source>
+                <target>Are you sure that you want delete this pc?</target>
+            </trans-unit>
+            <trans-unit id="pc_name">
+                <source>pc_name</source>
+                <target>Number/name</target>
+            </trans-unit>
+            <trans-unit id="pc_name_placeholder">
+                <source>pc_name_placeholder</source>
+                <target>Write the number of pc</target>
+            </trans-unit>
+            <trans-unit id="pc_state_exploitation">
+                <source>pc_state_exploitation</source>
+                <target>Exploitation</target>
+            </trans-unit>
+            <trans-unit id="pc_state_pendingmaintenance">
+                <source>pc_state_pendingmaintenance</source>
+                <target>Pending maintenance</target>
+            </trans-unit>
+            <trans-unit id="pc_state_pendingcancel">
+                <source>pc_state_pendingcancel</source>
+                <target>Pending cancel</target>
+            </trans-unit>
+            <trans-unit id="pc_details">
+                <source>pc_details</source>
+                <target>Pc details</target>
+            </trans-unit>
+            <trans-unit id="pc_details_header">
+                <source>pc_details_header</source>
+                <target>Properties and peripherals</target>
+            </trans-unit>
+
+            <trans-unit id="pc_details_loadproperties_button">
+                <source>pc_details_loadproperties_button</source>
+                <target>Load properties</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadproperties_message">
+                <source>pc_details_loadproperties_message</source>
+                <target>Register properties of computer: name, ip, model, etc.</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadpieces_button">
+                <source>pc_details_loadpieces_button</source>
+                <target>Load pieces</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadpieces_message">
+                <source>pc_details_loadpieces_message</source>
+                <target>Register pieces of computer: RAM, HDD, processor, etc.</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadperipherals_button">
+                <source>pc_details_loadperipherals_button</source>
+                <target>Load peripherals</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadperipherals_message">
+                <source>pc_details_loadperipherals_message</source>
+                <target>Register peripherals of computer: printers, speakers, monitors, etc.</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadreparations_button">
+                <source>pc_details_loadreparations_button</source>
+                <target>Load reparations</target>
+            </trans-unit>
+            <trans-unit id="pc_details_loadreparations_message">
+                <source>pc_details_loadreparations_message</source>
+                <target>Register reparations of computer, any cange of piece or component.</target>
+            </trans-unit>
+            <!--FIN PC-->
+
+
+            <!--INICIO PROPIEDAD-->
+            <trans-unit id="property_register_tooltip">
+                <source>property_register_tooltip</source>
+                <target>Register a new property</target>
+            </trans-unit>
+            <trans-unit id="properties">
+                <source>properties</source>
+                <target>Properties</target>
+            </trans-unit>
+            <trans-unit id="property_new_title">
+                <source>property_new_title</source>
+                <target>New property</target>
+            </trans-unit>
+            <trans-unit id="property_name_placeholder">
+                <source>property_name_placeholder</source>
+                <target>Write the name of the propety</target>
+            </trans-unit>
+            <trans-unit id="property_edit_title">
+                <source>property_edit_title</source>
+                <target>Edit property</target>
+            </trans-unit>
+            <trans-unit id="property_register_successfully">
+                <source>property_register_successfully</source>
+                <target>The property was register successfully</target>
+            </trans-unit>
+            <trans-unit id="property_update_successfully">
+                <source>property_update_successfully</source>
+                <target>The property was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="property_delete_successfully">
+                <source>property_delete_successfully</source>
+                <target>The property was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="property_delete_title">
+                <source>property_delete_title</source>
+                <target>Delete property</target>
+            </trans-unit>
+            <trans-unit id="property_delete_message">
+                <source>property_delete_message</source>
+                <target>Are you sure that you want delete this property?</target>
+            </trans-unit>
+            <!--FIN DE PROPIEDAD-->
+
+            <!--INICIO DE TIPO DE PREPARACION-->
+            <trans-unit id="typeofrepair_register_tooltip">
+                <source>typeofrepair_register_tooltip</source>
+                <target>Register a new type of repair</target>
+            </trans-unit>
+            <trans-unit id="typeofrepairs">
+                <source>typeofrepairs</source>
+                <target>Type of repairs</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_new_title">
+                <source>typeofrepair_new_title</source>
+                <target>New type of repair</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_name_placeholder">
+                <source>typeofrepair_name_placeholder</source>
+                <target>Write the name of the type of repair</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_edit_title">
+                <source>typeofrepair_edit_title</source>
+                <target>Edit type of repair</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_register_successfully">
+                <source>typeofrepair_register_successfully</source>
+                <target>The type of repair was register successfully</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_update_successfully">
+                <source>typeofrepair_update_successfully</source>
+                <target>The type of repair was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_delete_successfully">
+                <source>typeofrepair_delete_successfully</source>
+                <target>The type of repair was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_delete_title">
+                <source>typeofrepair_delete_title</source>
+                <target>Delete type of repair</target>
+            </trans-unit>
+            <trans-unit id="typeofrepair_delete_message">
+                <source>typeofrepair_delete_message</source>
+                <target>Are you sure that you want delete this type of repair?</target>
+            </trans-unit>
+            <!--FIN DE TIPO DE PREPARACION-->
+
+
+            <!--INICIO PIEZA-->
+            <trans-unit id="piece_register_tooltip">
+                <source>piece_register_tooltip</source>
+                <target>Register a new piece</target>
+            </trans-unit>
+            <trans-unit id="pieces">
+                <source>pieces</source>
+                <target>Pieces</target>
+            </trans-unit>
+            <trans-unit id="piece_new_title">
+                <source>piece_new_title</source>
+                <target>New piece</target>
+            </trans-unit>
+            <trans-unit id="piece_name_placeholder">
+                <source>piece_name_placeholder</source>
+                <target>Write the name of the piece</target>
+            </trans-unit>
+            <trans-unit id="piece_edit_title">
+                <source>piece_edit_title</source>
+                <target>Edit piece</target>
+            </trans-unit>
+            <trans-unit id="piece_register_successfully">
+                <source>piece_register_successfully</source>
+                <target>The piece was register successfully</target>
+            </trans-unit>
+            <trans-unit id="piece_update_successfully">
+                <source>piece_update_successfully</source>
+                <target>The piece was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="piece_delete_successfully">
+                <source>piece_delete_successfully</source>
+                <target>The piece was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="piece_delete_title">
+                <source>piece_delete_title</source>
+                <target>Delete piece</target>
+            </trans-unit>
+            <trans-unit id="piece_delete_message">
+                <source>piece_delete_message</source>
+                <target>Are you sure that you want delete this piece?</target>
+            </trans-unit>
+            <trans-unit id="piece_details">
+                <source>piece_details</source>
+                <target>Piece details</target>
+            </trans-unit>
+            <trans-unit id="piece_form_property_error">
+                <source>piece_form_property_error</source>
+                <target>Select one or more properties</target>
+            </trans-unit>
+            <!--FIN DE PIEZA-->
+
+            <!--INICIO PERIFERICO-->
+            <trans-unit id="peripheral_register_tooltip">
+                <source>peripheral_register_tooltip</source>
+                <target>Register a new peripheral</target>
+            </trans-unit>
+            <trans-unit id="peripherals">
+                <source>peripherals</source>
+                <target>Peripherals</target>
+            </trans-unit>
+            <trans-unit id="peripheral_new_title">
+                <source>peripheral_new_title</source>
+                <target>New peripheral</target>
+            </trans-unit>
+            <trans-unit id="peripheral_name_placeholder">
+                <source>peripheral_name_placeholder</source>
+                <target>Write the name of the peripheral</target>
+            </trans-unit>
+            <trans-unit id="peripheral_edit_title">
+                <source>peripheral_edit_title</source>
+                <target>Edit peripheral</target>
+            </trans-unit>
+            <trans-unit id="peripheral_register_successfully">
+                <source>peripheral_register_successfully</source>
+                <target>The peripheral was register successfully</target>
+            </trans-unit>
+            <trans-unit id="peripheral_update_successfully">
+                <source>peripheral_update_successfully</source>
+                <target>The peripheral was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="peripheral_delete_successfully">
+                <source>peripheral_delete_successfully</source>
+                <target>The peripheral was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="peripheral_delete_title">
+                <source>peripheral_delete_title</source>
+                <target>Delete peripheral</target>
+            </trans-unit>
+            <trans-unit id="peripheral_delete_message">
+                <source>peripheral_delete_message</source>
+                <target>Are you sure that you want delete this peripheral?</target>
+            </trans-unit>
+            <trans-unit id="peripheral_type_in">
+                <source>peripheral_type_in</source>
+                <target>In</target>
+            </trans-unit>
+            <trans-unit id="peripheral_type_out">
+                <source>peripheral_type_out</source>
+                <target>Out</target>
+            </trans-unit>
+            <trans-unit id="peripheral_type_inout">
+                <source>peripheral_type_inout</source>
+                <target>In-Out</target>
+            </trans-unit>
+            <trans-unit id="peripheral_type_storage">
+                <source>peripheral_type_storage</source>
+                <target>Storage</target>
+            </trans-unit>
+            <trans-unit id="peripheral_details">
+                <source>peripheral_details</source>
+                <target>Peripheral details</target>
+            </trans-unit>
+            <!--FIN DE PERIFERICO-->
+
+            <!--INICIO  DE RESERVACION-->
+            <trans-unit id="reservation_register_tooltip">
+                <source>reservation_register_tooltip</source>
+                <target>Register a new reservation</target>
+            </trans-unit>
+            <trans-unit id="reservation_new_title">
+                <source>reservation_new_title</source>
+                <target>New reservation</target>
+            </trans-unit>
+            <trans-unit id="reservation_edit_title">
+                <source>reservation_edit_title</source>
+                <target>Edit reservation</target>
+            </trans-unit>
+            <trans-unit id="reservation_register_successfully">
+                <source>reservation_register_successfully</source>
+                <target>The reservation was register successfully</target>
+            </trans-unit>
+            <trans-unit id="reservation_update_successfully">
+                <source>reservation_update_successfully</source>
+                <target>The reservation was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="reservation_delete_successfully">
+                <source>reservation_delete_successfully</source>
+                <target>The reservation was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="reservation_delete_title">
+                <source>reservation_delete_title</source>
+                <target>Delete reservation</target>
+            </trans-unit>
+            <trans-unit id="reservation_delete_message">
+                <source>reservation_delete_message</source>
+                <target>Are you sure that you want delete this reservation?</target>
+            </trans-unit>
+            <!--FIN DE RESERVACION-->
+
+            <!--INICIO  DE RESERVACION LABORATORIO-->
+            <trans-unit id="reservationlaboratorio_error_laboratorio_blank">
+                <source>reservationlaboratorio_error_laboratorio_blank</source>
+                <target>Please, select a laboratory</target>
+            </trans-unit>
+            <trans-unit id="reservationlaboratorio_error_startdate_superior">
+                <source>reservationlaboratorio_error_startdate_superior</source>
+                <target>The end date must be greater than or equal to the start date</target>
+            </trans-unit>
+            <trans-unit id="reservationlaboratorio_error_time_check">
+                <source>reservationlaboratorio_error_time_check</source>
+                <target>Check the time.</target>
+            </trans-unit>
+            <trans-unit id="reservationlaboratorio_error_range_existe">
+                <source>reservationlaboratorio_error_range_existe(%laboratorio%,%from%,%to%)</source>
+                <target>Exist a reservation for laboratory %laboratorio% between dates %from% and %to%</target>
+            </trans-unit>
+            <!--FIN  DE RESERVACION LABORATORIO-->
+
+            <!--INICIO  DE RESERVACION PC-->
+            <trans-unit id="reservation_error_noavailablepc">
+                <source>reservation_error_noavailablepc</source>
+                <target>No available pcs found</target>
+            </trans-unit>
+            <trans-unit id="reservacionpc_error_userjustreserv">
+                <source>reservacionpc_error_userjustreserv</source>
+                <target>You just has a reservation for today</target>
+            </trans-unit>
+            <!--FIN  DE RESERVACION PC-->
+
+            <!--INICIO  DE REGISTRO PIEZA-->
+             <trans-unit id="pieceregister_form_piece_placeholder">
+                 <source>pieceregister_form_piece_placeholder</source>
+                 <target>Select a piece</target>
+             </trans-unit>
+             <trans-unit id="pieceregister_form_piece_error">
+                 <source>pieceregister_form_piece_error</source>
+                 <target>Please,select a piece</target>
+             </trans-unit>
+             <trans-unit id="loading_properties">
+                 <source>loading_properties</source>
+                 <target>Loading properties</target>
+             </trans-unit>
+            <!--FIN  DE REGISTRO PIEZA-->
+
+            <!--INICIO  DE REGISTRO PERIFERICO-->
+            <trans-unit id="peripheralregister_form_peripheral_placeholder">
+                <source>peripheralregister_form_peripheral_placeholder</source>
+                <target>Select a peripheral</target>
+            </trans-unit>
+            <trans-unit id="peripheralregister_form_peripheral_error">
+                <source>peripheralregister_form_peripheral_error</source>
+                <target>Please, select a peripheral</target>
+            </trans-unit>
+            <trans-unit id="loading_pieces">
+                <source>loading_pieces</source>
+                <target>Loading pieces</target>
+            </trans-unit>
+            <trans-unit id="loading_pieceproperties">
+                <source>loading_pieceproperties</source>
+                <target>Loading piece properties</target>
+            </trans-unit>
+            <!--FIN  DE REGISTRO PERIFERICO-->
+
+            <!--INICIO  DE REPARACION PC-->
+            <trans-unit id="reparations">
+                <source>reparations</source>
+                <target>Reparations</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_register_tooltip">
+                <source>reparationpc_register_tooltip</source>
+                <target>Register a new reparation</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_new_title">
+                <source>reparationpc_new_title</source>
+                <target>New reparation</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_edit_title">
+                <source>reparationpc_edit_title</source>
+                <target>Edit reparation</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_register_successfully">
+                <source>reparationpc_register_successfully</source>
+                <target>The reparation was register successfully</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_update_successfully">
+                <source>reparationpc_update_successfully</source>
+                <target>The reparation was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_delete_successfully">
+                <source>reparationpc_delete_successfully</source>
+                <target>The reparation was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_delete_title">
+                <source>reparationpc_delete_title</source>
+                <target>Delete reparation</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_delete_message">
+                <source>reparationpc_delete_message</source>
+                <target>Are you sure that you want delete this reparation?</target>
+            </trans-unit>
+            <trans-unit id="reparationpc_details">
+                <source>reparationpc_details</source>
+                <target>Reparation details</target>
+            </trans-unit>
+            <!--FIN  DE REPARACION PC-->
+
+            <!--INICIO USUARIO-->
+            <trans-unit id="users">
+                <source>users</source>
+                <target>Users</target>
+            </trans-unit>
+            <trans-unit id="user_register_tooltip">
+                <source>user_register_tooltip</source>
+                <target>Register a new user</target>
+            </trans-unit>
+            <trans-unit id="user_new_title">
+                <source>user_new_title</source>
+                <target>New user</target>
+            </trans-unit>
+            <trans-unit id="user_edit_title">
+                <source>user_edit_title</source>
+                <target>Edit user</target>
+            </trans-unit>
+            <trans-unit id="user_details">
+                <source>user_details</source>
+                <target>User details</target>
+            </trans-unit>
+            <trans-unit id="surname_field">
+                <source>surname_field</source>
+                <target>Surname</target>
+            </trans-unit>
+            <trans-unit id="email_field_help">
+                <source>email_field_help</source>
+                <target>Made sure to add a valid email address.</target>
+            </trans-unit>
+            <trans-unit id="faculty_field_select">
+                <source>faculty_field_select</source>
+                <target>Select a faculty</target>
+            </trans-unit>
+            <trans-unit id="confirm_password_field_error">
+                <source>confirm_password_field_error</source>
+                <target>Both password must match</target>
+            </trans-unit>
+
+
+            <trans-unit id="user_register_successfully">
+                <source>user_register_successfully</source>
+                <target>The user was register successfully</target>
+            </trans-unit>
+            <trans-unit id="user_update_successfully">
+                <source>user_update_successfully</source>
+                <target>The user was updated successfully</target>
+            </trans-unit>
+            <trans-unit id="user_delete_successfully">
+                <source>user_delete_successfully</source>
+                <target>The user was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="user_delete_title">
+                <source>user_delete_title</source>
+                <target>Delete user</target>
+            </trans-unit>
+            <trans-unit id="user_delete_message">
+                <source>user_delete_message</source>
+                <target>Are you sure that you want delete this user?</target>
+            </trans-unit>
+            <trans-unit id="user_form_rol_error_blank">
+                <source>user_form_rol_error_blank</source>
+                <target>Select one or more rols</target>
+            </trans-unit>
+            <trans-unit id="user_form_rol_error_incompatibility">
+                <source>user_form_rol_error_incompatibility</source>
+                <target>The user can be technical or Head of technicians but not both of them</target>
+            </trans-unit>
+            <!--FIN USUARIO-->
+             <!--INICIO MENSAJE-->
+            <trans-unit id="message">
+                <source>message</source>
+                <target>Message</target>
+            </trans-unit>
+            <trans-unit id="messages">
+                <source>messages</source>
+                <target>Messages</target>
+            </trans-unit>
+            <trans-unit id="viewall">
+                <source>viewall</source>
+                <target>View all</target>
+            </trans-unit>
+            <trans-unit id="sendmessage">
+                <source>sendmessage</source>
+                <target>send message</target>
+            </trans-unit>
+            <trans-unit id="message_register_tooltip">
+                <source>message_register_tooltip</source>
+                <target>Register a new message</target>
+            </trans-unit>
+            <trans-unit id="message_inbox_received">
+                <source>message_inbox_received</source>
+                <target>Received</target>
+            </trans-unit>
+            <trans-unit id="message_inbox_sended">
+                <source>message_inbox_sended</source>
+                <target>Sended</target>
+            </trans-unit>
+            <trans-unit id="message_new_title">
+                <source>message_new_title</source>
+                <target>New message</target>
+            </trans-unit>
+            <trans-unit id="message_fromfield">
+                <source>message_fromfield</source>
+                <target>From</target>
+            </trans-unit>
+            <trans-unit id="message_tofield">
+                <source>message_tofield</source>
+                <target>To</target>
+            </trans-unit>
+            <trans-unit id="message_tofield_placeholder">
+                <source>message_tofield_placeholder</source>
+                <target>Write the name of destiniers</target>
+            </trans-unit>
+            <trans-unit id="message_messagefield_placeholder">
+                <source>message_messagefield_placeholder</source>
+                <target>Write content of message</target>
+            </trans-unit>
+            <trans-unit id="message_details">
+                <source>message_details</source>
+                <target>Message details</target>
+            </trans-unit>
+            <trans-unit id="message_register_successfully">
+                <source>message_register_successfully</source>
+                <target>The message was sended successfully</target>
+            </trans-unit>
+            <trans-unit id="message_delete_successfully">
+                <source>message_delete_successfully</source>
+                <target>The message was deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="message_delete_title">
+                <source>message_delete_title</source>
+                <target>Delete message</target>
+            </trans-unit>
+            <trans-unit id="message_delete_message">
+                <source>message_delete_message</source>
+                <target>Are you sure that you want delete this message?</target>
+            </trans-unit>
+            <trans-unit id="message_header">
+                <source>Tienes 1 mensaje nuevo | Tienes %total% mensajes nuevos</source>
+                <target>You have a new message | You have %total% new messages</target>
+            </trans-unit>
+            <!--FIN MENSAJE-->
+        </body>
+    </file>
+</xliff>

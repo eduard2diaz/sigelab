@@ -1,0 +1,40 @@
+<table class="table table-hover" id="tiporeparaciontable">
+    <thead>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {%set i=1%}
+    {% for tiporeparacion in tiporeparaciones %}
+        <tr>
+            <td>{{ i }}</td>
+            <td>{{ tiporeparacion.nombre }}</td>
+            <td>
+                <ul class="nav nav-pills" >
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicion" data-href="{{ path('tiporeparacion_edit', { 'id': tiporeparacion.id }) }}">
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-danger eliminar_tiporeparacion" data-href="{{ path('tiporeparacion_delete', { 'id': tiporeparacion.id }) }}">
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
+                        </a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        {%set i=1+i%}
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>

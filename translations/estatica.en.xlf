@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <!--Plantilla _descargar-->
+            <trans-unit id="download">
+                <source>download</source>
+                <target>Download</target>
+            </trans-unit>
+            <trans-unit id="_download.parragraph">
+                <source>_download.parragraph</source>
+                <target>For obtain the Milab's source code you can:</target>
+            </trans-unit>
+            <trans-unit id="_download.downloadlist_choice1">
+                <source>_download.downloadlist_choice1</source>
+                <target>Directly download from Github (The deployment, support and update must be carried out by you personally and no difficulty in the process will be the responsibility of the university)</target>
+            </trans-unit>
+            <trans-unit id="_download.downloadlist_choice2">
+                <source>_download.downloadlist_choice2</source>
+                <target>Contacting its developers and / or executives at the Agrarian University of Havana to draw up a contract for the acquisition, maintenance and updating of the software which will be developed by specialists of the institution and any problem or error detected during the operation of the software will be duly corrected at no cost.</target>
+            </trans-unit>
+            <trans-unit id="_download.sidelist_choice1">
+                <source>_download.sidelist_choice1</source>
+                <target>Download</target>
+            </trans-unit>
+            <trans-unit id="_download.sidelist_choice2">
+                <source>_download.sidelist_choice2</source>
+                <target>Deployment</target>
+            </trans-unit>
+            <trans-unit id="_download.sidelist_choice3">
+                <source>_download.sidelist_choice3</source>
+                <target>Support</target>
+            </trans-unit>
+            <trans-unit id="_download.sidelist_choice4">
+                <source>_download.sidelist_choice4</source>
+                <target>Update</target>
+            </trans-unit>
+            <!--Fin de la plantilla-->
+            <!--Pagina aboutus-->
+            <trans-unit id="aboutus.question1">
+                <source>aboutus.question1</source>
+                <target>What's Milab?</target>
+            </trans-unit>
+            <trans-unit id="aboutus.response1">
+                <source>aboutus.response1</source>
+                <target>Milab is a web application developed by the Agrarian University of Havana in order to allow institutions and work centers to control the hardware of all their computing means. It is a collaborative and free application for this reason other developers can collaborate with improvements and updates of the software, as long as they are made without profit and socialize with the whole community.</target>
+            </trans-unit>
+            <trans-unit id="aboutus.question2">
+                <source>aboutus.question2</source>
+                <target>What's its licencia?</target>
+            </trans-unit>
+            <trans-unit id="aboutus.response2">
+                <source>aboutus.response2</source>
+                <target>This system uses the MIT license, for this reason its source code is free and free, without profit motive. In addition anyone who uses this software in your company or work center like any developer who takes it as a basis for the preparation of other similar software just enough to stand out in your new proposal who took the original idea, etc.</target>
+            </trans-unit>
+            <!--Fin de Pagina aboutus-->
+            <!--Pagina de accesibilidad-->
+            <trans-unit id="accesibility.header">
+                <source>accesibility.header</source>
+                <target>Terms of use</target>
+            </trans-unit>
+            <trans-unit id="accesibility.parragraph">
+                <source>accesibility.parragraph</source>
+                <target>Milab is a free application, free and available to everyone; whose sole purpose is to serve as a tool for the control and monitoring of the hardware of our institutions and work centers. For this reason it constitutes a violation of the legal terms of the same its use for any type of attack against the
+                        computer security (hacking), whether or not for ethical purposes. Milab was developed on the MIT license, so it can and should be possible shared with other companies and nonprofit institutions as long as it highlights who are the main developers.</target>
+            </trans-unit>
+            <trans-unit id="accesibility.choice1">
+                <source>accesibility.choice1</source>
+                <target>Free</target>
+            </trans-unit>
+            <trans-unit id="accesibility.choice2">
+                <source>accesibility.choice2</source>
+                <target>Gratuitous</target>
+            </trans-unit>
+            <trans-unit id="accesibility.choice3">
+                <source>accesibility.choice3</source>
+                <target>Social</target>
+            </trans-unit>
+            <!--Fin de Pagina de accesibilidad-->
+            <!--Pagina de escalabilidad-->
+            <trans-unit id="scalability.section1_header">
+                <source>scalability.section1_header</source>
+                <target>OS</target>
+            </trans-unit>
+            <trans-unit id="scalability.section1_parragraph">
+                <source>scalability.section1_parragraph</source>
+                <target>Milab is a multiplatform system, so you can deploy it in any operating system, Windows, MAC and Linux as long as you have a web server installed. And although it is optimized for linux, the processing and response times are extraordinary in any other. Although many parameters and servers are configurable, there are determining points for their deployment.</target>
+            </trans-unit>
+            <trans-unit id="scalability.section1_list.tool1">
+                <source>scalability.section1_list.tool1</source>
+                <target>PHP v7.1 or more</target>
+            </trans-unit>
+            <trans-unit id="scalability.section1_list.tool2">
+                <source>scalability.section1_list.tool2</source>
+                <target>NodeJS v10</target>
+            </trans-unit>
+            <trans-unit id="scalability.section1_list.tool3">
+                <source>scalability.section1_list.tool3</source>
+                <target>Gulp</target>
+            </trans-unit>
+            <trans-unit id="scalability.section2_header">
+                <source>scalability.section2_header</source>
+                <target>Database</target>
+            </trans-unit>
+            <trans-unit id="scalability.section2_parragraph">
+                <source>scalability.section2_parragraph</source>
+                <target>Symfony 4 in its version 4.1 was the PHP Framework on which this application was developed, for this reason you can use the relational database server of your choice, only with the small detail of adjusting the database generation strategy ; a very simple process for our specialists but in case of not having the necessary skills it can be extremely cumbersome. Milab's original source code is intended for the use of Postgresql as a database system.</target>
+            </trans-unit>
+            <trans-unit id="scalability.section3_header">
+                <source>scalability.section3_header</source>
+                <target>Web server</target>
+            </trans-unit>
+            <trans-unit id="scalability.section3_parragraph">
+                <source>scalability.section3_parragraph</source>
+                <target>It is recommended the use of nginx as a web server, because the response times are higher compared to any other. But if you want, you can use xampp, lampp or use composer to install a local server in the application itself.</target>
+            </trans-unit>
+            <trans-unit id="scalability.section4_header">
+                <source>scalability.section4_header</source>
+                <target>Update</target>
+            </trans-unit>
+            <trans-unit id="scalability.section4_parragraph1">
+                <source>scalability.section4_parragraph1</source>
+                <target>Updates of the Milab source code will only be notified to clients who previously have been hired by the university for the acquisition, deployment and support of the application. For this reason, any non-compliance identified during the exploitation of the software will not be resolved by the software development team unless it is of interest to the software or comes from a client.</target>
+            </trans-unit>
+            <trans-unit id="scalability.section4_parragraph2">
+                <source>scalability.section4_parragraph2</source>
+                <target>Any developer outside the institution can contribute to the development of the system and its recommendations will be evaluated by the development team, but it is a violation of the terms of service any improvement that is made to the original software that is not shared with the development team. and socialized with the community.</target>
+            </trans-unit>
+            <!--Fin de Pagina de escalabilidad-->
+            <!--Pagina de gestion de cuenta-->
+            <trans-unit id="accountmanagement.section1_header">
+                <source>accountmanagement.section1_header</source>
+                <target>Data conservation</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section1_explain">
+                <source>accountmanagement.section1_explain</source>
+                <target>We will keep the personal data that you provide while your account is still active or to the extent necessary to provide you with the Services. In some cases we choose to keep certain information in a depersonalized or aggregated form.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section1_details">
+                <source>accountmanagement.section1_details</source>
+                <target>We keep most of your personal information as long as you keep the account open.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section2_header">
+                <source>accountmanagement.section2_header</source>
+                <target>Right of access and control of your personal data</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section2_explain">
+                <source>accountmanagement.section2_explain</source>
+                <target>We provide numerous options to collect, use and share your data, from deleting or correcting data that you include in the profile and control the visibility of your publications to mark the option of self-exclusion for advertising and communications controls. You can access the personal information we have about you.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section2_details">
+                <source>accountmanagement.section2_details</source>
+                <target>You can access or delete your personal data. You have many options when choosing how your data is collected, used and shared.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section3_header">
+                <source>accountmanagement.section3_header</source>
+                <target>Closing the account</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section3_explainp1">
+                <source>accountmanagement.section3_explainp1</source>
+                <target>If you decide to close your account, your personal data will no longer be visible in our Services, usually within 24 hours. Normally, we delete the information from the closed accounts within a period of 30 days from the closing of the account, except in the cases mentioned below.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section3_explainp2">
+                <source>accountmanagement.section3_explainp2</source>
+                <target>We will retain your personal data even after closing the account if it is reasonably necessary to comply with our legal obligations (including requests from law enforcement), meet regulatory requirements, resolve disputes, maintain security, avoid fraud and abuse, apply our Terms of use or meet your request to unsubscribe from future messages you receive. We will keep the information depersonalized after you close your account.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section3_explainp3">
+                <source>accountmanagement.section3_explainp3</source>
+                <target>The information that you have shared with other people will continue to be seen after closing the account or having deleted the information from your own profile or mailbox, and we do not control the data that other Members have copied from our Services. The contents of Groups associated with closed accounts will show an unknown user as the owner. Your profile may continue to show up in third-party services (for example, search engine results) until they update your cache.</target>
+            </trans-unit>
+            <trans-unit id="accountmanagement.section3_details">
+                <source>accountmanagement.section3_details</source>
+                <target>We keep some of your information even after closing your account.</target>
+            </trans-unit>
+            <!--Fin de Pagina de gestion de cuenta-->
+            <!--Pagina cookiespolicy-->
+            <trans-unit id="cookiespolicy.introduction">
+                <source>cookiespolicy.introduction</source>
+                <target>At Milab, we believe that you have to be clear and open about the way we collect and use your data. To provide a higher level of transparency, this policy provides detailed information on how and when we use cookies. This Cookie Policy applies to any Milab product or service associated with this policy or that incorporates it by reference.</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.question1">
+                <source>cookiespolicy.question1</source>
+                <target>Does Milab use cookies?</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.response1">
+                <source>cookiespolicy.response1</source>
+                <target>Yes. As described in clause 1.8 of our Privacy Policy, we use cookies and other technologies to ensure that all users using Milab have the best possible experience. Cookies also help us maintain the security of accounts. When you continue to visit or use our services, you are accepting the use of cookies and similar technologies for the purposes described in this policy.</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.question2">
+                <source>cookiespolicy.question2</source>
+                <target>What is a cookie?</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.response2">
+                <source>cookiespolicy.response2</source>
+                <target>A cookie is a small file placed on your electronic device that enables the Milab functionalities. For example, cookies allow us to identify your device, ensure your access to Milab and our sites in general.</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.question3">
+                <source>cookiespolicy.question3</source>
+                <target>When does Milab place cookies?</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.response3">
+                <source>cookiespolicy.response3</source>
+                <target>We use cookies on our website and in mobile applications. Any browser that visits this website will receive our cookies.</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.question4">
+                <source>cookiespolicy.question4</source>
+                <target>What kind of cookies does Milab use?</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.response4">
+                <source>cookiespolicy.response4</source>
+                <target>We use two types: permanent cookies and session cookies. A permanent cookie helps us to recognize you as a user, so it will be easier for you to return or interact with our services without having to log in again. Once you have logged in, a permanent cookie will remain in your browser and Milab will read it when you return to one of our websites. Session cookies last only one session (usually a visit to a website or a browser session).</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.question5">
+                <source>cookiespolicy.question5</source>
+                <target>What are cookies used for?</target>
+            </trans-unit>
+            <trans-unit id="cookiespolicy.response5">
+                <source>cookiespolicy.response5</source>
+                <target>Cookies can be used to recognize you when you visit Milab, remember your preferences and offer you a personalized experience based on your configuration. Cookies also allow your interactions in Milab to be faster and safer.</target>
+            </trans-unit>
+            <!--Fin de pagina cookiespolicy-->
+            <!--Pagina de privacidad-->
+            <trans-unit id="privacy.epigraph">
+                <source>privacy.epigraph</source>
+                <target>Information we collect</target>
+            </trans-unit>
+            <trans-unit id="privacy.section1_header">
+                <source>privacy.section1_header</source>
+                <target>Uso de los Servicios</target>
+            </trans-unit>
+            <trans-unit id="privacy.section1_parragraph">
+                <source>privacy.section1_parragraph</source>
+                <target>We record usage data when you visit or otherwise use our Services, including our websites, applications and platform technology (for example, our add-ons on other websites), such as when you view or click on content ( for example, a learning video) or in advertisements (on our websites and applications or outside of them), you perform a search, install one of our mobile applications, share articles or apply for jobs. We use login logs, device information and Internet Protocol ("IP") addresses to identify you and register your use in Milab.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section1_details">
+                <source>privacy.section1_details</source>
+                <target>We register your visits and your use of our Services, including mobile applications.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section2_header">
+                <source>privacy.section2_header</source>
+                <target>Cookies, web beacons and other similar technologies.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section2_parragraph">
+                <source>privacy.section2_parragraph</source>
+                <target>As described in our Cookies Policy, we use cookies and similar technologies (for example, web beacons, pixels, ad tags and device identifiers) to recognize you and / or your device (s) in the different Services and devices. We also allow other people to use cookies in the way described in our Cookies Policy. You can control cookies through the configuration of your browser and other tools. You can also check the option of self-exclusion so that we do not use cookies or similar technologies that track your behavior on other websites for third-party advertising. Visitors can self-exclude here.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section2_details">
+                <source>privacy.section2_details</source>
+                <target>We collect data through cookies and similar technologies.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section3_header">
+                <source>privacy.section3_header</source>
+                <target>Your device and your location</target>
+            </trans-unit>
+            <trans-unit id="privacy.section3_parragraph">
+                <source>privacy.section3_parragraph</source>
+                <target>When you visit or leave our Services (including our add-ons, cookies or similar technologies on other websites), we receive the URL of the site where you arrived from and where you are going next. We also receive information about your IP address, proxy server, operating system, web browser and add-ons, the identifier and the functions of your mobile device or your mobile network operator. If you use our Services from a mobile device, that device will send us the information about your location. Most devices allow you to prevent the sending of location data and we will respect your configuration.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section3_details">
+                <source>privacy.section3_details</source>
+                <target>We receive data from your devices and networks, including location data.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section4_header">
+                <source>privacy.section4_header</source>
+                <target>Other information.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section4_parragraph">
+                <source>privacy.section4_parragraph</source>
+                <target>Our Services are dynamic and we often introduce new functions, which may require the collection of new information. If we collect very different personal data or if we greatly change the way we use your data, we will notify you and we may also modify this Privacy Policy.</target>
+            </trans-unit>
+            <trans-unit id="privacy.section4_details">
+                <source>privacy.section4_details</source>
+                <target>We are improving our Services, which means that we receive new data and create new ways to use the data.</target>
+            </trans-unit>
+            <!--Fin de Pagina de privacidad-->
+            <!--Pagina politica de privacidad-->
+            <trans-unit id="privacypolicy.section1_header">
+                <source>privacypolicy.section1_header</source>
+                <target>Your privacy is important for us.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section1_parragraph">
+                <source>privacypolicy.section1_parragraph</source>
+                <target>Milab's goal is to connect professionals from around the world to help them be more productive and reach their work goals. Key to this mission is our commitment to be transparent with you about the data we collect about you and the way in which they are used and shared. By using our Services, you agree to our use of your data in accordance with the provisions of this Privacy Policy.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_header">
+                <source>privacypolicy.section2_header</source>
+                <target>Introduction</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_parragragraph1">
+                <source>privacypolicy.section2_parragragraph1</source>
+                <target>Our registered users ("Members") share their professional identity, interact with their network of contacts, exchange information and professional knowledge, publish and view relevant content, inform themselves and find professional and business opportunities. Some content of some of our Services is available to non-members ("Visitors>").</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection1.header">
+                <source>privacypolicy.section2_subsection1.header</source>
+                <target>Services</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection1.parragraph">
+                <source>privacypolicy.section2_subsection1.parragraph</source>
+                <target>This Privacy Policy applies to Milab.com and other sites related to Milab, to applications, communications and services ("Services"), including Services offered outside. of the website, such as our advertising services and the "Request with Milab" and "Share on Milab" supplements, but services offered under a different privacy policy are excluded.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_details">
+                <source>privacypolicy.section2_details</source>
+                <target>We are a social network and an online platform for professionals. People use our Services to find job opportunities or for them to find them, as well as to connect with other people and have access to information. Our Privacy Policy applies to any Member or Visitor of the Covered Services.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection2.header">
+                <source>privacypolicy.section2_subsection2.header</source>
+                <target>Consent</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection2.parragraph">
+                <source>privacypolicy.section2_subsection2.parragraph</source>
+                <target>If you use our Services, you agree to the collection, use and sharing of your personal data under this Privacy Policy (which includes our Cookie Policy and other documents referenced in the Privacy Policy) and you accept the Terms of Use. use. We provide you with options that allow you to self-exclude or control how we use and share your information.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection2.details">
+                <source>privacypolicy.section2_subsection2.details</source>
+                <target>If you use our Services, you accept this Privacy Policy, including our Cookies Policy.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection3.header">
+                <source>privacypolicy.section2_subsection3.header</source>
+                <target>Changes</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection3.parragraph">
+                <source>privacypolicy.section2_subsection3.parragraph</source>
+                <target>We may modify this Privacy Policy and if we make any important changes we will notify you through our Services, or through other means, to offer you the opportunity to review the changes before they become effective. If you do not agree with any of the changes, you can close your account. Your continued use of our Services after posting or sending a notice about changes to this Privacy Policy will mean that you agree to the updated terms.</target>
+            </trans-unit>
+            <trans-unit id="privacypolicy.section2_subsection3.details">
+                <source>privacypolicy.section2_subsection3.details</source>
+                <target>If you use the Services after an update of this Privacy Policy, you will be accepting the modified Policy.</target>
+            </trans-unit>
+            <!--Fin de pagina politica de privacidad-->
+            <!--Pagina de servicios-->
+            <trans-unit id="services.section1_header">
+                <source>services.section1_header</source>
+                <target>Use of the Services</target>
+            </trans-unit>
+            <trans-unit id="services.section1_parragraph">
+                <source>services.section1_parragraph</source>
+                <target>How we use your personal information will depend on the Services you use, the way you use those Services and your settings. We use the information we have about you to provide, support, personalize and make our Services (including advertisements) more relevant and useful to you and others.</target>
+            </trans-unit>
+            <trans-unit id="services.section1_details">
+                <source>services.section1_details</source>
+                <target>We use your data to provide, support, personalize and develop our Services.</target>
+            </trans-unit>
+            <trans-unit id="services.section2_header">
+                <source>services.section2_header</source>
+                <target>Development of Services and Research</target>
+            </trans-unit>
+            <trans-unit id="services.section2_parragraph">
+                <source>services.section2_parragraph</source>
+                <target>We use data, including public comments, to conduct research and develop our Services in order to provide you and other Members with a more personalized and intuitive experience, increase the number of Members and interaction in our Services and help professionals connect among themselves and have access to economic opportunities.</target>
+            </trans-unit>
+            <trans-unit id="services.section2_details">
+                <source>services.section2_details</source>
+                <target>We develop our Services and conduct research.</target>
+            </trans-unit>
+            <!--Fin de pagina de servicios-->
+            <!--Pagina terminos del servicio-->
+            <trans-unit id="serviceterms.section1.header">
+                <source>serviceterms.section1.header</source>
+                <target>Introduction</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection1.header">
+                <source>serviceterms.section1.subsection1.header</source>
+                <target>Contract</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection1.parragraph">
+                <source>serviceterms.section1.subsection1.parragraph</source>
+                <target>The present terms (hereinafter "Terms of service") are binding and mandatory. They are applied to the use of the services offered or made available to users by Milab. The use of the services implies the express, full and unreserved acceptance of each and every one of the clauses of the Terms of Service in the version published at the same moment in which the user uses the services and other information provided on the site . If you do not agree with the Terms of Service, you must refrain from using the services.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection1.details">
+                <source>serviceterms.section1.subsection1.details</source>
+                <target>When you use our Services you agree to comply with all these terms. Your use of our Services is also subject to our Cookie Policy and our Privacy Policy, which covers the way we collect, use, share and store your personal information.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection2.header">
+                <source>serviceterms.section1.subsection2.header</source>
+                <target>Services</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection2.parragraph">
+                <source>serviceterms.section1.subsection2.parragraph</source>
+                <target>This Agreement applies to milab.com, to the Milab brand applications and to other related sites, applications, communications and other services that they declare to be offered under this Agreement ("Services"), including data collection at website margin for those Services, such as our ads and add-ons. The users subscribed to our Services are «Members» and the unregistered users are «Visitors». This Agreement applies to both.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.header">
+                <source>serviceterms.section1.subsection3.header</source>
+                <target>Members and Visitors</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.parragraph">
+                <source>serviceterms.section1.subsection3.parragraph</source>
+                <target>When you register and join the Heart Service, you become a Member. If you have decided not to register in our Services, you can access certain features such as Visitor.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list">
+                <source>serviceterms.section1.subsection3.list</source>
+                <target>By completing the Form, the user accepts:</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list.option1">
+                <source>serviceterms.section1.subsection3.list.option1</source>
+                <target>Provide true, true, correct, updated and complete information (hereinafter "Registration Data"), which will be processed and stored on servers with security systems for their protection and security.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list.option2">
+                <source>serviceterms.section1.subsection3.list.option2</source>
+                <target>Keep the Registration Data updated, so that they continue to be true, true, correct, updated, and complete.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list.option3">
+                <source>serviceterms.section1.subsection3.list.option3</source>
+                <target>In the event that the user provides information that is false, incorrect, outdated or incomplete, or the system has a reasonable basis of suspicion that such information is false, incorrect, outdated or incomplete, the system shall have the right to suspend or terminate the possibility of the user to use the services.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list.option4">
+                <source>serviceterms.section1.subsection3.list.option4</source>
+                <target>The user, once registered, undertakes to preserve the confidentiality of his password. Consequently, the user will be responsible for access to the services and operations carried out with his Account and / or Email Address and Password.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list.option5">
+                <source>serviceterms.section1.subsection3.list.option5</source>
+                <target>By virtue of the foregoing, the user undertakes to notify immediately any unauthorized use or theft of his password or any other breach of security. In addition, the system will not be responsible for any loss incurred by the user as a result of the use of the Account by a third party, whether this happened with or without the knowledge of the user.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection3.list.option6">
+                <source>serviceterms.section1.subsection3.list.option6  </source>
+                <target>The system may suspend or delete the accounts of those users who violate the Terms of Service, and / or the Privacy Policy, and / or for any other reason that the system considers to be in violation of morals, good customs, good professional practices and / or commercial and / or harmful to the system or third parties.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection4.header">
+                <source>serviceterms.section1.subsection4.header</source>
+                <target>Changes</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection4.parragraph1">
+                <source>serviceterms.section1.subsection4.parragraph1</source>
+                <target>We may modify this Agreement, our Privacy Policy and our Cookie Policy from time to time. If we make any significant changes to the Contract, we will notify you through our Services, or through other means, to give you the opportunity to review the changes before they become effective.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section1.subsection4.parragraph2">
+                <source>serviceterms.section1.subsection4.parragraph2</source>
+                <target>If you do not agree with any of the changes, you can close your account. Your continued use of our Services after posting or sending a notice of changes to these terms will mean that you agree to the updated terms.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.header">
+                <source>serviceterms.section2.header</source>
+                <target>Obligations</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection1.header">
+                <source>serviceterms.section2.subsection1.header</source>
+                <target>Your account</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection1.parragraph1">
+                <source>serviceterms.section2.subsection1.parragraph1</source>
+                <target>Members are the account holders. You agree: (1) try to choose a difficult and secure password; (2) protect and maintain the confidentiality of the password; (3) Do not transfer any part of your account (for example, contacts) and (4) comply with the relevant legislation and our list of what should and should not be done.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection1.parragraph2">
+                <source>serviceterms.section2.subsection1.parragraph2</source>
+                <target>You are responsible for everything that happens in your account unless you close it or notify us that it is being used improperly. Between the others and you (including your company), your account belongs to you.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection1.details1">
+                <source>serviceterms.section2.subsection1.details1</source>
+                <target>You will protect your password.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection1.details2">
+                <source>serviceterms.section2.subsection1.details2</source>
+                <target>You will not share your account with any other person and you will respect our rules and the applicable legislation.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection2.header">
+                <source>serviceterms.section2.subsection2.header</source>
+                <target>Notices and messages about the Services</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection2.parragraph">
+                <source>serviceterms.section2.subsection2.parragraph</source>
+                <target>You agree that we communicate with you in the following ways: (1) a notice on the Service, or (2) a message sent to the contact information you provided to us (eg, email, mobile phone, postal address). You agree to keep your contact information updated. Check your settings to control and limit the messages we send you.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section2.subsection2.details">
+                <source>serviceterms.section2.subsection2.details</source>
+                <target>You accept that we send you notices through our websites, the applications and the contact information you have given us. If the contact information you provide is not up-to-date, you may not receive these important notices.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.header">
+                <source>serviceterms.section3.header</source>
+                <target>Rights and limitations</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection1.header">
+                <source>serviceterms.section3.subsection1.header</source>
+                <target>Availability of Services</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection1.parragraph">
+                <source>serviceterms.section3.subsection1.parragraph</source>
+                <target>We can change or withdraw any of our Services. We can not guarantee that we will store or continue to display the information or content you have posted. Heart is not a storage service. You agree that we do not have the obligation to store, preserve or provide you with a copy of any content or information provided by you or other persons, except to the extent required by law and as stated in our Privacy Policy.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection1.details">
+                <source>serviceterms.section3.subsection1.details</source>
+                <target>We may change, suspend or withdraw any Service, or change and modify future rates at our sole discretion. To the extent permitted by law, these changes will be effective when communicated to you.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection2.header">
+                <source>serviceterms.section3.subsection2.header</source>
+                <target>Limitations</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection2.parragraph">
+                <source>serviceterms.section3.subsection2.parragraph</source>
+                <target>Milab reserves the right to limit your use of the Services, including your number of contacts and your ability to contact other Members. Milab reserves the right to restrict, suspend or close your account if it considers that you may have breached this Agreement, the law or that you are improperly using the Services (for example, you have infringed the list of do's and don'ts) .</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection2.details">
+                <source>serviceterms.section3.subsection2.details</source>
+                <target>We have the right to limit the way you connect and interact with our Services.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection3.header">
+                <source>serviceterms.section3.subsection3.header</source>
+                <target>Intellectual Property Rights</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection3.parragraph">
+                <source>serviceterms.section3.subsection3.parragraph</source>
+                <target>Milab reserves all its intellectual property rights in the Services. The use of the Services does not give you the ownership of the same or the content or information that is displayed through them. The trademarks and logos used in connection with the Services are the trademarks of their respective owners.</target>
+            </trans-unit>
+            <trans-unit id="serviceterms.section3.subsection3.details">
+                <source>serviceterms.section3.subsection3.details</source>
+                <target>Below we provide you with information about our intellectual property rights.</target>
+            </trans-unit>
+            <!--Fin de Pagina terminos del servicio-->
+        </body>
+    </file>
+</xliff>

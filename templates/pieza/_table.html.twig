@@ -1,0 +1,45 @@
+<table class="table table-hover" id="piezatable">
+    <thead>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {%set i=1%}
+    {% for pieza in piezas %}
+        <tr>
+            <td>{{ i }}</td>
+            <td>{{ pieza.nombre }}</td>
+            <td>
+                <ul class="nav nav-pills" >
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-default edicion" data-href="{{ path('pieza_show', { 'id': pieza.id }) }}">
+                            <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicion" data-href="{{ path('pieza_edit', { 'id': pieza.id }) }}">
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-danger eliminar_pieza" data-href="{{ path('pieza_delete', { 'id': pieza.id }) }}">
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
+                        </a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        {%set i=1+i%}
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' |trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>

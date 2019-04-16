@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="535c9bf0-1fb6-40e9-847c-48ea4c217f00" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/css/base/milab.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/css/login.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/img/behind_the_mac_large.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/img/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/img/logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/plugins/datatable/language/en.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/plugins/datatable/language/es.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/plugins/datatable/language/fr.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/scripts/interface/authenticated.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/scripts/interface/base.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/milab/sound/error.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/app/js/dashboard.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/app/js/layout-builder.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/app/media/img/misc/notification_bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/app/media/img/misc/quick_actions_bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/app/media/img/misc/user_profile_bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/app/media/img/users/user4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/datatables/datatables.bundle.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/datatables/datatables.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/flot/flot.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/fullcalendar/fullcalendar.bundle.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/fullcalendar/fullcalendar.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/gmaps/gmaps.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/images/ui-icons_444444_256x240.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/images/ui-icons_555555_256x240.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/images/ui-icons_777620_256x240.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/images/ui-icons_777777_256x240.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/images/ui-icons_cc0000_256x240.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/images/ui-icons_ffffff_256x240.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/jquery-ui.bundle.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jquery-ui/jquery-ui.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jqvmap/jqvmap.bundle.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/assets/template/vendors/custom/jqvmap/jqvmap.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NotificacionController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/PerifericoController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/PiezaController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/PropiedadController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/RegistroPerifericoController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/RegistroPiezaController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/ReparacionController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/DataFixtures/PerifericoFixtures.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/DataFixtures/PiezaFixtures.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/DataFixtures/PropiedadFixtures.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Notificacion.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/RegistroPeriferico.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/RegistroPropiedad.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/ReservacionLaboratorio.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EventListener/LoginListener.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EventListener/LogoutListener.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EventListener/MaintanceListener.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EventListener/TranslateListener.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EventSubscriber/UsuarioSubscriber.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/PiezaType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/RegistroPerifericoType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/RegistroPiezaType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/Subscriber/AddDestinatarioFieldSubscriber.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/Subscriber/AddPerifericoPiezaFieldSubscriber.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/Subscriber/AddPiezaPropiedadFieldSubscriber.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/Transformer/DateTimetoStringTransformer.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/Transformer/DatetoStringTransformer.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Form/UsuarioType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/UsuarioRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Security/UserChecker.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Security/Voter/LaboratorioVoter.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Security/Voter/PcVoter.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Security/Voter/ReservacionLaboratorioVoter.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Security/Voter/ReservacionPcVoter.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Security/Voter/UsuarioVoter.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Services/EmailService.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Services/NotificacionService.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Twig/EstadoExtension.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error500.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error503.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/_download.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/aboutus.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/accesibility.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/account_management.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/cookiespolicy.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/privacy.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/privacypolicy.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/services.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/default/static/serviceterm.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/facultad/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/facultad/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/facultad/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/facultad/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/facultad/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/laboratorio/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/laboratorio/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/laboratorio/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/laboratorio/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/laboratorio/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/anonimo.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/autenticado.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/base.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/flashes/flashes.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/flashes/modal.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/form/fields.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/recortes/topmenu/language_topmenu.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/layout/script/base.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mensaje/_notify.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mensaje/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mensaje/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/notificacion/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/notificacion/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/notificacion/ajax/_json.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/notificacion/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pc/_pdf.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pc/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pc/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pc/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/periferico/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/periferico/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/periferico/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/periferico/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/periferico/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/periferico/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pieza/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pieza/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pieza/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pieza/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pieza/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/pieza/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/propiedad/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/propiedad/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/propiedad/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/propiedad/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/propiedad/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registroperiferico/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registroperiferico/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registroperiferico/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registroperiferico/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registroperiferico/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropieza/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropieza/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropieza/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropieza/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropieza/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropropiedad/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registropropiedad/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reparacion/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reparacion/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reparacion/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reparacion/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_laboratorio/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_laboratorio/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_laboratorio/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_laboratorio/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_pc/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_pc/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_pc/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_pc/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/reservacion_pc/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/tiporeparacion/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/tiporeparacion/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/tiporeparacion/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/tiporeparacion/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/tiporeparacion/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/usuario/_form.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/usuario/_new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/usuario/_show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/usuario/_table.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/usuario/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/usuario/script.js.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/error.en.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/error.es.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/error.fr.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/estatica.en.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/estatica.es.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/estatica.fr.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/messages.en.xlf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/translations/messages.es.xlf" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="milab@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="milab@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="milab@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="milab: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="milab@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="milab: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="milab@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="milab: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Gene</find>
+      <find>G</find>
+      <find>flas</find>
+      <find>bind</find>
+      <find>nav-item m-tabs__item</find>
+      <find>in</find>
+      <find>peri</find>
+      <find>aut</find>
+      <find>laboratory_delete_message</find>
+      <find>pc_delete_message</find>
+      <find>delete</find>
+      <find>laboratorio</find>
+      <find>Estás seguro que deseas eliminar esta propiedad</find>
+      <find>propiedad</find>
+      <find>comp</find>
+      <find>property_delete_message</find>
+      <find>com</find>
+      <find>piece_delete_message</find>
+      <find>Estás seguro que deseas eliminar esta pieza</find>
+      <find>edit</find>
+      <find>blo</find>
+      <find>Ver</find>
+      <find>base</find>
+      <find>message_register_tooltip</find>
+      <find>mensaje_contador</find>
+      <find>slimScrollDiv</find>
+      <find>MENS</find>
+      <find>message_delete_message</find>
+      <find>mensaje_content</find>
+      <find>Está seguro que desea eliminar este mensaje?</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>registropieza</replace>
+      <replace>RegistroPieza</replace>
+      <replace>reservacionlaboratorio</replace>
+      <replace>pc</replace>
+      <replace>reparacion</replace>
+      <replace>Periferico</replace>
+      <replace>$periferico</replace>
+      <replace>Peripheral</replace>
+      <replace>Estás</replace>
+      <replace>base</replace>
+      <replace>static</replace>
+      <replace>destinatario</replace>
+      <replace>mensaje</replace>
+      <replace>MIT</replace>
+      <replace>promo1</replace>
+      <replace>labora</replace>
+      <replace>periferico</replace>
+      <replace>pieza</replace>
+      <replace>reservacion_laboratorio</replace>
+      <replace>mApp.unblock</replace>
+      <replace>mApp.unblock('div#basicmodal div.modal-body');</replace>
+      <replace>mApp.block(&quot;div#basicmodal div.modal-body&quot;, {overlayColor:&quot;#000000&quot;,type:&quot;loader&quot;,state:&quot;success&quot;,message:window.loadingMessage});</replace>
+      <replace>mApp.unblock(&quot;body&quot;)</replace>
+      <replace>toastr.success(data['mensaje']);</replace>
+      <replace>mApp.block(&quot;body&quot;, {overlayColor:&quot;#000000&quot;,type:&quot;loader&quot;,state:&quot;success&quot;,message:window.loadingMessage});</replace>
+      <replace>//base.Error();</replace>
+      <replace>milab</replace>
+      <replace>Usuario</replace>
+      <replace>nav-item m-tabs__item</replace>
+      <replace>m-portlet__nav-item</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\rody</dir>
+    </dirStrings>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="ls" />
+      <command text="php bin/console doctrine:database:create" />
+      <command text="php bin/console doctrine:schema:create" />
+      <command text="php bin/console doctrine:fixtures:load" />
+      <command text="php bin/console doctrine:schema:update --force" />
+      <command text="php bin/console doctrine:schema:drop --force" />
+    </commandsHistory>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/facultad/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/periferico/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/facultad/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/facultad/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pieza/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/facultad/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/periferico/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/pieza/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/propiedad/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/tiporeparacion/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/laboratorio/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/laboratorio/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/laboratorio/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/laboratorio/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/LaboratorioController.php" />
+        <option value="$PROJECT_DIR$/templates/pc/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pc/_new.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pc/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pc/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/layout/flashes/modal.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pc/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Pc.php" />
+        <option value="$PROJECT_DIR$/templates/registropropiedad/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/registropropiedad/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/registropropiedad/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/RegistroPropiedad.php" />
+        <option value="$PROJECT_DIR$/templates/registropieza/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/registropieza/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/registropieza/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/RegistroPieza.php" />
+        <option value="$PROJECT_DIR$/templates/registroperiferico/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/registroperiferico/_table.html.twig" />
+        <option value="$PROJECT_DIR$/templates/registroperiferico/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/RegistroPeriferico.php" />
+        <option value="$PROJECT_DIR$/templates/reparacion/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/reparacion/script.js.twig" />
+        <option value="$PROJECT_DIR$/templates/reparacion/_table.html.twig" />
+        <option value="$PROJECT_DIR$/translations/messages.en.xlf" />
+        <option value="$PROJECT_DIR$/templates/layout/recortes/topmenu/message_topmenu.html.twig" />
+        <option value="$PROJECT_DIR$/templates/propiedad/_form.html.twig" />
+        <option value="$PROJECT_DIR$/templates/mensaje/_form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/templates/mensaje/_notify.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/MensajeController.php" />
+        <option value="$PROJECT_DIR$/../codice/public/assets/codice/script/base/authenticated.js" />
+        <option value="$PROJECT_DIR$/public/assets/milab/scripts/interface/authenticated.js" />
+        <option value="$PROJECT_DIR$/templates/mensaje/_show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/mensaje/_table.html.twig" />
+        <option value="$PROJECT_DIR$/translations/messages.es.xlf" />
+        <option value="$PROJECT_DIR$/translations/messages.fr.xlf" />
+        <option value="$PROJECT_DIR$/templates/mensaje/index.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PHPCodeSnifferBlackList">
+    <option name="filePaths">
+      <list>
+        <option value="$PROJECT_DIR$/src/Form/PerifericoType.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-time-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/panther" />
+      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="232" />
+    <option name="y" value="45" />
+    <option name="width" value="782" />
+    <option name="height" value="669" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="milab" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="milab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="milab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="datatable" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="milab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="datatable" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="language" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="milab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="milab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="interface" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Services" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mensaje" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="periferico" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rody" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rody" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../siplan" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\rody\public\bundles\app\assets\apps\scripts\interface" />
+      <recent name="C:\xampp\htdocs\rody\public\bundles\app\assets\apps\scripts" />
+      <recent name="C:\xampp\htdocs\rody\templates\layout" />
+      <recent name="C:\xampp\htdocs\rody\public\bundles\app\assets\apps\img\http_error" />
+      <recent name="C:\xampp\htdocs\rody\src\templates\bundles\TwigBundle\Exception" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\rody\public\assets\milab" />
+      <recent name="C:\xampp\htdocs\rody\public\assets\milab\plugins\datatable" />
+      <recent name="C:\xampp\htdocs\rody\templates\layout" />
+      <recent name="C:\xampp\htdocs\rody\templates\layout\recortes\topmenu" />
+      <recent name="C:\xampp\htdocs\rody\src\Entity" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="535c9bf0-1fb6-40e9-847c-48ea4c217f00" name="Default" comment="" />
+      <created>1528843849243</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528843849243</updated>
+      <workItem from="1528843856474" duration="1018000" />
+      <workItem from="1528844972859" duration="740000" />
+      <workItem from="1528846013252" duration="10038000" />
+      <workItem from="1528909401245" duration="1080000" />
+      <workItem from="1528916016322" duration="1884000" />
+      <workItem from="1528929321905" duration="4176000" />
+      <workItem from="1529028082602" duration="5026000" />
+      <workItem from="1529182334874" duration="26921000" />
+      <workItem from="1529274231185" duration="289000" />
+      <workItem from="1529284290036" duration="11666000" />
+      <workItem from="1529343453965" duration="1535000" />
+      <workItem from="1529350878267" duration="2348000" />
+      <workItem from="1529355537905" duration="13574000" />
+      <workItem from="1529362156782" duration="9632000" />
+      <workItem from="1529373157335" duration="3918000" />
+      <workItem from="1529412187249" duration="13380000" />
+      <workItem from="1529434913162" duration="413000" />
+      <workItem from="1529452993964" duration="6075000" />
+      <workItem from="1529486152290" duration="11803000" />
+      <workItem from="1529503498744" duration="88000" />
+      <workItem from="1530199830344" duration="2993000" />
+      <workItem from="1530202637428" duration="12711000" />
+      <workItem from="1530242239982" duration="3127000" />
+      <workItem from="1530279934868" duration="11387000" />
+      <workItem from="1530293845566" duration="709000" />
+      <workItem from="1530329931341" duration="4672000" />
+      <workItem from="1530419285344" duration="8327000" />
+      <workItem from="1530545087797" duration="14114000" />
+      <workItem from="1530571437959" duration="1486000" />
+      <workItem from="1530653816359" duration="5950000" />
+      <workItem from="1530590272699" duration="701000" />
+      <workItem from="1530591652575" duration="9014000" />
+      <workItem from="1530710941160" duration="4887000" />
+      <workItem from="1530718624133" duration="5738000" />
+      <workItem from="1530730085006" duration="8016000" />
+      <workItem from="1530672531099" duration="6533000" />
+      <workItem from="1530806291427" duration="14867000" />
+      <workItem from="1530769869590" duration="13893000" />
+      <workItem from="1530924765402" duration="5899000" />
+      <workItem from="1530934749754" duration="5616000" />
+      <workItem from="1530992117455" duration="296000" />
+      <workItem from="1531010459994" duration="5647000" />
+      <workItem from="1531116098052" duration="313000" />
+      <workItem from="1531235640712" duration="2484000" />
+      <workItem from="1531259501432" duration="1201000" />
+      <workItem from="1531321704152" duration="11637000" />
+      <workItem from="1531348076288" duration="1424000" />
+      <workItem from="1531341378251" duration="3435000" />
+      <workItem from="1531758496243" duration="4080000" />
+      <workItem from="1531766911169" duration="11163000" />
+      <workItem from="1531857573113" duration="4115000" />
+      <workItem from="1531872061467" duration="683000" />
+      <workItem from="1532012643942" duration="16017000" />
+      <workItem from="1532361650838" duration="5444000" />
+      <workItem from="1532298833230" duration="3268000" />
+      <workItem from="1532421084380" duration="8208000" />
+      <workItem from="1532430823875" duration="1477000" />
+      <workItem from="1532512322238" duration="8497000" />
+      <workItem from="1532554230368" duration="3204000" />
+      <workItem from="1532597495716" duration="363000" />
+      <workItem from="1532639872959" duration="2859000" />
+      <workItem from="1532657316534" duration="1600000" />
+      <workItem from="1532659207697" duration="3147000" />
+      <workItem from="1532780577025" duration="2770000" />
+      <workItem from="1532964893116" duration="18260000" />
+      <workItem from="1533241628133" duration="5846000" />
+      <workItem from="1533323120460" duration="6038000" />
+      <workItem from="1533266572931" duration="5136000" />
+      <workItem from="1533429954407" duration="15562000" />
+      <workItem from="1533917441487" duration="13136000" />
+      <workItem from="1533981622298" duration="3517000" />
+      <workItem from="1534260253917" duration="17148000" />
+      <workItem from="1534347433049" duration="6301000" />
+      <workItem from="1534309922313" duration="3603000" />
+      <workItem from="1534349244338" duration="4853000" />
+      <workItem from="1534532715956" duration="7006000" />
+      <workItem from="1534479086964" duration="1633000" />
+      <workItem from="1534521118934" duration="2627000" />
+      <workItem from="1534612828806" duration="4190000" />
+      <workItem from="1534847467029" duration="3420000" />
+      <workItem from="1534967930493" duration="5951000" />
+      <workItem from="1535023274054" duration="5121000" />
+      <workItem from="1535291104419" duration="1042000" />
+      <workItem from="1535304730705" duration="6329000" />
+      <workItem from="1535311500535" duration="3004000" />
+      <workItem from="1535321922267" duration="2372000" />
+      <workItem from="1535570901470" duration="15515000" />
+      <workItem from="1536014081495" duration="455000" />
+      <workItem from="1536014613343" duration="1262000" />
+      <workItem from="1536869706722" duration="6476000" />
+      <workItem from="1536880122816" duration="4882000" />
+      <workItem from="1536885587742" duration="774000" />
+      <workItem from="1536913547797" duration="4257000" />
+      <workItem from="1536932332207" duration="3491000" />
+      <workItem from="1537380553567" duration="5807000" />
+      <workItem from="1537404681764" duration="544000" />
+      <workItem from="1537405286743" duration="19000" />
+      <workItem from="1537701196068" duration="1321000" />
+      <workItem from="1537817131134" duration="964000" />
+      <workItem from="1537821854671" duration="11154000" />
+      <workItem from="1538339226010" duration="12437000" />
+      <workItem from="1538353502352" duration="1030000" />
+      <workItem from="1538421096467" duration="2482000" />
+      <workItem from="1538429718045" duration="3569000" />
+      <workItem from="1546742285607" duration="2876000" />
+      <workItem from="1546752056042" duration="19000" />
+      <workItem from="1549304614478" duration="7039000" />
+      <workItem from="1549383053469" duration="15912000" />
+      <workItem from="1549417776159" duration="744000" />
+      <workItem from="1549422159325" duration="2635000" />
+      <workItem from="1549564372897" duration="10222000" />
+      <workItem from="1549641818018" duration="12715000" />
+      <workItem from="1549819622330" duration="12997000" />
+      <workItem from="1549903952619" duration="8070000" />
+      <workItem from="1552761335037" duration="1441000" />
+      <workItem from="1552763451848" duration="178000" />
+      <workItem from="1555427235605" duration="26001000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="688983000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24177632" sideWeight="0.52118003" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829046" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4473684" sideWeight="0.47881997" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32724506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../codice/src/Entity/Autor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/flashes/modal.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Pc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2122">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pc/script.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="289" column="16" lean-forward="false" selection-start-line="289" selection-start-column="12" selection-end-line="289" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pc/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/RegistroPropiedad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="186" column="8" lean-forward="false" selection-start-line="186" selection-start-column="8" selection-end-line="186" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pc/_table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropropiedad/script.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="119" column="250" lean-forward="false" selection-start-line="119" selection-start-column="250" selection-end-line="119" selection-end-column="250" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropropiedad/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropropiedad/_table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropieza/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropieza/_new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropropiedad/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="34" column="126" lean-forward="false" selection-start-line="34" selection-start-column="96" selection-end-line="34" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropieza/script.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2027">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropieza/_table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pc/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registroperiferico/script.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="134" column="196" lean-forward="false" selection-start-line="134" selection-start-column="192" selection-end-line="134" selection-end-column="196" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registroperiferico/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/RegistroPieza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/RegistroPeriferico.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registropieza/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reparacion/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Reparacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3497">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reparacion/_table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reparacion/script.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1520">
+          <caret line="129" column="20" lean-forward="false" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registroperiferico/_new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registroperiferico/_table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registroperiferico/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/milab/scripts/interface/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translations/messages.en.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="938" column="36" lean-forward="false" selection-start-line="938" selection-start-column="28" selection-end-line="938" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/propiedad/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b7003c8a/c2f652d4-ceb1-4d4c-a35d-97c8b58de82c/milab.public.mensaje">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/periferico/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="56" column="127" lean-forward="false" selection-start-line="56" selection-start-column="97" selection-end-line="56" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../codice/templates/mensaje/_notify.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mensaje/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../codice/src/Controller/MensajeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="21" />
+          <folding>
+            <marker date="1555347244424" expanded="true" signature="2574:2699" ph="SELECT m FRO... App" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/script/base.js.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../codice/public/assets/codice/script/base/authenticated.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="129" column="4" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="155" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/milab/scripts/interface/authenticated.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="253" column="108" lean-forward="false" selection-start-line="253" selection-start-column="108" selection-end-line="253" selection-end-column="108" />
+          <folding>
+            <element signature="e#6039#6835#0" expanded="false" />
+            <element signature="e#6918#8033#0" expanded="false" />
+            <element signature="e#8132#9406#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../codice/templates/mensaje/_show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mensaje/_show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translations/messages.fr.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="1005" column="37" lean-forward="false" selection-start-line="1005" selection-start-column="37" selection-end-line="1005" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translations/estatica.fr.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/recortes/topmenu/message_topmenu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mensaje/_table.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mensaje/_notify.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MensajeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="41" />
+          <folding>
+            <element signature="e#2130#3222#0#PHP" expanded="false" />
+            <element signature="e#3306#5061#0#PHP" expanded="false" />
+            <element signature="e#5142#5477#0#PHP" expanded="false" />
+            <element signature="e#5553#6001#0#PHP" expanded="false" />
+            <marker date="1555454761144" expanded="true" signature="2382:2504" ph="SELECT m FRO... App" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mensaje/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="45" column="91" lean-forward="false" selection-start-line="45" selection-start-column="91" selection-end-line="45" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../codice/templates/mensaje/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="60" column="21" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="60" selection-end-column="21" />
+          <folding>
+            <element signature="e#609#4111#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translations/messages.es.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="1006" column="59" lean-forward="false" selection-start-line="1006" selection-start-column="37" selection-end-line="1006" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

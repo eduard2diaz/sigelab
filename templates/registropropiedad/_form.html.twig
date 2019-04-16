@@ -1,0 +1,38 @@
+{{ form_start(form,{'attr':{
+    'id': form_id|default('registropropiedad_new'),
+    'class': 'm-form m-form--state'
+}}) }}
+<div class="modal-body" id="modal-body">
+    <div class="row margin-top-20">
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.propiedad) }}
+                </label>
+                <div>
+                    {{ form_widget(form.propiedad,{'attr':{
+                        'class':'form-control input-medium'
+                    }}) }}
+                    {{ form_errors(form.propiedad) }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.valor) }}
+                </label>
+                <div>
+                    {{ form_widget(form.valor) }}
+                    {{ form_errors(form.valor) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary ladda-button" data-style="expand-right" type="submit"><i class="flaticon-edit"></i> {{ action |default('save_button')|trans }}
+    </button>
+</div>
+{{ form_end(form) }}

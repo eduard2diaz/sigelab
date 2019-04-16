@@ -1,0 +1,106 @@
+security:
+    encoders:
+        App\Entity\Usuario: { algorithm: bcrypt , cost: 13 }
+
+    role_hierarchy:
+        ROLE_ADMIN:  [ROLE_JEFETECNICO, ROLE_PROFESOR]
+        ROLE_JEFETECNICO:  ROLE_TECNICO
+
+    providers:
+        usuarios:
+            entity: { class: App:Usuario}
+
+
+    firewalls:
+        secured_area:
+            pattern:    ^/*
+            user_checker: App\Security\UserChecker
+            form_login:
+                login_path: index
+                check_path: check
+                default_target_path: index
+                always_use_default_target_path: true
+            logout:
+                path:   logout
+                target: index
+                handlers: [app.logoutlistener]
+            anonymous: ~
+            remember_me:
+                secret:  '%env(APP_SECRET)%'
+                lifetime: 604800 # 1 week in seconds
+                path: index
+    access_control:
+        - { path: ^/*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/facultad, roles: ROLE_ADMIN }
+        - { path: ^/faculty, roles: ROLE_ADMIN }
+        - { path: ^/moyen, roles: ROLE_ADMIN }
+        - { path: ^/laboratorio/new, roles: ROLE_ADMIN }
+        - { path: ^/laboratory/new, roles: ROLE_ADMIN }
+        - { path: ^/laboratoire/new, roles: ROLE_ADMIN }
+        - { path: ^/laboratorio/\d+/delete, roles: ROLE_ADMIN }
+        - { path: ^/laboratory/\d+/delete, roles: ROLE_ADMIN }
+        - { path: ^/laboratoire/\d+/delete, roles: ROLE_ADMIN }
+        - { path: ^/usuario$, roles: ROLE_ADMIN }
+        - { path: ^/user$, roles: ROLE_ADMIN }
+        - { path: ^/utilisateur$, roles: ROLE_ADMIN }
+        - { path: ^/usuario/new, roles: ROLE_ADMIN }
+        - { path: ^/user/new, roles: ROLE_ADMIN }
+        - { path: ^/utilisateur/new, roles: ROLE_ADMIN }
+        - { path: ^/usuario\d+/delete, roles: ROLE_ADMIN }
+        - { path: ^/user\d+/delete, roles: ROLE_ADMIN }
+        - { path: ^/utilisateur\d+/delete, roles: ROLE_ADMIN }
+        #INFORMACION QUE GESTIONA SOLAMENTE EL JEFE DE LOS TECNICOS
+        - { path: ^/propiedad, roles: ROLE_JEFETECNICO }
+        - { path: ^/property, roles: ROLE_JEFETECNICO }
+        - { path: ^/propriete, roles: ROLE_JEFETECNICO }
+        - { path: ^/periferico, roles: ROLE_JEFETECNICO }
+        - { path: ^/peripheral, roles: ROLE_JEFETECNICO }
+        - { path: ^/peripherique, roles: ROLE_JEFETECNICO }
+        - { path: ^/pieza, roles: ROLE_JEFETECNICO }
+        - { path: ^/piece, roles: ROLE_JEFETECNICO }
+        - { path: ^/pièce, roles: ROLE_JEFETECNICO }
+        - { path: ^/tiporeparacion, roles: ROLE_JEFETECNICO }
+        - { path: ^/typereparation, roles: ROLE_JEFETECNICO }
+        - { path: ^/typeréparation, roles: ROLE_JEFETECNICO }
+        - { path: ^/pc/\d+/new, roles: ROLE_JEFETECNICO }
+        - { path: ^/computadora/\d+/new, roles: ROLE_JEFETECNICO }
+        - { path: ^/ordinateur/\d+/new, roles: ROLE_JEFETECNICO }
+        - { path: ^/pc/\d+/delete, roles: [ROLE_JEFETECNICO] }
+        - { path: ^/computadora/\d+/delete, roles: [ROLE_JEFETECNICO] }
+        - { path: ^/ordinateur/\d+/delete, roles: [ROLE_JEFETECNICO] }
+        - { path: ^/reparacion/\d+/new, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparation/\d+/new, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparer/\d+/new, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparacion/\d+/edit, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparation/\d+/edit, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparer/\d+/edit, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparacion/\d+/delete, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparation/\d+/delete, roles: ROLE_JEFETECNICO }
+        - { path: ^/reparer/\d+/delete, roles: ROLE_JEFETECNICO }
+        #INFORMACION QUE GESTIONAN LOS TECNICOS DE LABORATORIO
+        - { path: ^/laboratorio, roles: ROLE_TECNICO }
+        - { path: ^/laboratory, roles: ROLE_TECNICO }
+        - { path: ^/laboratoire, roles: ROLE_TECNICO }
+        - { path: ^/pc, roles: ROLE_TECNICO }
+        - { path: ^/computadora, roles: ROLE_TECNICO }
+        - { path: ^/ordinateur, roles: ROLE_TECNICO }
+        - { path: ^/registropropiedad, roles: ROLE_TECNICO }
+        - { path: ^/propertyregister, roles: ROLE_TECNICO }
+        - { path: ^/proprietedenregistrement, roles: ROLE_TECNICO }
+        - { path: ^/registropieza, roles: ROLE_TECNICO }
+        - { path: ^/pieceregister, roles: ROLE_TECNICO }
+        - { path: ^/piecededisque, roles: ROLE_TECNICO }
+        - { path: ^/registroperiferico, roles: ROLE_TECNICO }
+        - { path: ^/peripheralregister, roles: ROLE_TECNICO }
+        - { path: ^/enregistrementperipherique, roles: ROLE_TECNICO }
+        - { path: ^/reparacion, roles: ROLE_TECNICO }
+        - { path: ^/reparation, roles: ROLE_TECNICO }
+        - { path: ^/reparer, roles: ROLE_TECNICO }
+        #INFORMACION QUE GESTIONAN LOS ESTUDIANTES Y PROFESORES
+        - { path: ^/reservacion/laboratorio, roles: ROLE_PROFESOR }
+        - { path: ^/reservation/laboratory, roles: ROLE_PROFESOR }
+        - { path: ^/reservation/laboratoire, roles: ROLE_PROFESOR }
+        - { path: ^/reservation/pc, roles: ROLE_ESTUDIANTE }
+        - { path: ^/reservacion/computadora, roles: ROLE_ESTUDIANTE }
+        - { path: ^/reservation/calculateur, roles: ROLE_ESTUDIANTE }
+        - { path: ^/*, roles: IS_AUTHENTICATED_FULLY }

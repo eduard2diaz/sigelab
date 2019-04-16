@@ -1,0 +1,38 @@
+{{ form_start(form,{'attr':{
+    'id': form_id|default('message_new'),
+    'class': 'm-form m-form--state'
+}}) }}
+<div class="modal-body" id="modal-body">
+    <div>
+        <div class="form-group m-form__group">
+            <label>
+                {{ form_label(form.iddestinatario) }}
+            </label>
+            <div>
+                {{ form_widget(form.iddestinatario) }}
+                {{ form_errors(form.iddestinatario) }}
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-10">
+        <div class="form-group m-form__group">
+            <label>
+                {{ form_label(form.descripcion) }}
+            </label>
+            <div>
+                {{ form_widget(form.descripcion) }}
+                {{ form_errors(form.descripcion) }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary  ladda-button" data-style="expand-right" type="submit">
+        <i class="flaticon-paper-plane"></i>
+        {{ action |default('save_button')|trans }}</button>
+</div>
+{{ form_end(form) }}
+
+
+

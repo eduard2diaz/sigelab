@@ -1,0 +1,56 @@
+<table class="table table-hover" id="table_usuario">
+    <thead>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' | trans }}</th>
+        <th>{{ 'surname_field' | trans }}</th>
+        <th>{{ 'username_field' | trans }}</th>
+        <th>{{ 'active_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {%set i=1%}
+    {% for usuario in usuarios %}
+        <tr>
+            <td>{{ i }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.apellido }}</td>
+            <td>{{ usuario.usuario }}</td>
+            <td>{{ usuario.activo | estado_color }}</td>
+            <td>
+                <ul class="nav nav-pills" >
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-default edicion" data-href="{{ path('usuario_show', { 'id': usuario.id }) }}">
+                            <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
+                        </a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-info edicion" data-href="{{ path('usuario_edit', { 'id': usuario.id }) }}">
+                            <i class="flaticon-edit"></i>{{ 'edit' |trans }}
+                        </a>
+                    </li>
+                    {%  if app.user.id!=usuario.id %}
+                    <li class="nav-item m-tabs__item">
+                        <a class="btn btn-sm btn-danger eliminar_usuario" data-href="{{ path('usuario_delete', { 'id': usuario.id }) }}">
+                            <i class="flaticon-delete"></i>{{ 'delete' |trans }}
+                        </a>
+                    </li>
+                    {%  endif %}
+                </ul>
+            </td>
+        </tr>
+        {%set i=1+i%}
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>{{ 'row_number' | trans }}</th>
+        <th>{{ 'name_field' | trans }}</th>
+        <th>{{ 'surname_field' | trans }}</th>
+        <th>{{ 'username_field' | trans }}</th>
+        <th>{{ 'active_field'|trans }}</th>
+        <th></th>
+    </tr>
+    </tfoot>
+</table>

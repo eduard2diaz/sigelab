@@ -1,0 +1,211 @@
+a.btn {
+    font-weight: bold !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15), 0 1px 5px rgba(0, 0, 0, 0.15) !important;
+}
+
+table.dataTable tbody tr:hover td:last-child ul {
+    visibility: visible;
+}
+
+table.dataTable tbody tr td:last-child ul {
+    float: right;
+    visibility: hidden;
+}
+
+button.bootbox-close-button {
+    position: fixed;
+    left: 91%;
+}
+
+/*Mi personalizacion*/
+div.m-body {
+    background-color: #f2f3f8;
+    /*background-color: white;*/
+}
+
+div.m-portlet {
+    border-radius: 0.3%;
+}
+
+div.dataTables_filter input {
+    border-radius: 0;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
+
+div.dataTables_filter input:focus {
+
+    border-bottom-width: 2px;
+    outline: 0;
+    padding-bottom: 4px;
+    width: auto;
+}
+
+div.modal-header {
+    background-color: #428bca;
+    padding: 16px !important;
+}
+
+div.modal-header h4, h5 {
+    margin: 0;
+    line-height: 1.42857;
+    color: white !important;
+}
+
+div.modal-footer {
+    background-color: #f1f1f1;
+    padding: 7px !important;
+}
+
+span.select2 {
+    width: 100% !important;
+}
+
+header {
+    background: rgba(255, 255, 255, .8);
+    border-top: 0;
+}
+
+
+td:last-child {
+    width: 32% !important;
+}
+
+div#m_header_menu {
+    margin-left: 20%;
+}
+
+.margin-top-10 {
+    margin-top: 2%;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 2%;
+}
+
+.margin-top-20 {
+    margin-top: 4%;
+}
+
+.modal-full {
+    min-width: 80% !important;
+}
+
+label {
+    font-weight: bolder;
+}
+
+header {
+    background-color: #4385f5 !important;
+}
+
+/*Inicio de personalizacion de los iconos del top menus*/
+div#m_header_menu  ul.m-menu__nav > li.m-menu__item > a > span.m-menu__link-text{
+    color: white;
+    font-weight: 400;
+    font-size: 1.07rem;
+    text-transform: initial;
+}
+div#m_header_menu  ul.m-menu__nav > li.m-menu__item > a > i{
+    color: white;
+}
+div#m_header_topbar  ul.m-topbar__nav li.m-nav__item a.m-nav__link span.m-nav__link-icon i{
+    color: white;
+}
+/*Fin de personalizacion de los iconos del top menus*/
+
+div.form-control-feedback:not(:empty):before {
+    content: 'Error';
+    color: #fff;
+    background-color: #f4516c;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    margin-right: 1%;
+}
+
+th {
+    font-weight: bold !important;
+}
+
+
+
+div.m-portlet p {
+    text-align: justify;
+}
+
+input.select2-search__field {
+    background-color: white;
+    color: black;
+}
+
+div.user_notification {
+    background-image: url('../../../template/app/media/img/misc/quick_actions_bg.jpg');
+    color: white;
+}
+
+div#usertopmenu_header {
+    background-image: url('../../../template/app/media/img/misc/user_profile_bg.jpg');
+}
+
+header span.m-dropdown__arrow {
+    color: rgb(111, 71, 208) !important;
+}
+
+.m-card-user__name, .m-card-user__email {
+    color: white !important;
+}
+
+
+.alert-notification {
+    box-shadow: 1px 2px 8px black;
+    position: absolute;
+    z-index: 2;
+    left: 2%;
+    top: 76%;
+}
+
+.m-dropdown .m-dropdown__wrapper .m-dropdown__header .m-dropdown__header-subtitle{
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+}
+
+h4, h4.m-form__section{
+    font-size: 1.2rem;
+}
+
+/*Inicio de personalizacion del footer*/
+footer.m-footer{
+    height: auto !important;
+    background-color: #5867dd !important;
+    color: white;
+}
+
+footer.m-footer a {
+    color: #000 !important;
+    text-decoration: none;
+}
+/*Fin de personalizacion del footer*/
+
+/*Inicio de personalizacion de language_topmenu*/
+.m-topbar__language-img {
+    width: 22px;
+    border-radius: 50% !important;
+}
+
+.m-topbar__language-selected-img {
+    width: 26px;
+    border-radius: 50% !important;
+}
+/*Fin de personalizacion de language_topmenu*/

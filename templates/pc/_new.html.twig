@@ -1,0 +1,11 @@
+<div class="modal-dialog modal-full">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">{{ title| default('pc_new_title')|trans }}</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        </div>
+        <div>
+            {%include 'pc/_form.html.twig'%}
+        </div>
+    </div>
+</div>
