@@ -11,9 +11,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use App\Entity\Reparacion;
 use App\Entity\Pc;
-/*
- * @Route("/reparacion")
- */
 
 /**
  * @Route({

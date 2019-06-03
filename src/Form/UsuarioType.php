@@ -14,10 +14,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Doctrine\ORM\EntityRepository;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use App\Form\Subscriber\AddCargoFieldSubscriber;
-
 use Symfony\Component\Validator\Constraints as Assert;
 
 
@@ -40,7 +38,12 @@ class UsuarioType extends AbstractType
                 'help' => 'email_field_help',
                 'attr' => array('autocomplete' => 'off', 'class' => 'form-control input-large')))
             ->add('activo', null, array('label'=>'active_field','disabled' => $disabled, 'required' => false, 'attr' => array('data-on-text' => 'active_yes', 'data-off-text' => 'active_no','data-size'=>'small')))
-            ->add('facultad', null, array('label'=>'faculty','disabled' => $disabled, 'placeholder' => 'faculty_field_select', 'required' => true, 'attr' => array('class' => 'form-control input-medium')));
+            ->add('facultad', null, array('label'=>'faculty','disabled' => $disabled, 'placeholder' => 'faculty_field_select', 'required' => true, 'attr' => array('class' => 'form-control input-medium')))
+            ->add('file', FileType::class, array('required' => false,
+                'attr' => array('style' => 'display:none',
+                    'accept' => 'image/*',/* 'accept' => '.jpg,.jpeg,.png,.gif,.bmp,.tiff'*/)
+            ));
+
 
         $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $obj) {
             $form = $obj->getForm();
@@ -61,6 +64,7 @@ class UsuarioType extends AbstractType
                 'second_options' => array('label' => 'confirm_password_field', 'attr' => array('class' => 'form-control input-medium'))
             ));
         });
+
        // if ($esAdmin)
             $builder->add('idrol', null, array('label'=>'role_field','disabled' => $disabled, 'required' => true, 'attr' => array('class' => 'form-control input-medium')));
 

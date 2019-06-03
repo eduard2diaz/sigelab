@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Notificacion
@@ -37,11 +39,12 @@ class Mensaje
     private $descripcion;
 
     /**
-     * @var boolean
+     * @var string|null
      *
-     * @ORM\Column(name="noleida", type="boolean", nullable=true)
+     * @ORM\Column(name="asunto", type="string", nullable=false)
+     * @Assert\Length(max=255)
      */
-    private $noleida;
+    private $asunto;
 
     /**
      * @var \Usuario
@@ -88,15 +91,14 @@ class Mensaje
     /**
      * @ORM\Column(type="boolean")
      */
-    private $isnew;
+    private $leida;
 
     public function __construct()
     {
         $this->fecha=new \DateTime();
         $this->iddestinatario = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->setNoleida(true);
         $this->bandeja=1;
-        $this->isnew=true;
+        $this->leida=false;
     }
 
 
@@ -159,27 +161,19 @@ class Mensaje
     }
 
     /**
-     * Set noleida
-     *
-     * @param boolean $noleida
-     *
-     * @return Notificacion
+     * @return null|string
      */
-    public function setNoleida($noleida)
+    public function getAsunto(): ?string
     {
-        $this->noleida = $noleida;
-
-        return $this;
+        return $this->asunto;
     }
 
     /**
-     * Get noleida
-     *
-     * @return boolean
+     * @param null|string $asunto
      */
-    public function getNoleida()
+    public function setAsunto(?string $asunto=null): void
     {
-        return $this->noleida;
+        $this->asunto = $asunto;
     }
 
     /**
@@ -280,14 +274,28 @@ class Mensaje
         $this->bandeja = $bandeja;
     }
 
-    public function getIsnew(): ?bool
+    /**
+     * @Assert\Callback
+     */
+    public function validate(ExecutionContextInterface $context, $payload)
     {
-        return $this->isnew;
+
+        if($this->getRemitente()==null)
+            $context->buildViolation('Seleccione un remitente')->atPath('remitente')->addViolation();
+        if($this->getPropietario()==null)
+            $context->buildViolation('Seleccione un propietario')->atPath('propietario')->addViolation();
+        if($this->getIddestinatario()->isEmpty())
+            $context->buildViolation('Seleccione el/los destinatario(s)')->atPath('iddestinatario')->addViolation();
     }
 
-    public function setIsnew(bool $isnew): self
+    public function getLeida(): ?bool
     {
-        $this->isnew = $isnew;
+        return $this->leida;
+    }
+
+    public function setLeida(bool $leida): self
+    {
+        $this->leida = $leida;
 
         return $this;
     }

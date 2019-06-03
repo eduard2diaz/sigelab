@@ -6,6 +6,7 @@ use Doctrine\Common\EventSubscriber;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use App\Entity\Usuario;
+use App\Tool\FileStorageManager;
 
 class UsuarioSubscriber implements EventSubscriber
 {
@@ -26,6 +27,22 @@ class UsuarioSubscriber implements EventSubscriber
         $entity = $args->getEntity();
         if ($entity instanceof Usuario){
             $entity->setPassword($this->getServiceContainer()->get('security.password_encoder')->encodePassword($entity,$entity->getPassword()));
+            $ruta=$this->getServiceContainer()->getParameter('storage_directory');
+            $file=$entity->getFile();
+            $nombreArchivoFoto=FileStorageManager::Upload($ruta,$file);
+            if (null!=$nombreArchivoFoto){
+                $entity->setRutaFoto($nombreArchivoFoto);
+            }
+        }
+    }
+
+    public function preRemove(LifecycleEventArgs $args)
+    {
+        $entity = $args->getEntity();
+        if ($entity instanceof Usuario && null!=$entity->getRutaFoto()) {
+            $directory = $this->getServiceContainer()->getParameter('storage_directory');
+            $ruta=$directory . DIRECTORY_SEPARATOR . $entity->getRutaFoto();
+            FileStorageManager::removeUpload($ruta);
         }
     }
 
@@ -33,6 +50,7 @@ class UsuarioSubscriber implements EventSubscriber
     {
         return [
             'prePersist',
+            'preRemove'
         ];
     }
 }

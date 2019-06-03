@@ -12,10 +12,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Entity\Pc;
 
-/*
- * @Route("/reservacion/pc")
- */
-
 /**
  * @Route({
  *     "en": "/reservation/pc",
@@ -30,12 +26,16 @@ class ReservacionPcController extends Controller
      */
     public function index(Request $request): Response
     {
-        $misLaboratorios = $this->getUser()->getFacultad()->getIdlaboratorio();
         $em = $this->getDoctrine()->getManager();
+        if($this->isGranted('ROLE_JEFETECNICOINSTITUCIONAL'))
+            $result=$em->getRepository(ReservacionPc::class)->findAll();
+        else{
+            $misLaboratorios = $this->getUser()->getFacultad()->getIdlaboratorio();
+            $consulta = $em->createQuery('SELECT r FROM App:ReservacionPc r JOIN r.laboratorio l WHERE l IN (:laboratorio)');
+            $consulta->setParameter('laboratorio', $misLaboratorios);
+            $result = $consulta->getResult();
+        }
 
-        $consulta = $em->createQuery('SELECT r FROM App:ReservacionPc r JOIN r.pc pc JOIN pc.laboratorio l WHERE l IN (:laboratorio)');
-        $consulta->setParameter('laboratorio', $misLaboratorios);
-        $result = $consulta->getResult();
         if ($request->isXmlHttpRequest())
             return $this->render('reservacion_pc/_table.html.twig', ['reservaciones' => $result]);
 

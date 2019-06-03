@@ -13,7 +13,7 @@
         $("div#extramodal form").validate({
             rules:{
                 'reparacion[fecha]': {required:true, date:true},
-                'reparacion[precio]': {required:true, number: true},
+                'reparacion[precio]': {required:true, number: true, min:0},
                 'reparacion[tiporeparacion]': {required:true},
                 'reparacion[descripcion]': {required:true}
             }
@@ -84,6 +84,8 @@
 
     var configurarDataTablereparacion = function () {
         tablereparacion = $('table#tablereparacion').DataTable({
+            pageLength: 3,
+            lengthMenu: [[3,5,10], [3,5,10]],
             "pagingType": "simple_numbers",
             "language": {
                 url: datatable_url
@@ -127,7 +129,7 @@
                     "fecha": data['fecha'],
                     "tiporeparacion": data['tiporeparacion'],
                     "usuario": data['usuario'],
-                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-default edicionreparacion' data-href="+ Routing.generate('reparacion_show.'+_locale,{id:data['id']}) +"><i class='flaticon-eye'></i>{{ 'visualize'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicionreparacion' data-href="+ Routing.generate('reparacion_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_reparacion' data-href="+ Routing.generate('reparacion_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
+                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-default text-uppercase edicionreparacion' data-href="+ Routing.generate('reparacion_show.'+_locale,{id:data['id']}) +"><i class='flaticon-eye'></i>{{ 'visualize'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicionreparacion' data-href="+ Routing.generate('reparacion_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_reparacion' data-href="+ Routing.generate('reparacion_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                     });
                     objeto.draw();
                     tablereparacion.page(pagina).draw('page');

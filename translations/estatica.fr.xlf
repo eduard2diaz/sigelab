@@ -9,7 +9,7 @@
             </trans-unit>
             <trans-unit id="_download.parragraph">
                 <source>_download.parragraph</source>
-                <target>Pour obtenir le code source de Milab, vous pouvez:</target>
+                <target>Pour obtenir le code source de SIGELAB, vous pouvez:</target>
             </trans-unit>
             <trans-unit id="_download.downloadlist_choice1">
                 <source>_download.downloadlist_choice1</source>
@@ -39,11 +39,11 @@
             <!--Pagina aboutus-->
             <trans-unit id="aboutus.question1">
                 <source>aboutus.question1</source>
-                <target>Qu'est ce que Milab?</target>
+                <target>Qu'est ce que SIGELAB?</target>
             </trans-unit>
             <trans-unit id="aboutus.response1">
                 <source>aboutus.response1</source>
-                <target>Milab est une application Web développée par l'Université agraire de La Havane afin de permettre aux institutions et aux centres de travail de contrôler le matériel informatique de tous leurs moyens informatiques. Il s’agit d’une application collaborative et gratuite. Pour cette raison, d’autres développeurs peuvent collaborer avec les améliorations et les mises à jour du logiciel, à condition qu’ils soient réalisés sans but lucratif et qu’ils puissent socialiser avec toute la communauté.</target>
+                <target>SIGELAB est une application Web développée par l'Université agraire de La Havane afin de permettre aux institutions et aux centres de travail de contrôler le matériel informatique de tous leurs moyens informatiques. Il s’agit d’une application collaborative et gratuite. Pour cette raison, d’autres développeurs peuvent collaborer avec les améliorations et les mises à jour du logiciel, à condition qu’ils soient réalisés sans but lucratif et qu’ils puissent socialiser avec toute la communauté.</target>
             </trans-unit>
             <trans-unit id="aboutus.question2">
                 <source>aboutus.question2</source>
@@ -61,8 +61,8 @@
             </trans-unit>
             <trans-unit id="accesibility.parragraph">
                 <source>accesibility.parragraph</source>
-                <target>Milab est une application gratuite, gratuite et accessible à tous. dont le seul but est de servir d'outil pour le contrôle et la surveillance du matériel de nos institutions et centres de travail. Pour cette raison, il constitue une violation des termes juridiques de même utilisation pour tout type d’attaque contre le
-                                                 sécurité informatique (piratage), à des fins éthiques ou non. Milab a été développé sur la licence MIT, donc il peut et devrait être possible de le partager avec d’autres sociétés et institutions à but non lucratif, à condition qu’il mette en avant les principaux développeurs.</target>
+                <target>SIGELAB est une application gratuite, gratuite et accessible à tous. dont le seul but est de servir d'outil pour le contrôle et la surveillance du matériel de nos institutions et centres de travail. Pour cette raison, il constitue une violation des termes juridiques de même utilisation pour tout type d’attaque contre le
+                                                 sécurité informatique (piratage), à des fins éthiques ou non. SIGELAB a été développé sur la licence MIT, donc il peut et devrait être possible de le partager avec d’autres sociétés et institutions à but non lucratif, à condition qu’il mette en avant les principaux développeurs.</target>
             </trans-unit>
             <trans-unit id="accesibility.choice1">
                 <source>accesibility.choice1</source>
@@ -84,7 +84,7 @@
             </trans-unit>
             <trans-unit id="scalability.section1_parragraph">
                 <source>scalability.section1_parragraph</source>
-                <target>Milab est un système multiplateforme, vous pouvez donc le déployer dans n'importe quel système d'exploitation, Windows, MAC et Linux, à condition d'avoir un serveur Web installé. Et bien qu'il soit optimisé pour Linux, les temps de traitement et de réponse sont extraordinaires. Bien que de nombreux paramètres et serveurs soient configurables, il existe des points déterminants pour leur déploiement.</target>
+                <target>SIGELAB est un système multiplateforme, vous pouvez donc le déployer dans n'importe quel système d'exploitation, Windows, MAC et Linux, à condition d'avoir un serveur Web installé. Et bien qu'il soit optimisé pour Linux, les temps de traitement et de réponse sont extraordinaires. Bien que de nombreux paramètres et serveurs soient configurables, il existe des points déterminants pour leur déploiement.</target>
             </trans-unit>
             <trans-unit id="scalability.section1_list.tool1">
                 <source>scalability.section1_list.tool1</source>
@@ -104,7 +104,7 @@
             </trans-unit>
             <trans-unit id="scalability.section2_parragraph">
                 <source>scalability.section2_parragraph</source>
-                <target>Symfony 4 dans sa version 4.1 était le framework PHP sur lequel cette application a été développée. Pour cette raison, vous pouvez utiliser le serveur de base de données relationnelle de votre choix, uniquement avec le petit détail d'ajustement de la stratégie de génération de base de données; un processus très simple pour nos spécialistes mais, en l’absence des compétences nécessaires, il peut être extrêmement lourd. Le code source original de Milab est destiné à l'utilisation de Postgresql en tant que système de base de données.</target>
+                <target>Symfony 4 dans sa version 4.1 était le framework PHP sur lequel cette application a été développée. Pour cette raison, vous pouvez utiliser le serveur de base de données relationnelle de votre choix, uniquement avec le petit détail d'ajustement de la stratégie de génération de base de données; un processus très simple pour nos spécialistes mais, en l’absence des compétences nécessaires, il peut être extrêmement lourd. Le code source original de SIGELAB est destiné à l'utilisation de Postgresql en tant que système de base de données.</target>
             </trans-unit>
             <trans-unit id="scalability.section3_header">
                 <source>scalability.section3_header</source>
@@ -120,7 +120,7 @@
             </trans-unit>
             <trans-unit id="scalability.section4_parragraph1">
                 <source>scalability.section4_parragraph1</source>
-                <target>Les mises à jour du code source de Milab ne seront notifiées qu'aux clients qui ont déjà été embauchés par l'université pour l'acquisition, le déploiement et le support de l'application. Pour cette raison, toute non-conformité identifiée lors de l’exploitation du logiciel ne sera pas résolue par l’équipe de développement du logiciel, sauf si elle présente un intérêt pour le logiciel ou provient d’un client.</target>
+                <target>Les mises à jour du code source de SIGELAB ne seront notifiées qu'aux clients qui ont déjà été embauchés par l'université pour l'acquisition, le déploiement et le support de l'application. Pour cette raison, toute non-conformité identifiée lors de l’exploitation du logiciel ne sera pas résolue par l’équipe de développement du logiciel, sauf si elle présente un intérêt pour le logiciel ou provient d’un client.</target>
             </trans-unit>
             <trans-unit id="scalability.section4_parragraph2">
                 <source>scalability.section4_parragraph2</source>
@@ -176,15 +176,15 @@
             <!--Pagina cookiespolicy-->
             <trans-unit id="cookiespolicy.introduction">
                 <source>cookiespolicy.introduction</source>
-                <target>Chez Milab, nous pensons que vous devez être clair et ouvert sur la façon dont nous collectons et utilisons vos données. Pour fournir un niveau de transparence plus élevé, cette politique fournit des informations détaillées sur la manière et le moment où nous utilisons les cookies. Cette politique de cookies s'applique à tout produit ou service Milab associé à cette politique ou qui l'intègre par référence.</target>
+                <target>Chez SIGELAB, nous pensons que vous devez être clair et ouvert sur la façon dont nous collectons et utilisons vos données. Pour fournir un niveau de transparence plus élevé, cette politique fournit des informations détaillées sur la manière et le moment où nous utilisons les cookies. Cette politique de cookies s'applique à tout produit ou service SIGELAB associé à cette politique ou qui l'intègre par référence.</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question1">
                 <source>cookiespolicy.question1</source>
-                <target>Milab utilise-t-il des cookies?</target>
+                <target>SIGELAB utilise-t-il des cookies?</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.response1">
                 <source>cookiespolicy.response1</source>
-                <target>Oui. Comme décrit dans la clause 1.8 de notre politique de confidentialité, nous utilisons des cookies et d'autres technologies pour garantir que tous les utilisateurs de Milab bénéficient de la meilleure expérience possible. Les cookies nous aident également à maintenir la sécurité des comptes. Lorsque vous continuez à visiter ou à utiliser nos services, vous acceptez l'utilisation de cookies et de technologies similaires aux fins décrites dans cette politique.</target>
+                <target>Oui. Comme décrit dans la clause 1.8 de notre politique de confidentialité, nous utilisons des cookies et d'autres technologies pour garantir que tous les utilisateurs de SIGELAB bénéficient de la meilleure expérience possible. Les cookies nous aident également à maintenir la sécurité des comptes. Lorsque vous continuez à visiter ou à utiliser nos services, vous acceptez l'utilisation de cookies et de technologies similaires aux fins décrites dans cette politique.</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question2">
                 <source>cookiespolicy.question2</source>
@@ -192,11 +192,11 @@
             </trans-unit>
             <trans-unit id="cookiespolicy.response2">
                 <source>cookiespolicy.response2</source>
-                <target>Un cookie est un petit fichier placé sur votre appareil électronique qui active les fonctionnalités de Milab. Par exemple, les cookies nous permettent d’identifier votre appareil, d’assurer votre accès à Milab et à nos sites en général.</target>
+                <target>Un cookie est un petit fichier placé sur votre appareil électronique qui active les fonctionnalités de SIGELAB. Par exemple, les cookies nous permettent d’identifier votre appareil, d’assurer votre accès à SIGELAB et à nos sites en général.</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question3">
                 <source>cookiespolicy.question3</source>
-                <target>Quand Milab place-t-il des cookies?</target>
+                <target>Quand SIGELAB place-t-il des cookies?</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.response3">
                 <source>cookiespolicy.response3</source>
@@ -204,11 +204,11 @@
             </trans-unit>
             <trans-unit id="cookiespolicy.question4">
                 <source>cookiespolicy.question4</source>
-                <target>Quel type de cookies Milab utilise-t-il?</target>
+                <target>Quel type de cookies SIGELAB utilise-t-il?</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.response4">
                 <source>cookiespolicy.response4</source>
-                <target>Nous utilisons deux types: les cookies permanents et les cookies de session. Un cookie permanent nous aide à vous reconnaître en tant qu'utilisateur. Il vous sera donc plus facile de retourner ou d'interagir avec nos services sans avoir à vous connecter à nouveau. Une fois connecté, un cookie permanent restera dans votre navigateur et Milab le lira lorsque vous retournerez sur l'un de nos sites Web. Les cookies de session ne durent qu'une session (généralement une visite sur un site Web ou une session de navigateur).</target>
+                <target>Nous utilisons deux types: les cookies permanents et les cookies de session. Un cookie permanent nous aide à vous reconnaître en tant qu'utilisateur. Il vous sera donc plus facile de retourner ou d'interagir avec nos services sans avoir à vous connecter à nouveau. Une fois connecté, un cookie permanent restera dans votre navigateur et SIGELAB le lira lorsque vous retournerez sur l'un de nos sites Web. Les cookies de session ne durent qu'une session (généralement une visite sur un site Web ou une session de navigateur).</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question5">
                 <source>cookiespolicy.question5</source>
@@ -216,7 +216,7 @@
             </trans-unit>
             <trans-unit id="cookiespolicy.response5">
                 <source>cookiespolicy.response5</source>
-                <target>Les cookies peuvent être utilisés pour vous reconnaître lorsque vous visitez Milab, mémoriser vos préférences et vous offrir une expérience personnalisée en fonction de votre configuration. Les cookies permettent également à vos interactions dans Milab d'être plus rapides et plus sûres.</target>
+                <target>Les cookies peuvent être utilisés pour vous reconnaître lorsque vous visitez SIGELAB, mémoriser vos préférences et vous offrir une expérience personnalisée en fonction de votre configuration. Les cookies permettent également à vos interactions dans SIGELAB d'être plus rapides et plus sûres.</target>
             </trans-unit>
             <!--Fin de pagina cookiespolicy-->
             <!--Pagina de privacidad-->
@@ -230,7 +230,7 @@
             </trans-unit>
             <trans-unit id="privacy.section1_parragraph">
                 <source>privacy.section1_parragraph</source>
-                <target>Nous enregistrons les données d'utilisation lorsque vous visitez ou utilisez nos Services, y compris nos sites Web, applications et technologies de plate-forme (par exemple, nos modules complémentaires sur d'autres sites Web), par exemple ) ou dans des publicités (sur nos sites Web et applications ou en dehors d’eux), vous effectuez une recherche, installez une de nos applications mobiles, partagez des articles ou postulez pour des emplois. Nous utilisons les journaux de connexion, les informations sur les appareils et les adresses IP (Internet Protocol) pour vous identifier et enregistrer votre utilisation dans Milab.</target>
+                <target>Nous enregistrons les données d'utilisation lorsque vous visitez ou utilisez nos Services, y compris nos sites Web, applications et technologies de plate-forme (par exemple, nos modules complémentaires sur d'autres sites Web), par exemple ) ou dans des publicités (sur nos sites Web et applications ou en dehors d’eux), vous effectuez une recherche, installez une de nos applications mobiles, partagez des articles ou postulez pour des emplois. Nous utilisons les journaux de connexion, les informations sur les appareils et les adresses IP (Internet Protocol) pour vous identifier et enregistrer votre utilisation dans SIGELAB.</target>
             </trans-unit>
             <trans-unit id="privacy.section1_details">
                 <source>privacy.section1_details</source>
@@ -280,7 +280,7 @@
             </trans-unit>
             <trans-unit id="privacypolicy.section1_parragraph">
                 <source>privacypolicy.section1_parragraph</source>
-                <target>L'objectif de Milab est de connecter des professionnels du monde entier pour les aider à être plus productifs et à atteindre leurs objectifs professionnels. La clé de cette mission est notre engagement à être transparent avec vous concernant les données que nous collectons à votre sujet et la manière dont elles sont utilisées et partagées. En utilisant nos services, vous acceptez notre utilisation de vos données conformément aux dispositions de la présente politique de confidentialité.</target>
+                <target>L'objectif de SIGELAB est de connecter des professionnels du monde entier pour les aider à être plus productifs et à atteindre leurs objectifs professionnels. La clé de cette mission est notre engagement à être transparent avec vous concernant les données que nous collectons à votre sujet et la manière dont elles sont utilisées et partagées. En utilisant nos services, vous acceptez notre utilisation de vos données conformément aux dispositions de la présente politique de confidentialité.</target>
             </trans-unit>
             <trans-unit id="privacypolicy.section2_header">
                 <source>privacypolicy.section2_header</source>
@@ -296,7 +296,7 @@
             </trans-unit>
             <trans-unit id="privacypolicy.section2_subsection1.parragraph">
                 <source>privacypolicy.section2_subsection1.parragraph</source>
-                <target>Cette politique de confidentialité s'applique à Milab.com et à d'autres sites liés à Milab, aux applications, communications et services («Services»), y compris aux services offerts à l'extérieur. du site, tels que nos services de publicité et les suppléments "Request with Milab" et "Share on Milab", mais les services proposés dans le cadre d'une politique de confidentialité différente sont exclus.</target>
+                <target>Cette politique de confidentialité s'applique à SIGELAB.com et à d'autres sites liés à SIGELAB, aux applications, communications et services («Services»), y compris aux services offerts à l'extérieur. du site, tels que nos services de publicité et les suppléments "Request with SIGELAB" et "Share on SIGELAB", mais les services proposés dans le cadre d'une politique de confidentialité différente sont exclus.</target>
             </trans-unit>
             <trans-unit id="privacypolicy.section2_details">
                 <source>privacypolicy.section2_details</source>
@@ -364,7 +364,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection1.parragraph">
                 <source>serviceterms.section1.subsection1.parragraph</source>
-                <target>Les présentes conditions (ci-après "Conditions d'utilisation") sont obligatoires et obligatoires. Ils sont appliqués à l'utilisation des services offerts ou mis à la disposition des utilisateurs par Milab. L'utilisation des services implique l'acceptation expresse, sans réserve et sans réserve de chacune des clauses des Conditions d'utilisation dans la version publiée au même moment où l'utilisateur utilise les services et autres informations fournies sur le site. Si vous n'êtes pas d'accord avec les conditions d'utilisation, vous devez vous abstenir d'utiliser les services.</target>
+                <target>Les présentes conditions (ci-après "Conditions d'utilisation") sont obligatoires et obligatoires. Ils sont appliqués à l'utilisation des services offerts ou mis à la disposition des utilisateurs par SIGELAB. L'utilisation des services implique l'acceptation expresse, sans réserve et sans réserve de chacune des clauses des Conditions d'utilisation dans la version publiée au même moment où l'utilisateur utilise les services et autres informations fournies sur le site. Si vous n'êtes pas d'accord avec les conditions d'utilisation, vous devez vous abstenir d'utiliser les services.</target>
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection1.details">
                 <source>serviceterms.section1.subsection1.details</source>
@@ -376,7 +376,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection2.parragraph">
                 <source>serviceterms.section1.subsection2.parragraph</source>
-                <target>Le présent Contrat s’applique à milab.com, aux applications de marque Milab et aux autres sites, applications, communications et autres services connexes qu’ils déclarent être proposés dans le cadre du présent Contrat («Services»), y compris la collecte de données sur la marge du Site pour ces Services. tels que nos annonces et add-ons. Les utilisateurs abonnés à nos Services sont des «Membres» et les utilisateurs non enregistrés sont des «Visiteurs». Cet accord s'applique aux deux.</target>
+                <target>Le présent Contrat s’applique à milab.com, aux applications de marque SIGELAB et aux autres sites, applications, communications et autres services connexes qu’ils déclarent être proposés dans le cadre du présent Contrat («Services»), y compris la collecte de données sur la marge du Site pour ces Services. tels que nos annonces et add-ons. Les utilisateurs abonnés à nos Services sont des «Membres» et les utilisateurs non enregistrés sont des «Visiteurs». Cet accord s'applique aux deux.</target>
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection3.header">
                 <source>serviceterms.section1.subsection3.header</source>
@@ -484,7 +484,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection2.parragraph">
                 <source>serviceterms.section3.subsection2.parragraph</source>
-                <target>Milab se réserve le droit de limiter votre utilisation des Services, y compris votre nombre de contacts et votre capacité à contacter d'autres Membres. Milab se réserve le droit de restreindre, suspendre ou fermer votre compte si elle considère que vous avez enfreint le présent Contrat, la loi ou que vous utilisez les Services de manière inappropriée (par exemple, vous avez enfreint la liste des choses à faire et à ne pas faire).</target>
+                <target>SIGELAB se réserve le droit de limiter votre utilisation des Services, y compris votre nombre de contacts et votre capacité à contacter d'autres Membres. SIGELAB se réserve le droit de restreindre, suspendre ou fermer votre compte si elle considère que vous avez enfreint le présent Contrat, la loi ou que vous utilisez les Services de manière inappropriée (par exemple, vous avez enfreint la liste des choses à faire et à ne pas faire).</target>
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection2.details">
                 <source>serviceterms.section3.subsection2.details</source>
@@ -496,7 +496,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection3.parragraph">
                 <source>serviceterms.section3.subsection3.parragraph</source>
-                <target>Milab se réserve tous les droits de propriété intellectuelle sur les services. L'utilisation des Services ne vous donne pas la propriété du même ou du contenu ou des informations affichées à travers eux. Les marques et logos utilisés dans le cadre des Services sont les marques commerciales de leurs propriétaires respectifs.</target>
+                <target>SIGELAB se réserve tous les droits de propriété intellectuelle sur les services. L'utilisation des Services ne vous donne pas la propriété du même ou du contenu ou des informations affichées à travers eux. Les marques et logos utilisés dans le cadre des Services sont les marques commerciales de leurs propriétaires respectifs.</target>
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection3.details">
                 <source>serviceterms.section3.subsection3.details</source>

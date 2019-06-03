@@ -4,13 +4,23 @@
 <div class="modal-body" id="modal-body">
     <div class="row">
         <div class="col-md-12">
-            {{form_row(form.laboratorio)}}
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.laboratorio) }}
+                </label>
+                <div>
+                    {{ form_widget(form.laboratorio) }}
+                    {{ form_errors(form.laboratorio) }}
+                </div>
+            </div>
         </div>
     </div>
 </div>
+{{ form_errors(form) }}
+{{ form_rest(form) }}
 <div class="modal-footer">
-    <a class="btn btn-sm btn-metal" data-dismiss="modal">{{ 'cancel_button'|trans }}</a>
-    <button class="btn btn-sm btn-primary  mt-ladda-btn ladda-button" data-style="expand-right" type="submit">{{ action |default('save_button')|trans }}</button>
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary  mt-ladda-btn ladda-button" data-style="expand-right" type="submit"><i class="flaticon-edit-1"></i> {{ action |default('save_button')|trans }}</button>
 </div>
 {{ form_end(form) }}
 

@@ -15,16 +15,12 @@ class EmailService
     private $username;
     private $password;
 
-    /**
-     * EmailService constructor.
-     * @param $mailer_url
-     */
-    public function __construct($mailer_url=null)
+    public function __construct($mailer_host,$mailer_port,$mailer_username,$mailer_password)
     {
-        $this->host='correo.ica.edu.cu';
-        $this->port=25;
-        $this->username='eduardo';
-        $this->password='hkusxpq1*';
+        $this->host=$mailer_host;
+        $this->port=$mailer_port;
+        $this->username=$mailer_username;
+        $this->password=$mailer_password;
     }
 
 
@@ -39,6 +35,7 @@ class EmailService
             $mailer->send($message);
         }
         catch (\Exception $e){
+            dump('exploto');
         }
     }
 }

@@ -34,6 +34,7 @@ class Pc
      *
      * @ORM\Column(name="numero", type="string", nullable=false)
      * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private $numero;
 
@@ -58,7 +59,7 @@ class Pc
      *
      * @ORM\ManyToOne(targetEntity="Laboratorio")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="laboratorio", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="laboratorio", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $laboratorio;

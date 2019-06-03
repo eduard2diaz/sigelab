@@ -1,0 +1,108 @@
+<script>
+    var notificacion = function () {
+    var table = null;
+    var obj = null;
+
+    var configurarDataTable = function () {
+    table = $('table#notificacion_table').DataTable({
+        "pagingType": "simple_numbers",
+        "language": {
+            url: datatable_url
+        },
+        columns: [
+            {data: 'numero'},
+            {data: 'descripcion'},
+            {data: 'fecha'},
+            {data: 'acciones'}
+        ]});
+    }
+
+    var refrescar = function () {
+    $('a#notificacion_tablerefrescar').click(function (evento)
+{
+    evento.preventDefault();
+    var link = $(this).attr('href');
+    obj = $(this);
+    $.ajax({
+    type: 'get',
+    dataType: 'html',
+    url: link,
+    beforeSend: function (data) {
+    mApp.block("body",
+{overlayColor:"#000000",type:"loader",state:"success",message: window.loadingMessage});
+},
+    success: function (data) {
+    $('table#notificacion_table').html(data);
+    table.destroy();
+    configurarDataTable();
+},
+    error: function ()
+{
+    base.Error();
+},
+    complete: function () {
+    mApp.unblock("body")
+}});
+});
+}
+
+    var eliminar = function () {
+    $('table#notificacion_table').on('click', 'a.eliminar_notificacion', function (evento)
+{
+    evento.preventDefault();
+    var obj = $(this);
+    var link = $(this).attr('data-href');
+    var token = $(this).attr('data-csrf');
+    bootbox.confirm({
+    title: '{{ 'notification_delete_title' | trans }}',
+    message: '<p>{{ 'notification_delete_message'| trans }}</p>',
+    buttons: {
+    confirm: {
+    label: '{{ 'confirm_button'| trans }}',
+    className: 'btn-sm btn-primary'},
+    cancel: {
+    label: '{{ 'cancel_button'|trans }}',
+    className: 'btn-sm btn-metal'}
+},
+    callback: function (result) {
+    if (result == true)
+    $.ajax({
+    type: 'get',
+    url: link,
+    beforeSend: function () {
+    mApp.block("body",
+{overlayColor:"#000000",type:"loader",state:"success",message: window.loadingMessage});
+},
+    complete: function () {
+    mApp.unblock("body")
+},
+    success: function (data) {
+    table.row(obj.parents('tr'))
+    .remove()
+    .draw('page');
+    toastr.success(data['mensaje']);
+},
+    error: function ()
+{
+    base.Error();
+}
+});
+}
+});
+});
+}
+
+    return {
+    init: function () {
+    $().ready(function () {
+    configurarDataTable();
+    refrescar();
+    eliminar();
+}
+    );
+}
+}
+}();
+</script>
+
+

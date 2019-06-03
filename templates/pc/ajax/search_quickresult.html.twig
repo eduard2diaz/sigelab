@@ -1,0 +1,14 @@
+<div class="m-list-search__results">
+{% if pcs is empty%}
+    <span class="m-list-search__result-message">{{ 'noresult'|trans }}</span>
+    {% else %}
+    {% for pc in pcs %}
+        <a data-href="{{ path('pc_ajaxdetails',{'id':pc['id']}) }}" class="m-list-search__result-item">
+		<span class="m-list-search__result-item-pic">
+			<img class="m--img-rounded" src="{{ asset('img/laravel-nova-mastery.svg','milab') }}" title="">
+		</span>
+            <span class="m-list-search__result-item-text" style="font-weight: bolder">{{ pc['mac'] }}</span>
+        </a>
+    {% endfor %}
+</div>
+{% endif %}

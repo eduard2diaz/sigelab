@@ -29,7 +29,6 @@ class ReparacionType extends AbstractType
                 'autocomplete' => 'off',
                 'class' => 'form-control input-medium'
             )))
-            //    ->add('usuario')
             ->add('tiporeparacion', null, array('label'=>'typeofrepair','required'=>true,'attr' => array(
                 'autocomplete' => 'off',
                 'class' => 'form-control input-medium'

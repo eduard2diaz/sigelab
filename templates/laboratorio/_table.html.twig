@@ -19,20 +19,22 @@
             <td>
                 <ul class="nav nav-pills">
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-default"
+                        <a class="btn btn-sm btn-default text-uppercase"
                            href="{{ path('laboratorio_show', { 'id': laboratorio.id }) }}">
                             <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
                         </a>
                     </li>
+                    {% if is_granted('ROLE_JEFETECNICO') %}
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-info edicion"
+                        <a class="btn btn-sm btn-info edicion text-uppercase"
                            data-href="{{ path('laboratorio_edit', { 'id': laboratorio.id }) }}">
                             <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
                         </a>
                     </li>
-                    {% if is_granted('ROLE_ADMIN') %}
+                    {% endif %}
+                    {% if is_granted('ROLE_JEFETECNICOINSTITUCIONAL') %}
                         <li class="nav-item m-tabs__item">
-                            <a class="btn btn-sm btn-danger eliminar_laboratorio"
+                            <a class="btn btn-sm btn-danger text-uppercase eliminar_laboratorio"
                                data-href="{{ path('laboratorio_delete', { 'id': laboratorio.id }) }}">
                                 <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
                             </a>

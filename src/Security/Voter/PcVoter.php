@@ -19,8 +19,6 @@ class PcVoter extends Voter
 
     protected function supports($attribute, $subject)
     {
-        // replace with your own logic
-        // https://symfony.com/doc/current/security/voters.html
         return in_array($attribute, ['EDIT', 'DELETE', 'NEW', 'VIEW'])
             && $subject instanceof Pc;
     }
@@ -37,14 +35,12 @@ class PcVoter extends Voter
         switch ($attribute) {
             case 'VIEW':
             case 'EDIT':
-                if ($this->decisionManager->decide($token, array('ROLE_TECNICO')) || $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject->getLaboratorio()))
-                    return true;
-                break;
+                return ($this->decisionManager->decide($token, array('ROLE_JEFETECNICOINSTITUCIONAL')) || ($this->decisionManager->decide($token, array('ROLE_TECNICO')) && $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject->getLaboratorio())));
+            break;
             case 'NEW':
             case 'DELETE':
-                if ($this->decisionManager->decide($token, array('ROLE_JEFETECNICO')) || $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject->getLaboratorio()))
-                    return true;
-                break;
+                return ($this->decisionManager->decide($token, array('ROLE_JEFETECNICOINSTITUCIONAL')) || ($this->decisionManager->decide($token, array('ROLE_JEFETECNICO')) || $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject->getLaboratorio())));
+            break;
         }
 
         return false;

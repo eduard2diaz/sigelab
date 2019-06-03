@@ -1,0 +1,27 @@
+<li class="m-menu__item m-menu__item--submenu m-menu__item--rel"
+		m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:;"
+																					   class="m-menu__link m-menu__toggle"><i
+					class="m-menu__link-icon flaticon-calendar"></i><span class="m-menu__link-title"> <span
+						class="m-menu__link-wrap"> <span class="m-menu__link-text  text-white">{{ 'reservations' | trans }}</span> <span
+							class="m-menu__link-badge"></span>
+												</span></span><i class="m-menu__hor-arrow la la-angle-down"></i><i
+					class="m-menu__ver-arrow la la-angle-right"></i></a>
+		<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+			<ul class="m-menu__subnav">
+				{% if is_granted('ROLE_PROFESOR') or is_granted("ROLE_TECNICO")%}
+					<li class="m-menu__item m-menu__item--submenu m-menu__item--rel">
+						<a href="{{ path('reservacion_laboratorio_index') }}" class="m-menu__link">
+							<i class="m-menu__link-icon flaticon-technology"></i><span
+									class="m-menu__link-text">{{ 'laboratory' | trans }}</span>
+						</a>
+					</li>
+				{% endif %}
+				<li class="m-menu__item m-menu__item--submenu m-menu__item--rel">
+					<a href="{{ path('reservacion_pc_index') }}" class="m-menu__link">
+						<i class="m-menu__link-icon flaticon-computer"></i><span
+								class="m-menu__link-text">{{ 'pc' | trans }}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</li>

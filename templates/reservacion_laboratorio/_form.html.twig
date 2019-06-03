@@ -1,24 +1,51 @@
 {{ form_start(form,{'attr':{
-    'id': form_id|default('reservacionlaboratorio_new')
+    'id': form_id|default('reservacionlaboratorio_new'),
+    'class': 'm-form m-form--state'
 }}) }}
 <div class="modal-body" id="modal-body">
     <div class="row">
         <div class="col-md-6">
-            {{ form_row(form.fechainicio) }}
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.fechainicio) }}
+                </label>
+                <div>
+                    {{ form_widget(form.fechainicio) }}
+                    {{ form_errors(form.fechainicio) }}
+                </div>
+            </div>
         </div>
         <div class="col-md-6">
-            {{ form_row(form.fechafin) }}
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.fechafin) }}
+                </label>
+                <div>
+                    {{ form_widget(form.fechafin) }}
+                    {{ form_errors(form.fechafin) }}
+                </div>
+            </div>
         </div>
     </div>
     <div class="row m--margin-top-20">
         <div class="col-md-6">
-            {{ form_row(form.laboratorio) }}
+            <div class="form-group m-form__group">
+                <label>
+                    {{ form_label(form.laboratorio) }}
+                </label>
+                <div>
+                    {{ form_widget(form.laboratorio) }}
+                    {{ form_errors(form.laboratorio) }}
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="modal-footer">
-    <a class="btn btn-sm btn-metal" data-dismiss="modal">{{ 'cancel_button'|trans }}</a>
-    <button class="btn btn-sm btn-primary ladda-button" data-style="expand-right" type="submit">{{ action |default('save_button')|trans }}
+    <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
+    <button class="btn btn-sm btn-primary ladda-button" data-style="expand-right" type="submit">
+        <i class="flaticon-edit"></i>
+        {{ action |default('save_button')|trans }}
     </button>
 </div>
 {{ form_errors(form) }}

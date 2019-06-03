@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\FacultadType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,10 +11,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 use App\Entity\Facultad;
-
-/*
- * @Route("/facultad")
- */
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route({
@@ -22,7 +20,7 @@ use App\Entity\Facultad;
  *     "fr": "/moyen",
  * })
  */
-class FacultadController extends Controller
+class FacultadController extends AbstractController
 {
 
     /**
@@ -44,7 +42,7 @@ class FacultadController extends Controller
     /**
      * @Route("/new", name="facultad_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -57,9 +55,9 @@ class FacultadController extends Controller
             if ($form->isValid()) {
                 $em->persist($facultad);
                 $em->flush();
-                $message=$this->get('translator')->trans('faculty_register_successfully');
+                $message=$translator->trans('faculty_register_successfully');
 
-                return new JsonResponse(array('mensaje' => $message,
+                return $this->json(array('mensaje' => $message,
                     'nombre' => $facultad->getNombre(),
                     'id' => $facultad->getId(),
                 ));
@@ -67,7 +65,7 @@ class FacultadController extends Controller
                 $page = $this->renderView('facultad/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
 
@@ -81,7 +79,7 @@ class FacultadController extends Controller
     /**
      * @Route("/{id}/edit", name="facultad_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Facultad $facultad): Response
+    public function edit(Request $request, Facultad $facultad, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -93,15 +91,15 @@ class FacultadController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($facultad);
                 $em->flush();
-                $message=$this->get('translator')->trans('faculty_update_successfully');
-                return new JsonResponse(array('mensaje' => $message, 'nombre' => $facultad->getNombre()));
+                $message=$translator->trans('faculty_update_successfully');
+                return $this->json(array('mensaje' => $message, 'nombre' => $facultad->getNombre()));
             } else {
                 $page = $this->renderView('facultad/_form.html.twig', array(
                     'form' => $form->createView(),
                     'form_id' => 'facultad_edit',
                     'action' => 'update_button',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('facultad/_new.html.twig', [
@@ -129,7 +127,7 @@ class FacultadController extends Controller
     /**
      * @Route("/{id}/delete",options={"expose"=true}, name="facultad_delete")
      */
-    public function delete(Request $request, Facultad $facultad): Response
+    public function delete(Request $request, Facultad $facultad, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -137,7 +135,7 @@ class FacultadController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($facultad);
         $em->flush();
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('faculty_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('faculty_delete_successfully')));
     }
 
 }

@@ -13,7 +13,12 @@
                         </div>
                         <div class="m-card-profile__pic">
                             <div class="m-card-profile__pic-wrapper">
-                                <img src="{{ asset('app/media/img/users/user4.jpg','template') }}" alt="">
+                                {%if mensaje.remitente.rutaFoto!=null %}
+                                    {% set rutaFoto=  asset('archivos/'~mensaje.remitente.rutaFoto) %}
+                                {% else %}
+                                    {% set rutaFoto= asset('img/facebook_perfil.jpg','milab') %}
+                                {% endif %}
+                                <img src="{{ rutaFoto }}" alt="">
                             </div>
                         </div>
                         <div class="m-card-profile__details">
@@ -40,7 +45,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-sm btn-metal" data-dismiss="modal">{{ 'cancel_button'|trans }}</a>
+                <a class="btn btn-sm btn-metal" data-dismiss="modal"> <i class="flaticon-cancel"></i> {{ 'cancel_button'|trans }}</a>
             </div>
         </div>
     </div>

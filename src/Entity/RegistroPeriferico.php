@@ -38,6 +38,7 @@ class RegistroPeriferico
      *
      * @ORM\Column(name="valor", type="string", nullable=false)
      * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private $valor;
 
@@ -46,7 +47,7 @@ class RegistroPeriferico
      *
      * @ORM\ManyToOne(targetEntity="Propiedad")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="propiedad", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="propiedad", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $propiedad;
@@ -56,7 +57,7 @@ class RegistroPeriferico
      *
      * @ORM\ManyToOne(targetEntity="Periferico")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="periferico", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="periferico", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $periferico;
@@ -66,7 +67,7 @@ class RegistroPeriferico
      *
      * @ORM\ManyToOne(targetEntity="Pieza")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="pieza", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="pieza", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $pieza;

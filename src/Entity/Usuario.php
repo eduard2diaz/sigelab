@@ -110,7 +110,7 @@ class Usuario implements UserInterface
      *
      * @ORM\ManyToOne(targetEntity="Facultad")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="facultad", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="facultad", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $facultad;
@@ -130,12 +130,24 @@ class Usuario implements UserInterface
     private $lastlogout;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $rutaFoto;
+
+    /**
+     * @Assert\Image()
+     */
+    private $file;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->idrol = new \Doctrine\Common\Collections\ArrayCollection();
         $this->idmensaje = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->activo=true;
+        $this->salt=uniqid();
     }
 
 
@@ -420,7 +432,41 @@ class Usuario implements UserInterface
         $this->lastlogout = $lastlogout;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getRutaFoto()
+    {
+        return $this->rutaFoto;
+    }
 
+    /**
+     * @param mixed $rutaFoto
+     */
+    public function setRutaFoto($rutaFoto): void
+    {
+        $this->rutaFoto = $rutaFoto;
+    }
+
+    /**
+     * Sets file.
+     *
+     * @param UploadedFile $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * Get file.
+     *
+     * @return UploadedFile
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
 
 
     public function getRoles()
@@ -455,15 +501,17 @@ class Usuario implements UserInterface
             $context->addViolation('user_form_rol_error_blank');
         }
 
-        $istecnico=false;
-        $isjefetecnico=false;
-        foreach($this->getIdrol()->toArray() as $rol){
-            if($rol->getNombre()=='ROLE_TECNICO')
-                $istecnico=true;
-            elseif($rol->getNombre()=='ROLE_JEFETECNICO')
-                $isjefetecnico=true;
-        }
-        if ($istecnico==$isjefetecnico && $istecnico==true) {
+        $roles=$this->getRoles();
+        if(in_array('ROLE_TECNICO',$roles) && in_array('ROLE_JEFETECNICO',$roles)){
+            $context->setNode($context, 'idrol', null, 'data.idrol');
+            $context->addViolation('user_form_rol_error_incompatibility');
+        }elseif(in_array('ROLE_TECNICO',$roles) && in_array('ROLE_JEFETECNICOINSTITUCIONAL',$roles)){
+            $context->setNode($context, 'idrol', null, 'data.idrol');
+            $context->addViolation('user_form_rol_error_incompatibility');
+        }elseif(in_array('ROLE_JEFETECNICO',$roles) && in_array('ROLE_JEFETECNICOINSTITUCIONAL',$roles)){
+            $context->setNode($context, 'idrol', null, 'data.idrol');
+            $context->addViolation('user_form_rol_error_incompatibility');
+        }elseif(in_array('ROLE_PROFESOR',$roles) && in_array('ROLE_ESTUDIANTE',$roles)){
             $context->setNode($context, 'idrol', null, 'data.idrol');
             $context->addViolation('user_form_rol_error_incompatibility');
         }

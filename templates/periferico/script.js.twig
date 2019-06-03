@@ -74,7 +74,7 @@
         $('a#refrescar').click(function (evento)
         {
             evento.preventDefault();
-            var link = $(this).attr('href');
+            var link = $(this).attr('data-href');
             obj = $(this);
             $.ajax({
             type: 'get', //Se uso get pues segun los desarrolladores de yahoo es una mejoria en el rendimineto de las peticiones ajax
@@ -131,7 +131,7 @@
                     "numero": total,
                     "nombre": data['nombre'],
                     "tipo": data['tipo'],
-                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-default edicion' data-href="+ Routing.generate('periferico_show.'+_locale,{id:data['id']}) +"><i class='flaticon-eye'></i>{{ 'visualize'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicion' data-href="+ Routing.generate('periferico_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_periferico' data-href="+ Routing.generate('periferico_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
+                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-default text-uppercase edicion' data-href="+ Routing.generate('periferico_show.'+_locale,{id:data['id']}) +"><i class='flaticon-eye'></i>{{ 'visualize'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicion' data-href="+ Routing.generate('periferico_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_periferico' data-href="+ Routing.generate('periferico_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                     });
                     objeto.draw();
                     table.page(pagina).draw('page');

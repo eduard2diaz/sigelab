@@ -20,7 +20,7 @@ class LaboratorioVoter extends Voter
     {
         // replace with your own logic
         // https://symfony.com/doc/current/security/voters.html
-        return in_array($attribute, ['EDIT'])
+        return in_array($attribute, ['VIEW','EDIT'])
             && $subject instanceof Laboratorio ;
     }
 
@@ -34,10 +34,12 @@ class LaboratorioVoter extends Voter
         }
 
         switch ($attribute) {
+            case 'VIEW':
+                return ($this->decisionManager->decide($token, array('ROLE_JEFETECNICOINSTITUCIONAL')) || ($this->decisionManager->decide($token, array('ROLE_TECNICO')) && $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject)));
+            break;
             case 'EDIT':
-                if($this->decisionManager->decide($token, array('ROLE_ADMIN')) || $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject))
-                    return true;
-                break;
+                return ($this->decisionManager->decide($token, array('ROLE_JEFETECNICOINSTITUCIONAL')) || ($this->decisionManager->decide($token, array('ROLE_JEFETECNICO')) && $token->getUser()->getFacultad()->getIdlaboratorio()->contains($subject)));
+            break;
         }
 
         return false;

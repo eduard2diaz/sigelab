@@ -8,15 +8,14 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Doctrine\ORM\EntityRepository;
-use App\Form\Transformer\DatetoStringTransformer;
 
 class ReservacionPcType extends AbstractType
 {
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $laboratorios = $options['laboratorios'];
+        $laboratorios=$options['laboratorios'];
         $builder
             ->add('laboratorio', EntityType::class, array(
                 'label'=>'laboratory',
@@ -42,10 +41,6 @@ class ReservacionPcType extends AbstractType
                     return $category->getFacultad();
                 },
                 'attr' => array('class' => 'form-control input-medium')));
-
-       /* $builder->get('fecha')
-            ->addModelTransformer(new DatetoStringTransformer());*/
-
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -53,6 +48,6 @@ class ReservacionPcType extends AbstractType
         $resolver->setDefaults([
             'data_class' => ReservacionPc::class,
         ]);
-        $resolver->setRequired(['laboratorios']);
+        $resolver->setRequired('laboratorios');
     }
 }

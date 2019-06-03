@@ -5,10 +5,10 @@
             #
         </th>
         <th>
-            Descripción
+            {{ 'description_field'|trans }}
         </th>
         <th>
-            Fecha
+            {{ 'date_field'|trans }}
         </th>
         <th>
         </th>
@@ -24,13 +24,13 @@
             <td>
                 <ul class="m-nav m-nav--inline m--pull-right">
                     <li class="m-nav__item">
-                        <a class="btn  btn-sm notificacion_show" data-href="{{ path('notificacion_show', { 'id': notificacion.id }) }}" >
-                            <i class="flaticon-eye"></i></a>
+                        <a class="btn  btn-sm text-uppercase notificacion_show" data-href="{{ path('notificacion_show', { 'id': notificacion.id }) }}" >
+                            <i class="flaticon-eye"></i>{{ 'visualize' |trans }}</a>
                     </li>
                     
                     <li class="m-nav__item">
-                        <a class="btn btn-danger btn-sm  eliminar_notificacion"  data-csrf="{{ csrf_token('delete' ~ notificacion.id) }}" data-href="{{ path('notificacion_delete', { 'id': notificacion.id }) }}">
-                            <i class="flaticon-delete-1"></i></a>
+                        <a class="btn btn-danger btn-sm text-uppercase  eliminar_notificacion" data-href="{{ path('notificacion_delete', { 'id': notificacion.id }) }}">
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}</a>
                     </li>
                 </ul>
             </td>
@@ -44,10 +44,10 @@
             #
         </th>
         <th>
-            Descripción
+            {{ 'description_field'|trans }}
         </th>
         <th>
-            Fecha
+            {{ 'date_field'|trans }}
         </th>
         <th>
         </th>

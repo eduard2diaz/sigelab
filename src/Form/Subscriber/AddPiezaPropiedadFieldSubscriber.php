@@ -52,6 +52,7 @@ class AddPiezaPropiedadFieldSubscriber  implements EventSubscriberInterface{
 
     protected function addElements($form, $pieza) {
         $form->add($this->factory->createNamed('propiedad',EntityType::class,null,array(
+            'label'=>'property',
             'auto_initialize'=>false,
             'class'         =>'App:Propiedad',
             'query_builder'=>function(EntityRepository $repository)use($pieza){
@@ -77,7 +78,7 @@ class AddPiezaPropiedadFieldSubscriber  implements EventSubscriberInterface{
         $form = $event->getForm();
 
        if(null==$data->getId()){
-           $form->add('propiedad',null,array('choices'=>array()));
+           $form->add('propiedad',null,array('label'=>'property','choices'=>array()));
         }else
        {
            $pieza= is_array($data) ? $data['pieza'] : $data->getPieza();

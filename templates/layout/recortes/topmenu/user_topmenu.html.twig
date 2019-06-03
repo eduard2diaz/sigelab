@@ -2,7 +2,12 @@
     m-dropdown-toggle="click">
     <a href="#" class="m-nav__link m-dropdown__toggle">
         <span class="m-topbar__userpic">
-													<img src="{{ asset('app/media/img/users/user4.jpg','template') }}"
+             {%if app.user.rutaFoto!=null %}
+                 {% set rutaFoto=  asset('archivos/'~app.user.rutaFoto) %}
+             {% else %}
+                 {% set rutaFoto= asset('img/facebook_perfil.jpg','milab') %}
+             {% endif %}
+													<img src="{{ rutaFoto }}"
                                                          class="m--img-rounded m--marginless m--img-centered" alt=""/>
 												</span>
         <span class="m-nav__link-icon m-topbar__usericon  m--hide">
@@ -18,15 +23,16 @@
             <div class="m-dropdown__header m--align-center" id="usertopmenu_header">
                 <div class="m-card-user m-card-user--skin-light">
                     <div class="m-card-user__pic">
-                        <img src="{{ asset('app/media/img/users/user4.jpg','template') }}"
+
+                        <img src="{{ rutaFoto }}"
                              class="m--img-rounded m--marginless" alt=""/>
                     </div>
                     <div class="m-card-user__details">
 																<span class="m-card-user__name m--font-weight-500">
 																	{{ app.user.nombre }}
 																</span>
-                        <a href="{{ path('usuario_show',{'id':app.user.id}) }}"
-                           class="m-card-user__email m--font-weight-300 m-link">
+                        <a data-href="{{ path('usuario_show',{'id':app.user.id}) }}"
+                           class="m-card-user__email m--font-weight-300 m-link usuario_show">
                             {{ app.user.correo }}
                         </a>
                     </div>
@@ -41,8 +47,7 @@
 																	</span>
                         </li>
                         <li class="m-nav__item">
-                            <a href="{{ path('usuario_show',{'id':app.user.id}) }}"
-                               class="m-nav__link">
+                            <a data-href="{{ path('usuario_show',{'id':app.user.id}) }}" style="cursor: pointer" class="m-nav__link usuario_show">
                                 <i class="m-nav__link-icon flaticon-profile-1"></i>
                                 <span class="m-nav__link-title">
 																			<span class="m-nav__link-wrap">
@@ -53,22 +58,6 @@
 																		</span>
                             </a>
                         </li>
-                        {% if is_granted("ROLE_ADMIN") %}
-                            <li class="m-nav__item">
-                                <a href="{{ path('facultad_index') }}" class="m-nav__link">
-                                    <i class="m-nav__link-icon flaticon-share"></i>
-                                    <span class="m-nav__link-text">{{ 'faculty' | trans }}</span>
-                                </a>
-                            </li>
-                            <li class="m-nav__item">
-                                <a href="{{ path('usuario_index') }}" class="m-nav__link">
-                                    <i class="m-nav__link-icon flaticon-info"></i>
-                                    <span class="m-nav__link-text">{{ 'user' | trans }}</span>
-                                </a>
-                            </li>
-                            <li class="m-nav__separator m-nav__separator--fit">
-                            </li>
-                        {% endif %}
                         <li class="m-nav__item">
                             <a href="{{ path('logout') }}" class="m-nav__link">
                                 <i class="m-nav__link-icon flaticon-logout"></i>

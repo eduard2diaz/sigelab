@@ -6,6 +6,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Usuario;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -41,6 +43,20 @@ class Notificacion
      * @ORM\Column(name="descripcion", type="text", nullable=false)
      */
     private $descripcion;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $leida;
+
+    /**
+     * Notificacion constructor.
+     */
+    public function __construct()
+    {
+        $this->leida=false;
+    }
+
 
     public function getId()
     {
@@ -93,5 +109,27 @@ class Notificacion
     public function setDescripcion(?string $descripcion): void
     {
         $this->descripcion = $descripcion;
+    }
+
+    /**
+     * @Assert\Callback
+     */
+    public function validate(ExecutionContextInterface $context, $payload)
+    {
+
+        if($this->getDestinatario()==null)
+            $context->buildViolation('Seleccione el destinatario')->atPath('destinatario')->addViolation();
+    }
+
+    public function getLeida(): ?bool
+    {
+        return $this->leida;
+    }
+
+    public function setLeida(bool $leida): self
+    {
+        $this->leida = $leida;
+
+        return $this;
     }
 }

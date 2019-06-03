@@ -10,7 +10,7 @@
         {% else %}
             <div class="m-list-timeline__item">
                 <span class="m-list-timeline__badge -m-list-timeline__badge--state-danger"></span>
-                <span class="m-list-timeline__text">No hay nuevos mensajes</span>
+                <span class="m-list-timeline__text">{{ 'message_recent_empty' | trans }}</span>
             </div>
         {% endfor %}
 

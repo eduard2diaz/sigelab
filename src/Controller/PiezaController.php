@@ -3,17 +3,13 @@
 namespace App\Controller;
 
 use App\Form\PiezaType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Pieza;
 use App\Entity\Periferico;
-
-/*
- * @Route("/pieza")
- */
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route({
@@ -22,7 +18,7 @@ use App\Entity\Periferico;
  *     "fr": "/pièce",
  * } ,options={"utf8": true})
  */
-class PiezaController extends Controller
+class PiezaController extends AbstractController
 {
 
     /**
@@ -44,7 +40,7 @@ class PiezaController extends Controller
     /**
      * @Route("/new", name="pieza_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request,  TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -57,7 +53,7 @@ class PiezaController extends Controller
             if ($form->isValid()) {
                 $em->persist($pieza);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('piece_register_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('piece_register_successfully'),
                     'nombre' => $pieza->getNombre(),
                     'id' => $pieza->getId(),
                 ));
@@ -65,7 +61,7 @@ class PiezaController extends Controller
                 $page = $this->renderView('pieza/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
 
@@ -79,7 +75,7 @@ class PiezaController extends Controller
     /**
      * @Route("/{id}/edit", name="pieza_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Pieza $pieza): Response
+    public function edit(Request $request, Pieza $pieza, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -91,14 +87,14 @@ class PiezaController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($pieza);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('piece_update_successfully'), 'nombre' => $pieza->getNombre()));
+                return $this->json(array('mensaje' => $translator->trans('piece_update_successfully'), 'nombre' => $pieza->getNombre()));
             } else {
                 $page = $this->renderView('pieza/_form.html.twig', array(
                     'form' => $form->createView(),
                     'form_id' => 'pieza_edit',
                     'action' => 'update_button',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('pieza/_new.html.twig', [
@@ -124,7 +120,7 @@ class PiezaController extends Controller
     /**
      * @Route("/{id}/delete",options={"expose"=true}, name="pieza_delete")
      */
-    public function delete(Request $request, Pieza $pieza): Response
+    public function delete(Request $request, Pieza $pieza, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -132,7 +128,7 @@ class PiezaController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($pieza);
         $em->flush();
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('piece_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('piece_delete_successfully')));
     }
 
     /**

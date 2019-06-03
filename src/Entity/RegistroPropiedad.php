@@ -41,6 +41,7 @@ class RegistroPropiedad
      *
      * @ORM\Column(name="valor", type="string", nullable=false)
      * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private $valor;
 
@@ -49,7 +50,7 @@ class RegistroPropiedad
      *
      * @ORM\ManyToOne(targetEntity="Propiedad")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="propiedad", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="propiedad", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $propiedad;
@@ -59,7 +60,7 @@ class RegistroPropiedad
      *
      * @ORM\ManyToOne(targetEntity="Pc")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="pc", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="pc", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $pc;

@@ -4,7 +4,7 @@
     obj = null;
 
     var configurarDataTable = function () {
-    table = $('table#table').DataTable({
+    table = $('table#tablemensaje').DataTable({
     "pagingType": "simple_numbers",
     "language": {
     url: datatable_url
@@ -31,8 +31,7 @@
     mApp.block("body", {overlayColor:"#000000",type:"loader",state:"success",message:window.loadingMessage});
 },
     success: function (data) {
-        console.log(data);
-    $('table#table').html(data['messages']);
+    $('table#tablemensaje').html(data['messages']);
     $('small#message_inbox').html(data['message_inbox']);
     table.destroy();
     configurarDataTable();
@@ -50,7 +49,7 @@
 
 
     var eliminar = function () {
-    $('table#table').on('click', 'a.eliminar_mensaje', function (evento)
+    $('table#tablemensaje').on('click', 'a.eliminar_mensaje', function (evento)
 {
     evento.preventDefault();
     var obj = $(this);

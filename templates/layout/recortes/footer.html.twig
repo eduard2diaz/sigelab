@@ -1,118 +1,80 @@
-<!--<footer class="m-grid__item	m-footer">
-            <div class="row">
-            <div class="col-md-3">
+<div class="prefooter m--padding-20">
+    <div class="row text-white">
+        <div class="col-md-3 footer_logo">
 
-            </div>
-            <div class="col-md-3">
-                <b><i class="fa fa-user-circle"></i> {{ 'account'| trans }}</b>
-                <ul class="list-unstyled margin-bottom-20">
-                    <li><a href="{{ path('account_management') }}">{{ 'account_management'| trans }}</a></li>
-                </ul>
-                <b><i class="fa fa-th-large"></i> {{ 'principles'| trans }}</b>
-                <ul class="list-unstyled">
-                    <li><a href="{{ path('accesibility') }}">{{ 'accesibility'| trans }}</a></li>
-                    <li><a href="{{ path('scalability') }}">{{ 'scalability'| trans }}</a></li>
-                    <li><a href="{{ path('privacy') }}">{{ 'privacy'| trans }}</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <b><i class="fa fa-search-plus"></i> {{ 'discover' | trans }}</b>
-                <ul class="list-unstyled">
-                    <li><a href="">{{ 'university_site' | trans }}</a></li>
-                    <li><a href="">{{ 'email_field' | trans }}</a></li>
-                    <li><a href="">Intranet</a></li>
-                    <li><a href="">{{ 'news' | trans }}</a></li>
-                    <li><a href="">FTP</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <b><i class="fa fa-info-circle"></i> {{ 'about' | trans }}</b>
-                <ul class="list-unstyled">
-                    <li><a href="{{ path('aboutus') }}">{{ 'aboutus' | trans }}</a></li>
-                    <li><a href="{{ path('services') }}">{{ 'services' | trans }}</a></li>
-                    <li><a href="{{ path('serviceterms') }}">{{ 'serviceterms' | trans }}</a></li>
-                    <li><a href="{{ path('cookiespolicy') }}">{{ 'cookiespolicy' | trans }}</a></li>
-                    <li><a href="{{ path('privacypolicy') }}" class="active">{{ 'privacypolicy' | trans }}</a></li>
-                </ul>
-            </div>
         </div>
-
+        <div class="col-md-3">
+            <b><i class="fa fa-user-circle"></i> {{ 'account'| trans }}</b>
+            <ul class="list-unstyled margin-bottom-20">
+                <li><a href="{{ path('account_management') }}">{{ 'account_management'| trans }}</a></li>
+            </ul>
+            <b><i class="fa fa-th-large"></i> {{ 'principles'| trans }}</b>
+            <ul class="list-unstyled">
+                <li><a href="{{ path('accesibility') }}">{{ 'accesibility'| trans }}</a></li>
+                <li><a href="{{ path('scalability') }}">{{ 'scalability'| trans }}</a></li>
+                <li><a href="{{ path('privacy') }}">{{ 'privacy'| trans }}</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <b><i class="fa fa-search-plus"></i> {{ 'discover' | trans }}</b>
+            <ul class="list-unstyled">
+                <li><a href="">{{ 'university_site' | trans }}</a></li>
+                <li><a href="">{{ 'email_field' | trans }}</a></li>
+                <li><a href="">Intranet</a></li>
+                <li><a href="">{{ 'news' | trans }}</a></li>
+                <li><a href="">FTP</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <b><i class="fa fa-info-circle"></i> {{ 'about' | trans }}</b>
+            <ul class="list-unstyled">
+                <li><a href="{{ path('aboutus') }}">{{ 'aboutus' | trans }}</a></li>
+                <li><a href="{{ path('services') }}">{{ 'services' | trans }}</a></li>
+                <li><a href="{{ path('serviceterms') }}">{{ 'serviceterms' | trans }}</a></li>
+                <li><a href="{{ path('cookiespolicy') }}">{{ 'cookiespolicy' | trans }}</a></li>
+                <li><a href="{{ path('privacypolicy') }}" class="active">{{ 'privacypolicy' | trans }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="m-grid__item  m-footer">
+    <div class="m-container m-container--responsive m-container--xxl m-container--full-height">
         <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
             <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
 							<span class="m-footer__copyright">
-								2019 &copy; SIGELab
+                                <b>Copyright © 2019 SIGELAB.</b> {{ 'all_right_reserved'| trans }}
 							</span>
             </div>
-            <div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
-                <ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
+            <div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first" style="padding-top: 1.5%">
+                <ul class="m-footer__nav m-nav m-nav--inline">
                     <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
-                            <span class="m-nav__link-text">About</span>
-                        </a>
-                    </li>
-                    <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
-                            <span class="m-nav__link-text">Privacy</span>
+                        <a href="https://www.github.com/eduard2diaz/siplan" class="m-nav__link">
+                            <i class="socicon-github"></i>
                         </a>
                     </li>
                     <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
-                            <span class="m-nav__link-text">T&C</span>
+                        <a href="https://www.google.com" class="m-nav__link">
+                            <i class="socicon-google"></i>
                         </a>
                     </li>
                     <li class="m-nav__item">
-                        <a href="#" class="m-nav__link">
-                            <span class="m-nav__link-text">Purchase</span>
+                        <a href="https://www.facebook.com" class="m-nav__link">
+                            <i class="socicon-facebook"></i>
                         </a>
                     </li>
-                    <li class="m-nav__item m-nav__item">
-                        <a href="#" class="m-nav__link" data-toggle="m-tooltip" title="Support Center" data-placement="left">
-                            <i class="m-nav__link-icon flaticon-info m--icon-font-size-lg3"></i>
+                    <li class="m-nav__item">
+                        <a href="https://www.facebook.com" class="m-nav__link">
+                            <i class="socicon-twitter"></i>
                         </a>
                     </li>
+                    <li class="m-nav__item">
+                        <a href="https://www.linkedin.com" class="m-nav__link">
+                            <i class="socicon-linkedin"></i>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
-</footer>-->
-
-<footer class="m-grid__item  m-footer ">
-    <div class="m-container m-container--responsive m-container--xxl m-container--full-height">
-            <div class="row m--margin-top-20">
-                <div class="col-md-3">aadsgasd gasdg asdgsdg</div>
-                <div class="col-md-3">
-                    <b><i class="fa fa-user-circle"></i> {{ 'account'| trans }}</b>
-                    <ul class="list-unstyled margin-bottom-20">
-                        <li><a href="{{ path('account_management') }}">{{ 'account_management'| trans }}</a></li>
-                    </ul>
-                    <b><i class="fa fa-th-large"></i> {{ 'principles'| trans }}</b>
-                    <ul class="list-unstyled">
-                        <li><a href="{{ path('accesibility') }}">{{ 'accesibility'| trans }}</a></li>
-                        <li><a href="{{ path('scalability') }}">{{ 'scalability'| trans }}</a></li>
-                        <li><a href="{{ path('privacy') }}">{{ 'privacy'| trans }}</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <b><i class="fa fa-search-plus"></i> {{ 'discover' | trans }}</b>
-                    <ul class="list-unstyled">
-                        <li><a href="">{{ 'university_site' | trans }}</a></li>
-                        <li><a href="">{{ 'email_field' | trans }}</a></li>
-                        <li><a href="">Intranet</a></li>
-                        <li><a href="">{{ 'news' | trans }}</a></li>
-                        <li><a href="">FTP</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <b><i class="fa fa-info-circle"></i> {{ 'about' | trans }}</b>
-                    <ul class="list-unstyled">
-                        <li><a href="{{ path('aboutus') }}">{{ 'aboutus' | trans }}</a></li>
-                        <li><a href="{{ path('services') }}">{{ 'services' | trans }}</a></li>
-                        <li><a href="{{ path('serviceterms') }}">{{ 'serviceterms' | trans }}</a></li>
-                        <li><a href="{{ path('cookiespolicy') }}">{{ 'cookiespolicy' | trans }}</a></li>
-                        <li><a href="{{ path('privacypolicy') }}" class="active">{{ 'privacypolicy' | trans }}</a></li>
-                    </ul>
-                </div>
-            </div>
-
-
     </div>
 </footer>

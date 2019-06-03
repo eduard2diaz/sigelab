@@ -117,7 +117,8 @@ class Rol extends Role
     public function __toString()
     {
         $array=['ROLE_ADMIN'=>'Administrador','ROLE_ESTUDIANTE'=>'Estudiante','ROLE_PROFESOR'=>'Profesor',
-                'ROLE_TECNICO'=>'Tecnico de laboratorio','ROLE_JEFETECNICO'=>'Jefe Tecnico de Laboratorio'];
+                'ROLE_TECNICO'=>'Tecnico de laboratorio','ROLE_JEFETECNICO'=>'Jefe de Técnico'
+            ,'ROLE_JEFETECNICOINSTITUCIONAL'=>'Jefe de Técnicos Institucional'];
      return $array[$this->getNombre()];
     }
 

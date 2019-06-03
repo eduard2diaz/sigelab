@@ -3,6 +3,7 @@
 parameters:
     locale: 'es'
     is_system_maintance: '%env(IS_SYSTEM_MAINTANCE)%'
+    storage_directory: '%env(STORAGE_DIRECTORY)%'
 
 services:
     # default configuration for services in *this* file
@@ -12,6 +13,19 @@ services:
         public: false       # Allows optimizing the container by removing unused services; this also means
                             # fetching services directly from the container via $container->get() won't work.
                             # The best practice is to be explicit about your dependencies anyway.
+        bind:
+            $mailer_host: '%env(MAILER_HOST)%'
+            $mailer_port: '%env(MAILER_PORT)%'
+            $mailer_username: '%env(MAILER_USERNAME)%'
+            $mailer_password: '%env(MAILER_PASSWORD)%'
+
+            $ldap_dominio: '%env(LDAP_DOMAIN)%'
+            $ldap_server: '%env(LDAP_SERVER)%'
+            $ldap_version: '%env(LDAP_VERSION)%'
+            $ldap_dn: '%env(LDAP_DN)%'
+            $ldap_puerto: '%env(LDAP_PUERTO)%'
+            $ldap_username: '%env(LDAP_USERNAME)%'
+            $ldap_password: '%env(LDAP_PASSWORD)%'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -38,6 +52,14 @@ services:
         tags:
             - { name: doctrine.event_subscriber,  connection: default }
         arguments: ['@service_container']
+
+    pc_subscriber:
+        class: App\EventSubscriber\PcSubscriber
+        public: true
+        autowire: true
+        autoconfigure: true
+        tags:
+            - { name: doctrine.event_subscriber,  connection: default }
 
     app_bundle.locale_listener:
         class: App\EventListener\TranslateListener
@@ -66,6 +88,15 @@ services:
             - { name: validator.constraint_validator, alias: reservacionlaboratorio.validator.period }
         arguments: ['@doctrine','@translator']
 
+    tiempomaquina.validator.period:
+        class: App\Validator\TiempoMaquinaValidator
+        public: true
+        autowire: true
+        autoconfigure: true
+        tags:
+            - { name: validator.constraint_validator, alias: tiempomaquina.validator.period }
+        arguments: ['@doctrine','@translator']
+
     App\EventListener\LoginListener:
         tags:
             - { name: 'kernel.event_listener', event: 'security.interactive_login' }
@@ -73,3 +104,14 @@ services:
     app.logoutlistener:
         class: App\EventListener\LogoutListener
         arguments: ['@doctrine.orm.default_entity_manager']
+
+    app.token_authenticator:
+        class: App\Security\ApiTokenAuthenticator
+
+    app.ldap_service:
+        class: App\Services\LdapService
+        public: true
+
+    app.notificacion_service:
+        class: App\Services\NotificacionService
+        public: true

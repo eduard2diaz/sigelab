@@ -1,50 +1,90 @@
 {% extends 'layout/anonimo.html.twig' %}
 {% block stylesheets %}
     {{ parent() }}
-   <link rel="stylesheet" type="text/css" href="{{ asset('assets/milab/css/login.min.css') }}"/>
-    <!--<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bangers|Chela+One|Cinzel|Dancing+Script|Lobster|Lobster+Two|Merienda|Playfair+Display" rel="stylesheet">-->
-
+   <link rel="stylesheet" type="text/css" href="{{ asset('assets/milab/css/page/login.min.css') }}"/>
 {% endblock %}
 {% block body %}
-    <div id="behind">
-        <div class="col-md-offset-1 margin-top-40 col-md-6" style="padding-top:2%">
-            <h2>{{ 'promo1_title1' |trans }}</h2>
-            <h3>{{ 'promo1_title2' |trans }}</h3>
-            <ul class="list-inline margin-top-40 promo">
-                <li>{{ 'promo1_ad1' |trans }}<i class="fa fa-bolt"></i></li>
-                <li>{{ 'promo1_ad2' |trans }} <i class="fa fa-angle-right"></i></li>
-            </ul>
-            <hr/>
-            <form action="{{ path('check') }}"  method="POST">
-                {% if error is defined and error is not empty %}
-                    <div class="alert alert-danger">
-                        <button class="close" data-close="alert"></button>
-                        <span>{{ error.message |trans }} </span>
-                    </div>
-                {% endif %}
-                <div class="row">
-                    <div class="col-xs-6">
-                        <input class="form-control bordered" placeholder="{{ 'loginform_username_placeholder' | trans}}" id="_username" name="_username"
-                               required="required" aria-required="true" type="text"></div>
-                    <div class="col-xs-6">
-                        <input class="form-control bordered" placeholder="{{ 'loginform_password_placeholder' | trans}}" name="_password"
-                               required="required" type="password">
-                    </div>
+    <div class="login-form">
+        <div class="col-md-5">
+            {% if error is defined and error is not empty %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                    {{ error.message |trans }}
                 </div>
-                <div class="row margin-top-20">
-                    <div class="col-sm-4">
-                        <div class="rem-password">
-                            <label class="rememberme mt-checkbox mt-checkbox-outline uppercase bold">
-                                <input name="remember" value="1" type="checkbox"> {{ 'loginform_rememberme_placeholder' | trans}}
-                                <span></span>
+
+            {% endif %}
+            <form action="{{ path('check') }}"  method="POST" class="m-form m-form--state">
+                <div class="m-portlet__body">
+                    <div class="m-form__section">
+                        <div class="form-group m-form__group">
+                            <label for="_username">
+                                {{ 'loginform_username_placeholder' | trans }}
+                            </label>
+                            <div class="m-input-icon m-input-icon--left">
+                                <input class="form-control m-input" placeholder="{{ 'loginform_username_placeholder' | trans}}" id="_username" name="_username"
+                                       required="required" type="text" value="{{ last_username }}">
+                                <span class="m-input-icon__icon m-input-icon__icon--left">
+													<span><i class="la la-user"></i></span>
+												</span>
+                            </div>
+                        </div>
+                        <div class="form-group m-form__group">
+                            <label for="_password">
+                                {{ 'Contraseña' | trans }}
+                            </label>
+                            <div class="m-input-icon m-input-icon--left">
+                                <input class="form-control m-input" placeholder="{{ 'loginform_password_placeholder' | trans}}" id="_password" name="_password"
+                                       required="required" type="password">
+                                <span class="m-input-icon__icon m-input-icon__icon--left">
+													<span><i class="la la-key"></i></span>
+												</span>
+                            </div>
+                        </div>
+                        <div class="form-group m-form__group">
+                            <label class="m-checkbox">
+                                <input type="checkbox" name="remember" value="1"/>{{ 'loginform_rememberme_placeholder' | trans}}<span></span>
                             </label>
                         </div>
                     </div>
-                    <div class="col-sm-8 text-right">
-                        <button class="btn green" type="submit">{{ 'loginform_submit_button' |trans }}</button>
-                    </div>
                 </div>
+                <button type="submit" class="btn btn-sm btn-success">
+                    {{ 'loginform_submit_button' |trans }}
+                </button>
+                <button type="reset" class="btn btn-sm btn-secondary">
+                    {{ 'cancel_button' | trans }}
+                </button>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
             </form>
         </div>
     </div>
+    <div class="promo promo1">
+    </div>
+    <div class="promo promo2">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <h2>{{ 'promo1_title1' |trans }}</h2>
+                <h3>{{ 'promo1_title2' |trans }}</h3>
+                <!--<ul class="m-footer__nav m-nav m-nav--inline">
+                    <li class="m-nav__item">
+                        <a href="https://github.com/eduard2diaz/milab" class="m-nav__link text-white">
+                            <i class="flaticon-rocket"></i> {{ 'promo1_ad1' |trans }}
+                        </a>
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="http://www.facebook.com" class="m-nav__link  text-white">
+                            <i class="flaticon-information"></i> {{ 'promo1_ad2' |trans }}
+                        </a>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+    </div>
 {% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('scripts/page/login.js','milab') }}"></script>
+    <script>
+        login.init();
+    </script>
+{% endblock javascripts %}

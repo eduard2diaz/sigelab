@@ -2,14 +2,22 @@
 
 namespace App\Repository;
 
+use App\Entity\Usuario;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Doctrine\ORM\NoResultException;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 
-class UsuarioRepository extends EntityRepository implements UserLoaderInterface {
+class UsuarioRepository extends ServiceEntityRepository implements UserLoaderInterface {
+
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, Usuario::class);
+    }
     /*
      * Funcionalidad que permite autenticar un usuario a partir del username o por el correo
      */
@@ -24,7 +32,8 @@ class UsuarioRepository extends EntityRepository implements UserLoaderInterface 
             $user = $q->getSingleResult();
         } catch (NoResultException $e) {
             $message = sprintf('Unable to find an active admin AcmeUserBundle:User object identified by "%s".', $username);
-            throw new UsernameNotFoundException($message, 0, $e);
+         //   throw new UsernameNotFoundException($message, 0, $e);
+            return null;
         }
         return $user;
     }

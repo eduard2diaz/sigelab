@@ -13,14 +13,12 @@ class PerifericoFixtures extends  Fixture implements OrderedFixtureInterface
     {
         $propiedades=['Modelo','Fabricante','No. serie','No Inv.'];
         $perifericos=[
-            ['nombre'=>'Teclado','tipo'=>'Entrada'],
-            ['nombre'=>'Mouse','tipo'=>'Entrada'],
-            ['nombre'=>'Monitor','tipo'=>'Salida'],
-            ['nombre'=>'Bocina','tipo'=>'Salida'],
-            ['nombre'=>'Impresora','tipo'=>'Salida'],
-            ['nombre'=>'Scanner','tipo'=>'Entrada'],
-            ['nombre'=>'HDD','tipo'=>'Almacenamiento'],
-            ['nombre'=>'Disco externo','tipo'=>'Almacenamiento'],
+            ['nombre'=>'Teclado','tipo'=>'in'],
+            ['nombre'=>'Mouse','tipo'=>'in'],
+            ['nombre'=>'Monitor','tipo'=>'out'],
+            ['nombre'=>'Bocina','tipo'=>'out'],
+            ['nombre'=>'Impresora','tipo'=>'out'],
+            ['nombre'=>'Scanner','tipo'=>'in'],
             ];
 
         foreach ($perifericos as $perifericos_it){

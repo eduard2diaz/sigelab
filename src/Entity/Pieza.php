@@ -23,6 +23,7 @@ class Pieza
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private $nombre;
 

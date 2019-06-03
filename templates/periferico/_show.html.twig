@@ -10,7 +10,7 @@
                     <th>{{ 'name_field'|trans }}</th>
                     <td>{{ periferico.nombre }}</td>
                     <th>{{ 'type_field'|trans }}</th>
-                    <td>{{ ('peripheral_type_'~periferico.tipo)|trans }}</td>
+                    <td>{{ ('peripheral_type_'~periferico.tipo) | trans }}</td>
                 </tr>
                 <tr>
                     <th>{{ 'properties'|trans }}</th>
@@ -33,7 +33,7 @@
             </table>
         </div>
         <div class="modal-footer">
-            <a class="btn btn-sm btn-primary" data-dismiss="modal">{{ 'close'|trans }}</a>
+            <a class="btn btn-sm btn-metal" data-dismiss="modal"> <i class="flaticon-cancel"></i> {{ 'close'|trans }}</a>
         </div>
     </div>
 </div>

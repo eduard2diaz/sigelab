@@ -9,7 +9,7 @@
                 <div class="portlet-title tabbable-line">
                     <div class="caption">
                         <i class="icon-share font-dark"></i>
-                        <span class="caption-subject font-dark bold uppercase">{{ 'pc_details_header'|trans }}</span>
+                        <h4 class="caption-subject font-dark bold uppercase">{{ 'pc_details_header'|trans }}</h4>
                     </div>
                     <ul class="nav nav-tabs m-tabs-line m-tabs-line--primary m-tabs-line--2x" role="tablist">
                         <li class="nav-item m-tabs__item">
@@ -63,7 +63,7 @@
                                         </a>
                                     </li>
                                 <li class="nav-item m-tabs__item">
-                                    <a class="btn btn-sm btn-default" href="{{ path('pc_exportar',{'id':pc.id}) }}">
+                                    <a class="btn btn-sm btn-default text-uppercase" href="{{ path('pc_exportar',{'id':pc.id}) }}">
                                         <i class="flaticon-file-1"></i>{{ 'export' |trans }}
                                     </a>
                                 </li>
@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a class="btn btn-sm btn-primary" data-dismiss="modal">{{ 'close'|trans }}</a>
+            <a class="btn btn-sm btn-metal" data-dismiss="modal"> <i class="flaticon-cancel"></i> {{ 'close'|trans }}</a>
         </div>
     </div>
 </div>

@@ -19,21 +19,23 @@
             <td>{{ reservacion.laboratorio }}</td>
             <td>{{ reservacion.usuario }}</td>
             <td>
+                {% set hoy ='now'| date %}
+                {%if is_granted('ROLE_JEFETECNICO') or (is_granted('ROLE_PROFESOR') and app.user.id==reservacion.usuario.id and reservacion.fechainicio > hoy) %}
                 <ul class="nav nav-pills">
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-info edicion"
+                        <a class="btn btn-sm btn-info text-uppercase edicion"
                            data-href="{{ path('reservacion_laboratorio_edit', { 'id': reservacion.id }) }}">
-                            <i class="flaticon-edit"></i>{{ 'edit' |trans }}
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
                         </a>
                     </li>
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-danger eliminar_reservacionlaboratorio"
+                        <a class="btn btn-sm btn-danger text-uppercase eliminar_reservacionlaboratorio"
                            data-href="{{ path('reservacion_laboratorio_delete', { 'id': reservacion.id }) }}">
-                            <i class="flaticon-delete"></i>{{ 'delete' |trans }}
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
                         </a>
                     </li>
                 </ul>
-
+                {% endif %}
             </td>
         </tr>
         {% set i=1+i %}

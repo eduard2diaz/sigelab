@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Services\LdapService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -73,5 +74,13 @@ class DefaultController extends Controller
         unset($propiedades['_controller']);
         unset($propiedades['_route']);
         return $this->redirectToRoute($ruta,$propiedades);
+    }
+
+    /**
+     * @Route("/ldap", name="ldap")
+     */
+    public function ldap(Request $request,LdapService $ldapService)
+    {
+       $result=$ldapService->search('yoelvissb');
     }
 }

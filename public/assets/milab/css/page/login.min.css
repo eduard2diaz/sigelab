@@ -1,0 +1,33 @@
+div.m-wrapper{
+    background-color: white !important;
+    padding: 0px !important;
+}
+
+div.promo{
+    padding: 4% 4%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div.login-form {
+    background-image: url('../../img/40482386-0-hack3.jpg') !important;
+    box-shadow: 1px 2px 7px darkslategray;
+    padding: 3% 4% !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+div.promo1{
+    background-image: url('../../img/offices-1181385_960_720.jpg') !important;
+    background-attachment: fixed;
+    height: 500px;
+    border-top: 0.1px dashed #22266f;
+    border-bottom: 0.1px dashed #22266f;
+}
+div.promo2{
+    background-image: url('../../img/40482381-0-hack2.jpg') !important;
+    color: white;
+    text-align: center;
+    padding: 10% 0%;
+}

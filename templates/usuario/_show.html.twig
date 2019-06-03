@@ -1,46 +1,71 @@
-<div class="modal-dialog modal-lg">
+<div class="modal-dialog modal-full">
     <div class="modal-content">
         <div class="modal-header">
             <h4 class="modal-title">{{ 'user_details'|trans }}</h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
         </div>
-        <div>
-            <table class="table table-striped" style="margin-bottom: 0px">
-                <tr>
-                    <th>{{ 'name_field' | trans }}</th>
-                    <td>{{ usuario.nombre }}</td>
-                    <th>{{ 'surname_field' | trans }}</th>
-                    <td>{{ usuario.apellido }}</td>
-                </tr>
-                <tr>
-                    <th>{{ 'username_field' | trans }}</th>
-                    <td>{{ usuario.usuario }}</td>
-                    <th>{{ 'email_field' | trans }}</th>
-                    <td>{{ usuario.correo }}</td>
-                </tr>
-                <tr>
-                    <th>{{ 'faculty'|trans }}</th>
-                    <td >{{ usuario.facultad }}</td>
-                    <th>{{ 'active_field'|trans }}</th>
-                    <td>{{ usuario.activo | estado_color }}</td>
-                </tr>
-                <tr>
-                    <th>{{ 'role_field'|trans }}</th>
-                    <td colspan="3">
-                        <ul>
-                        {% for rol in usuario.idrol %}
-                            <li>{{ rol }}</li>
-                        {% endfor %}
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+        <div class="m--padding-30">
+            <div class="row">
+                <div class="col-md-3">
+                    {%if usuario.rutaFoto!=null %}
+                        {% set rutaFoto=  asset('archivos/'~usuario.rutaFoto) %}
+                    {% else %}
+                        {% set rutaFoto= asset('img/facebook_perfil.jpg','milab') %}
+                    {% endif %}
+                    <div class="m-card-profile">
+                        <div class="m-card-profile__title m--hide">
+                            Your Profile
+                        </div>
+                        <div class="m-card-profile__pic">
+                            <div class="m-card-profile__pic-wrapper">
+                                <img src="{{ rutaFoto }}" alt="No se pudo cargar la imagen" id="foto_perfil"
+                                     data-image="{{ rutaFoto }}" data-toggle="m-tooltip" data-placement="top"
+                                     title="" data-original-title="Cambiar foto de perfil"/>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <table class="table table-striped" style="margin-bottom: 0px">
+                        <tr>
+                            <th>{{ 'name_field' | trans }}</th>
+                            <td>{{ usuario.nombre }}</td>
+                            <th>{{ 'surname_field' | trans }}</th>
+                            <td>{{ usuario.apellido }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'username_field' | trans }}</th>
+                            <td>{{ usuario.usuario }}</td>
+                            <th>{{ 'email_field' | trans }}</th>
+                            <td>{{ usuario.correo }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'faculty'|trans }}</th>
+                            <td >{{ usuario.facultad }}</td>
+                            <th>{{ 'active_field'|trans }}</th>
+                            <td>{{ usuario.activo | estado_color }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'role_field'|trans }}</th>
+                            <td colspan="3">
+                                <ul>
+                                    {% for rol in usuario.idrol %}
+                                        <li>{{ rol }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
             {% if app.user.id==usuario.id %}
-                <a class="btn btn-outline btn-sm btn-primary editar_usuario mt-ladda-btn ladda-button" data-style="expand-right"  data-href="{{ path('usuario_edit',{'id':usuario.id}) }}"><i class="fa fa-edit"></i> {{ 'edit'|trans }}</a>
+                <a class="btn btn-outline btn-sm btn-primary mt-ladda-btn ladda-button editar_usuario" data-style="expand-right"  data-href="{{ path('usuario_edit',{'id':usuario.id}) }}"><i class="flaticon-edit-1"></i> {{ 'edit'|trans }}</a>
             {% endif %}
-            <a class="btn btn-sm btn-metal" data-dismiss="modal">{{ 'close'|trans }}</a>
+            <a class="btn btn-sm btn-metal" data-dismiss="modal"><i class="flaticon-cancel"></i> {{ 'close'|trans }}</a>
         </div>
     </div>
 </div>

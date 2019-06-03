@@ -89,17 +89,15 @@
         {
             evento.preventDefault();
             var padre = $(this).parent();
-            var l = Ladda.create(document.querySelector( '.ladda-button' ) );
-            l.start();
+            var l = Ladda.create(document.querySelector('.ladda-button' ) );
             $.ajax({
             url: $(this).attr("action"),
             type: "POST",
             data: $(this).serialize(), //para enviar el formulario hay que serializarlo
             beforeSend: function () {
-                mApp.block("body", {overlayColor:"#000000",type:"loader",state:"success",message:window.loadingMessage});
+                l.start();
             },
             complete: function () {
-                mApp.unblock("body")
                 l.stop();
             },
             success: function (data) {
@@ -116,7 +114,7 @@
                     objeto = table.row.add({
                         "numero": total,
                         "nombre": data['nombre'],
-                        "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicion' data-href="+ Routing.generate('tiporeparacion_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_tiporeparacion' data-href="+ Routing.generate('tiporeparacion_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
+                        "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicion' data-href="+ Routing.generate('tiporeparacion_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_tiporeparacion' data-href="+ Routing.generate('tiporeparacion_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                     });
                     objeto.draw();
                     table.page(pagina).draw('page');

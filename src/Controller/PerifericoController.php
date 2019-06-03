@@ -3,13 +3,12 @@
 namespace App\Controller;
 
 use App\Form\PerifericoType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
-
 use App\Entity\Periferico;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /*
  * @Route("/periferico")
@@ -22,7 +21,7 @@ use App\Entity\Periferico;
  *     "fr": "/peripherique"
  * })
  */
-class PerifericoController extends Controller
+class PerifericoController extends AbstractController
 {
 
     /**
@@ -44,7 +43,7 @@ class PerifericoController extends Controller
     /**
      * @Route("/new", name="periferico_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -57,16 +56,16 @@ class PerifericoController extends Controller
             if ($form->isValid()) {
                 $em->persist($periferico);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('peripheral_register_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('peripheral_register_successfully'),
                     'nombre' => $periferico->getNombre(),
-                    'tipo' => $this->get('translator')->trans('peripheral_type_'.$periferico->getTipo()),
+                    'tipo' => $translator->trans('peripheral_type_'.$periferico->getTipo()),
                     'id' => $periferico->getId(),
                 ));
             } else {
                 $page = $this->renderView('periferico/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
 
@@ -80,7 +79,7 @@ class PerifericoController extends Controller
     /**
      * @Route("/{id}/edit", name="periferico_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Periferico $periferico): Response
+    public function edit(Request $request, Periferico $periferico, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -92,10 +91,10 @@ class PerifericoController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($periferico);
                 $em->flush();
-                return new JsonResponse(
-                    array('mensaje' => $this->get('translator')->trans('peripheral_update_successfully'),
+                return $this->json(
+                    array('mensaje' => $translator->trans('peripheral_update_successfully'),
                         'nombre' => $periferico->getNombre(),
-                        'tipo' => $this->get('translator')->trans('peripheral_type_'.$periferico->getTipo()),
+                        'tipo' => $translator->trans('peripheral_type_'.$periferico->getTipo()),
                     ));
             } else {
                 $page = $this->renderView('periferico/_form.html.twig', array(
@@ -103,7 +102,7 @@ class PerifericoController extends Controller
                     'form_id' => 'periferico_edit',
                     'action' => 'update_button',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('periferico/_new.html.twig', [
@@ -129,7 +128,7 @@ class PerifericoController extends Controller
     /**
      * @Route("/{id}/delete",options={"expose"=true}, name="periferico_delete")
      */
-    public function delete(Request $request, Periferico $periferico): Response
+    public function delete(Request $request, Periferico $periferico, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -137,7 +136,7 @@ class PerifericoController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($periferico);
         $em->flush();
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('peripheral_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('peripheral_delete_successfully')));
     }
 
 }

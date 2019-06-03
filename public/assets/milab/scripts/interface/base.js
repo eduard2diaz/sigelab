@@ -78,7 +78,7 @@ var base = function () {
                         document.refresh();
                 }
             });
-            createjs.Sound.play("sound");
+          //  createjs.Sound.play("sound");
         },
     };
 }();

@@ -1,0 +1,329 @@
+<script>
+    var reporte = function () {
+    var ultimoreporte=null;
+    //Inicio de la definicion de los formularios
+    function createDateRangeForm(title,form_id, action){
+    var dialog = bootbox.dialog({
+    title: title,
+    message: '<form id="'+form_id+'" class="daterange" action="'+action+'">' +
+    '<div class="row">' +
+    '<div class="col-md-6"><label for="finicio">{{ "startdate_field"|trans }}</label>' +
+    '<input type="text" class="form-control input-medium" id="finicio" name="finicio"/></div>' +
+    '<div class="col-md-6"><label for="ffin">{{ "enddate_field"|trans }}</label>' +
+    '<input type="text" class="form-control input-medium" id="ffin" name="ffin"/></div>' +
+    '</div>' +
+    '</form>',
+    buttons: {
+    cancel: {
+    label: '{{ "cancel_button"| trans }}',
+    className: 'btn-metal btn-sm',
+},
+    noclose: {
+    label: '{{ "send_button"|trans }}',
+    className: 'btn btn-primary btn-sm',
+    callback: function(){
+    if ($('div.bootbox form.daterange').valid()) {
+    $('div.bootbox form.daterange').submit();
+} else {
+    return false;
+}
+}
+},
+}
+}
+    );
+
+    $('input#finicio').datepicker();
+    $('input#ffin').datepicker();
+    jQuery.validator.addMethod("greaterThan",
+    function(value, element, params) {
+    return moment(value)> moment($(params).val());
+},'{{ "reservationlaboratorio_error_startdate_superior"| trans }}');
+
+
+    $("div.bootbox form.daterange").validate({
+    rules:{
+    'finicio': {required:true},
+    'ffin': {required:true, greaterThan: "#finicio"},
+}
+});
+}
+
+    //Inicio de los reporte del consumo y los kms
+    var reservacionporFacultadLink=function() {
+    $('body').on('click', 'a#reportefacultad_link', function (evento) {
+    evento.preventDefault();
+    var link = Routing.generate('reporte_reservacionfacultad');
+    var form_id = 'reservacionfacultad';
+    var title = '{{ "report_reservationbyfaculty"| trans }}';
+    createDateRangeForm(title,form_id,link);
+});
+}
+
+    var reservacionporLaboratorioLink=function() {
+    $('body').on('click', 'a#reportelaboratorio_link', function (evento) {
+    evento.preventDefault();
+    var link = Routing.generate('reporte_reservacionlaboratorio');
+    var form_id = 'reservacionlaboratorio';
+    var title = '{{ "report_reservationbylaboratory" | trans }}';
+    createDateRangeForm(title,form_id,link);
+});
+}
+
+    var tiempomaquinaporFacultadLink=function() {
+    $('body').on('click', 'a#reportetiempomaquinafacultad_link', function (evento) {
+    evento.preventDefault();
+    var link = Routing.generate('reporte_tiempomaquinafacultad');
+    var form_id = 'tiempomaquinafacultad';
+    var title = '{{ "report_machinetimebyfaculty" |trans }}';
+    createDateRangeForm(title,form_id,link);
+});
+}
+
+    var tiempomaquinaporLaboratorioLink=function() {
+    $('body').on('click', 'a#reportetiempomaquinalaboratorio_link', function (evento) {
+    evento.preventDefault();
+    var link = Routing.generate('reporte_tiempomaquinalaboratorio');
+    var form_id = 'tiempomaquinalaboratorio';
+    var title = '{{ "report_machinetimebylaboratory"| trans }}';
+    createDateRangeForm(title,form_id,link);
+});
+}
+
+    var reservacionporFacultadAction = function () {
+    $('body').on('submit', 'form#reservacionfacultad', function (evento)
+{
+    evento.preventDefault();
+    $('div.bootbox').modal('hide');
+    var action=$(this).attr("action");
+    var data= $(this).serialize();
+    $.ajax({
+    url: action,
+    type: "POST",
+    data: data, //para enviar el formulario hay que serializarlo
+    beforeSend: function () {
+    mApp.block("body", {overlayColor:"#000000",type:"loader",state:"success",message:"Cargando..."});
+},
+    complete: function () {
+    mApp.unblock("body");
+},
+    success: function (data) {
+    if(data.error_message){
+        toastr.error(data.error_message);
+    }else
+        if ($('div#extramodal').html(data.view)) {
+    $('div#extramodal').modal('show');
+
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    // Create chart instance
+    var chart = am4core.create("modal-body", am4charts.PieChart);
+    chart.exporting.menu = new am4core.ExportMenu();
+    // Add data
+    chart.data=JSON.parse(data.data);
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "cantidad";
+    pieSeries.dataFields.category = "facultad";
+    pieSeries.slices.template.stroke = am4core.color("#fff");
+    pieSeries.slices.template.strokeWidth = 2;
+    pieSeries.slices.template.strokeOpacity = 1;
+    // This creates initial animation
+    pieSeries.hiddenState.properties.opacity = 1;
+    pieSeries.hiddenState.properties.endAngle = -90;
+    pieSeries.hiddenState.properties.startAngle = -90;
+}
+
+},
+    error: function ()
+{
+    base.Error();
+}
+});
+
+
+});
+}
+
+    var reservacionporLaboratorioAction = function () {
+    $('body').on('submit', 'form#reservacionlaboratorio', function (evento)
+{
+    evento.preventDefault();
+    $('div.bootbox').modal('hide');
+    var action=$(this).attr("action");
+    var data= $(this).serialize();
+    $.ajax({
+    url: action,
+    type: "POST",
+    data: data, //para enviar el formulario hay que serializarlo
+    beforeSend: function () {
+    mApp.block("body", {overlayColor:"#000000",type:"loader",state:"success",message:"Cargando..."});
+},
+    complete: function () {
+    mApp.unblock("body");
+},
+    success: function (data) {
+
+    if(data.error_message){
+        toastr.error(data.error_message);
+    }else
+        if ($('div#extramodal').html(data.view)) {
+    $('div#extramodal').modal('show');
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    // Create chart instance
+    var chart = am4core.create("modal-body", am4charts.PieChart);
+    chart.exporting.menu = new am4core.ExportMenu();
+    // Add data
+    chart.data=JSON.parse(data.data);
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "cantidad";
+    pieSeries.dataFields.category = "laboratorio";
+    pieSeries.slices.template.stroke = am4core.color("#fff");
+    pieSeries.slices.template.strokeWidth = 2;
+    pieSeries.slices.template.strokeOpacity = 1;
+    // This creates initial animation
+    pieSeries.hiddenState.properties.opacity = 1;
+    pieSeries.hiddenState.properties.endAngle = -90;
+    pieSeries.hiddenState.properties.startAngle = -90;
+}
+
+
+},
+    error: function ()
+{
+    base.Error();
+}
+});
+
+
+});
+}
+
+    var tiempoMaquinaFacultadAction = function () {
+    $('body').on('submit', 'form#tiempomaquinafacultad', function (evento)
+{
+    evento.preventDefault();
+    $('div.bootbox').modal('hide');
+    var action=$(this).attr("action");
+    var data= $(this).serialize();
+
+
+    $.ajax({
+    url: action,
+    type: "POST",
+    data: data, //para enviar el formulario hay que serializarlo
+    beforeSend: function () {
+    mApp.block("body", {overlayColor:"#000000",type:"loader",state:"success",message:"Cargando..."});
+},
+    complete: function () {
+    mApp.unblock("body");
+},
+    success: function (data) {
+    if(data.error_message){
+        toastr.error(data.error_message);
+    }else
+    if ($('div#extramodal').html(data.view)) {
+        $('div#extramodal').modal('show');
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        // Create chart instance
+        var chart = am4core.create("modal-body", am4charts.PieChart);
+        chart.exporting.menu = new am4core.ExportMenu();
+        // Add data
+        chart.data=JSON.parse(data.data);
+        // Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "cantidad";
+        pieSeries.dataFields.category = "facultad";
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeWidth = 2;
+        pieSeries.slices.template.strokeOpacity = 1;
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+    }
+},
+    error: function ()
+{
+    base.Error();
+}
+});
+
+
+});
+}
+
+    var tiempoMaquinaLaboratorioAction = function () {
+    $('body').on('submit', 'form#tiempomaquinalaboratorio', function (evento)
+{
+    evento.preventDefault();
+    $('div.bootbox').modal('hide');
+    var action=$(this).attr("action");
+    var data= $(this).serialize();
+    $.ajax({
+    url: action,
+    type: "POST",
+    data: data, //para enviar el formulario hay que serializarlo
+    beforeSend: function () {
+    mApp.block("body", {overlayColor:"#000000",type:"loader",state:"success",message:"Cargando..."});
+},
+    complete: function () {
+    mApp.unblock("body");
+},
+    success: function (data) {
+
+    if(data.error_message){
+        toastr.error(data.error_message);
+    }else
+    if ($('div#extramodal').html(data.view)) {
+    $('div#extramodal').modal('show');
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+    // Create chart instance
+    var chart = am4core.create("modal-body", am4charts.PieChart);
+    // Add data
+    chart.data=JSON.parse(data.data);
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "cantidad";
+    pieSeries.dataFields.category = "laboratorio";
+    pieSeries.slices.template.stroke = am4core.color("#fff");
+    pieSeries.slices.template.strokeWidth = 2;
+    pieSeries.slices.template.strokeOpacity = 1;
+    // This creates initial animation
+    pieSeries.hiddenState.properties.opacity = 1;
+    pieSeries.hiddenState.properties.endAngle = -90;
+    pieSeries.hiddenState.properties.startAngle = -90;
+    }
+},
+    error: function ()
+{
+    base.Error();
+}
+});
+
+
+});
+}
+    //Fin del reporte del consumo y los kms
+
+
+    return {
+    init: function () {
+    $().ready(function(){
+    reservacionporFacultadLink();
+    reservacionporLaboratorioLink();
+    tiempomaquinaporFacultadLink();
+    tiempomaquinaporLaboratorioLink();
+    reservacionporLaboratorioAction();
+    reservacionporFacultadAction();
+    tiempoMaquinaFacultadAction();
+    tiempoMaquinaLaboratorioAction();
+});
+},
+};
+}();
+</script>

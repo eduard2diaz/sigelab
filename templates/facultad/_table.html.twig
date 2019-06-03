@@ -15,17 +15,17 @@
             <td>
                 <ul class="nav nav-pills" >
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-default edicion" data-href="{{ path('facultad_show', { 'id': facultad.id }) }}">
+                        <a class="btn btn-sm btn-default edicion text-uppercase" data-href="{{ path('facultad_show', { 'id': facultad.id }) }}">
                             <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
                         </a>
                     </li>
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-info edicion" data-href="{{ path('facultad_edit', { 'id': facultad.id }) }}">
+                        <a class="btn btn-sm btn-info edicion text-uppercase" data-href="{{ path('facultad_edit', { 'id': facultad.id }) }}">
                             <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
                         </a>
                     </li>
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-danger eliminar_facultad" data-href="{{ path('facultad_delete', { 'id': facultad.id }) }}">
+                        <a class="btn btn-sm btn-danger eliminar_facultad text-uppercase" data-href="{{ path('facultad_delete', { 'id': facultad.id }) }}">
                             <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
                         </a>
                     </li>

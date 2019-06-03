@@ -10,10 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-/*
- * @Route("/reservacion/laboratorio")
- */
-
 /**
  * @Route({
  *     "en": "/reservation/laboratory",
@@ -28,12 +24,17 @@ class ReservacionLaboratorioController extends Controller
      */
     public function index(Request $request): Response
     {
-        $misLaboratorios = $this->getUser()->getFacultad()->getIdlaboratorio();
-        $em = $this->getDoctrine()->getManager();
 
+        $em = $this->getDoctrine()->getManager();
+        if($this->isGranted('ROLE_JEFETECNICOINSTITUCIONAL'))
+            $result=$em->getRepository(ReservacionLaboratorio::class)->findAll();
+        else{
+            $misLaboratorios = $this->getUser()->getFacultad()->getIdlaboratorio();
             $consulta = $em->createQuery('SELECT r FROM App:ReservacionLaboratorio r JOIN r.laboratorio l WHERE l.id IN (:laboratorio)');
             $consulta->setParameter('laboratorio', $misLaboratorios);
             $result = $consulta->getResult();
+        }
+
             if($request->isXmlHttpRequest())
                 return $this->render('reservacion_laboratorio/_table.html.twig', ['reservaciones' => $result]);
 
@@ -45,14 +46,15 @@ class ReservacionLaboratorioController extends Controller
      */
     public function new(Request $request): Response
     {
-    //    if (!$request->isXmlHttpRequest())
-    //        throw $this->createAccessDeniedException();
+        if (!$request->isXmlHttpRequest())
+            throw $this->createAccessDeniedException();
+
 
         $reservacionLaboratorio = new ReservacionLaboratorio();
         $reservacionLaboratorio->setUsuario($this->getUser());
-        $misLaboratorios = $this->getUser()->getFacultad()->getIdlaboratorio()->toArray();
 
-        $form = $this->createForm(ReservacionLaboratorioType::class, $reservacionLaboratorio, array('laboratorios' => $misLaboratorios, 'action' => $this->generateUrl('reservacion_laboratorio_new')));
+        $this->denyAccessUnlessGranted('NEW',$reservacionLaboratorio);
+        $form = $this->createForm(ReservacionLaboratorioType::class, $reservacionLaboratorio, array('action' => $this->generateUrl('reservacion_laboratorio_new')));
         $form->handleRequest($request);
 
         if ($form->isSubmitted())
@@ -90,7 +92,7 @@ class ReservacionLaboratorioController extends Controller
 
         $this->denyAccessUnlessGranted('EDIT', $reservacionLaboratorio);
         $misLaboratorios = $this->getUser()->getFacultad()->getIdlaboratorio()->toArray();
-        $form = $this->createForm(ReservacionLaboratorioType::class, $reservacionLaboratorio, array('laboratorios' => $misLaboratorios, 'action' => $this->generateUrl('reservacion_laboratorio_edit', array('id' => $reservacionLaboratorio->getId()))));
+        $form = $this->createForm(ReservacionLaboratorioType::class, $reservacionLaboratorio, array('action' => $this->generateUrl('reservacion_laboratorio_edit', array('id' => $reservacionLaboratorio->getId()))));
         $form->handleRequest($request);
 
         if ($form->isSubmitted())

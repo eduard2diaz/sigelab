@@ -45,7 +45,7 @@ class ReservacionLaboratorio
      *
      * @ORM\ManyToOne(targetEntity="Usuario")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $usuario;
@@ -55,7 +55,7 @@ class ReservacionLaboratorio
      *
      * @ORM\ManyToOne(targetEntity="Laboratorio")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="laboratorio", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="laboratorio", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $laboratorio;
@@ -173,10 +173,13 @@ class ReservacionLaboratorio
     public function comprobarFechas(ExecutionContextInterface $context)
     {
         $badstruc=false;
+        $currentDate=new \DateTime();
         if (null == $this->getFechainicio()){
             $context->buildViolation('This value should not be blank.')->atPath('fechainicio')->addViolation();
             $badstruc=true;
         }
+        elseif ($this->getFechainicio()<$currentDate)
+            $context->buildViolation('reservationlaboratorio_error_date_check')->atPath('fechainicio')->addViolation();
         elseif ($this->getFechainicio()->format('H') > 17 || $this->getFechainicio()->format('H') < 8)
             $context->buildViolation('reservationlaboratorio_error_time_check')->atPath('fechainicio')->addViolation();
 
@@ -187,12 +190,19 @@ class ReservacionLaboratorio
         elseif ($this->getFechafin()->format('H') > 17 || $this->getFechafin()->format('H') < 8)
             $context->buildViolation('reservationlaboratorio_error_time_check')->atPath('fechafin')->addViolation();
 
-        if (!$badstruc && $this->getFechafin() < $this->getFechainicio()) {
+        if (!$badstruc && $this->getFechafin() <= $this->getFechainicio()) {
             $context->buildViolation('reservationlaboratorio_error_startdate_superior')->atPath('fechafin')->addViolation();
         }
-        if (null == $this->getLaboratorio()) {
+
+        if (null == $this->getLaboratorio())
             $context->buildViolation('reservationlaboratorio_error_laboratorio_blank')->atPath('laboratorio')->addViolation();
-        }
+        elseif (!$this->getUsuario()->getFacultad()->getIdlaboratorio()->contains($this->getLaboratorio()))
+            $context->buildViolation('reservationlaboratorio_error_laboratorio_ungrantedaccess')->atPath('laboratorio')->addViolation();
+        elseif (!$this->getLaboratorio()->getEnfuncionamiento())
+            $context->buildViolation('reservationlaboratorio_error_laboratorio_inactive')->atPath('laboratorio')->addViolation();
+
+
+
 
     }
 }

@@ -38,22 +38,17 @@ class ReservacionPc
      *
      * @ORM\ManyToOne(targetEntity="Usuario")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $usuario;
-
-    public function __construct()
-    {
-        $this->setFecha(new \DateTime());
-    }
 
     /**
      * @var \Pc
      *
      * @ORM\ManyToOne(targetEntity="Pc")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="pc", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="pc", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $pc;
@@ -63,11 +58,15 @@ class ReservacionPc
      *
      * @ORM\ManyToOne(targetEntity="Laboratorio")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="laboratorio", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="laboratorio", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $laboratorio;
 
+    public function __construct()
+    {
+        $this->setFecha(new \DateTime());
+    }
 
     /**
      * Get id
@@ -166,13 +165,13 @@ class ReservacionPc
      */
     public function comprobarFechas(ExecutionContextInterface $context)
     {
-    /*    if (null == $this->getFecha()){
+        if (null == $this->getFecha()){
             $context->buildViolation('This value should not be blank.')->atPath('fecha')->addViolation();
-        }*/
+        }
 
-        /*if (null == $this->getLaboratorio()) {
+        if (null == $this->getLaboratorio()) {
             $context->buildViolation('reservationlaboratorio_error_laboratorio_blank')->atPath('laboratorio')->addViolation();
-        }*/
+        }
 
     }
 }

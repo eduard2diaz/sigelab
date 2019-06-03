@@ -2,6 +2,9 @@
 
 {% block header %}
 {% embed "layout/recortes/header.html.twig" %}
+    {% block user_shortcut_menu %}
+        {{ include('layout/recortes/topmenu/language_topmenu.html.twig') }}
+    {% endblock %}
 {% endembed %}
 {% endblock header %}
 

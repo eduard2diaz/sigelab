@@ -5,7 +5,7 @@
         <th>{{ 'date_field' |trans }}</th>
         <th>{{ 'pc'|trans }}</th>
         <th>{{ 'laboratory'|trans }}</th>
-        <th>{{ 'student'|trans }}</th>
+        <th>{{ 'user'|trans }}</th>
         <th style="width: 20%"></th>
     </tr>
     </thead>
@@ -14,23 +14,25 @@
     {% for reservacion in reservaciones %}
         <tr>
             <td>{{ i }}</td>
-            <td>{{ reservacion.fecha|date('d-m-Y H:i') }}</td>
+            <td>{{ reservacion.fecha|date('d-m-Y') }}</td>
             <td>{{ reservacion.pc }}</td>
             <td>{{ reservacion.pc.laboratorio }}</td>
             <td>{{ reservacion.usuario }}</td>
             <td>
-            {%if app.user.id==reservacion.usuario.id%}
+                {% set hoy ='today'| date('d-m-Y') %}
+                {% set esEditable= 'now' |date('H')<20 %}
+            {%if is_granted('ROLE_ESTUDIANTE') and app.user.id==reservacion.usuario.id and (hoy==reservacion.fecha |date('d-m-Y') and esEditable==true ) %}
                 <ul class="nav nav-pills">
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-info edicion"
+                        <a class="btn btn-sm btn-info text-uppercase edicion"
                            data-href="{{ path('reservacion_pc_edit', { 'id': reservacion.id }) }}">
-                            <i class="flaticon-edit"></i>{{ 'edit' |trans }}
+                            <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
                         </a>
                     </li>
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-danger eliminar_reservacionpc"
+                        <a class="btn btn-sm btn-danger text-uppercase eliminar_reservacionpc"
                            data-href="{{ path('reservacion_pc_delete', { 'id': reservacion.id }) }}">
-                            <i class="flaticon-delete"></i>{{ 'delete' |trans }}
+                            <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
                         </a>
                     </li>
                 </ul>
@@ -46,7 +48,7 @@
         <th>{{ 'date_field' |trans }}</th>
         <th>{{ 'pc'|trans }}</th>
         <th>{{ 'laboratory'|trans }}</th>
-        <th>{{ 'student'|trans }}</th>
+        <th>{{ 'user'|trans }}</th>
         <th></th>
     </tr>
     </tfoot>

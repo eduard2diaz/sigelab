@@ -1,53 +1,61 @@
-{% extends is_granted('IS_AUTHENTICATED_FULLY') ? 'layout/autenticado.html.twig':  'layout/anonimo.html.twig'  %}
+{% extends is_granted('IS_AUTHENTICATED_FULLY') ? 'layout/autenticado.html.twig':  'layout/anonimo.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/page/estatica.css','milab') }}"/>
+{% endblock stylesheets %}
 {% block body %}
-<div class="block-information">
-    <section class="enum">
-        <h2>{{ 'privacy'|trans }}</h2>
-        <h3>{{ 'privacy.epigraph'|trans({},'estatica') }}</h3>
-        <div class="row">
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        {{ 'privacy'|trans }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <h4>1. {{ 'privacy.epigraph'|trans({},'estatica') }}</h4>
             <h4>{{ 'privacy.section1_header'|trans({},'estatica') }}</h4>
-            <div class="col-md-6">
-                <p>{{ 'privacy.section1_parragraph'|trans({},'estatica') }}</p>
+            <div class="row">
+                <div class="col-md-5">
+                    <p>{{ 'privacy.section1_parragraph'|trans({},'estatica') }}</p>
+                </div>
+                <div class="col-md-5">
+                    <p><b>{{ 'privacy.section1_details'|trans({},'estatica') }}</b></p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <blockquote class="pull-right">
-                    <p>{{ 'privacy.section1_details'|trans({},'estatica') }}</p>
-                </blockquote>
-
-            </div>
-        </div>
-        <div class="row">
             <h4>{{ 'privacy.section2_header'|trans({},'estatica') }}</h4>
-            <div class="col-md-6">
-                <p>{{ 'privacy.section2_parragraph'|trans({},'estatica') }}</p>
+            <div class="row">
+                <div class="col-md-5">
+                    <p>{{ 'privacy.section2_parragraph'|trans({},'estatica') }}</p>
+                </div>
+                <div class="col-md-5">
+                    <p><b>{{ 'privacy.section2_details'|trans({},'estatica') }}</b></p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <blockquote class="pull-right">
-                <p>{{ 'privacy.section2_details'|trans({},'estatica') }}</p>
-                </blockquote>
+            <h4>2.{{ 'privacy.section3_header'|trans({},'estatica') }}</h4>
+            <div class="row">
+                <div class="col-md-5">
+                    <p>{{ 'privacy.section3_parragraph'|trans({},'estatica') }}</p>
+                </div>
+                <div class="col-md-5">
+                    <p><b>{{ 'privacy.section3_details'|trans({},'estatica') }}</b></p>
+                </div>
+            </div>
+            <h4>3.{{ 'privacy.section4_header'|trans({},'estatica') }}</h4>
+            <div class="row">
+                <div class="col-md-5">
+                    <p>{{ 'privacy.section4_parragraph'|trans({},'estatica') }}</p>
+                </div>
+                <div class="col-md-5">
+                    <p>
+                        <b>
+                            {{ 'privacy.section4_details'|trans({},'estatica') }}
+                        </b>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <h4>{{ 'privacy.section3_header'|trans({},'estatica') }}</h4>
-            <div class="col-md-6">
-                <p>{{ 'privacy.section3_parragraph'|trans({},'estatica') }}</p>
-            </div>
-            <div class="col-md-6">
-                <blockquote class="pull-right">
-                <p>{{ 'privacy.section3_details'|trans({},'estatica') }}</p>
-                </blockquote>
-            </div>
-        </div><div class="row">
-            <h4>{{ 'privacy.section4_header'|trans({},'estatica') }}</h4>
-            <div class="col-md-6">
-                <p>{{ 'privacy.section4_parragraph'|trans({},'estatica') }}</p>
-            </div>
-            <div class="col-md-6">
-                <blockquote class="pull-right">
-                <p>{{ 'privacy.section4_details'|trans({},'estatica') }}</p>
-                </blockquote>
-            </div>
-        </div>
-    </section>
-</div>
+    </div>
 {% endblock %}

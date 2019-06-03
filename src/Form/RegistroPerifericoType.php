@@ -15,12 +15,10 @@ class RegistroPerifericoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        //    ->add('fecha',TextType::class,array('attr'=>array('class'=>'form-control input-medium')))
             ->add('valor',TextType::class,array('label'=>'value_field','attr'=>array('autocomplete'=>'off','class'=>'form-control input-medium')))
             ->add('propiedad',null,array('label'=>'property','choices'=>array(),'required'=>true,'attr'=>array('class'=>'form-control input-medium')))
             ->add('pieza',null,array('label'=>'piece','choices'=>array(),'placeholder'=>'pieceregister_form_piece_placeholder','required'=>false,'attr'=>array('class'=>'form-control input-medium')))
             ->add('periferico',null,array('label'=>'peripheral','placeholder'=>'peripheralregister_form_peripheral_placeholder','required'=>true,'attr'=>array('class'=>'form-control input-medium')))
-           // ->add('pc')
         ;
 
         $factory=$builder->getFormFactory();

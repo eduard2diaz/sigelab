@@ -125,7 +125,7 @@
                                 "pc": data['pc'],
                                 "laboratorio": data['laboratorio'],
                                 "estudiante": data['estudiante'],
-                                "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicion' data-href="+ Routing.generate('reservacion_pc_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_reservacionpc' data-href="+ Routing.generate('reservacion_pc_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete'></i>{{ 'delete'|trans }}</a></li></ul>",
+                                "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicion' data-href="+ Routing.generate('reservacion_pc_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_reservacionpc' data-href="+ Routing.generate('reservacion_pc_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                             });
                             objeto.draw();
                             table.page(pagina).draw('page');

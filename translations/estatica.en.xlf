@@ -9,7 +9,7 @@
             </trans-unit>
             <trans-unit id="_download.parragraph">
                 <source>_download.parragraph</source>
-                <target>For obtain the Milab's source code you can:</target>
+                <target>For obtain the SIGELAB's source code you can:</target>
             </trans-unit>
             <trans-unit id="_download.downloadlist_choice1">
                 <source>_download.downloadlist_choice1</source>
@@ -39,11 +39,11 @@
             <!--Pagina aboutus-->
             <trans-unit id="aboutus.question1">
                 <source>aboutus.question1</source>
-                <target>What's Milab?</target>
+                <target>What's SIGELAB?</target>
             </trans-unit>
             <trans-unit id="aboutus.response1">
                 <source>aboutus.response1</source>
-                <target>Milab is a web application developed by the Agrarian University of Havana in order to allow institutions and work centers to control the hardware of all their computing means. It is a collaborative and free application for this reason other developers can collaborate with improvements and updates of the software, as long as they are made without profit and socialize with the whole community.</target>
+                <target>SIGELAB is a web application developed by the Agrarian University of Havana in order to allow institutions and work centers to control the hardware of all their computing means. It is a collaborative and free application for this reason other developers can collaborate with improvements and updates of the software, as long as they are made without profit and socialize with the whole community.</target>
             </trans-unit>
             <trans-unit id="aboutus.question2">
                 <source>aboutus.question2</source>
@@ -61,8 +61,8 @@
             </trans-unit>
             <trans-unit id="accesibility.parragraph">
                 <source>accesibility.parragraph</source>
-                <target>Milab is a free application, free and available to everyone; whose sole purpose is to serve as a tool for the control and monitoring of the hardware of our institutions and work centers. For this reason it constitutes a violation of the legal terms of the same its use for any type of attack against the
-                        computer security (hacking), whether or not for ethical purposes. Milab was developed on the MIT license, so it can and should be possible shared with other companies and nonprofit institutions as long as it highlights who are the main developers.</target>
+                <target>SIGELAB is a free application, free and available to everyone; whose sole purpose is to serve as a tool for the control and monitoring of the hardware of our institutions and work centers. For this reason it constitutes a violation of the legal terms of the same its use for any type of attack against the
+                        computer security (hacking), whether or not for ethical purposes. SIGELAB was developed on the MIT license, so it can and should be possible shared with other companies and nonprofit institutions as long as it highlights who are the main developers.</target>
             </trans-unit>
             <trans-unit id="accesibility.choice1">
                 <source>accesibility.choice1</source>
@@ -84,7 +84,7 @@
             </trans-unit>
             <trans-unit id="scalability.section1_parragraph">
                 <source>scalability.section1_parragraph</source>
-                <target>Milab is a multiplatform system, so you can deploy it in any operating system, Windows, MAC and Linux as long as you have a web server installed. And although it is optimized for linux, the processing and response times are extraordinary in any other. Although many parameters and servers are configurable, there are determining points for their deployment.</target>
+                <target>SIGELAB is a multiplatform system, so you can deploy it in any operating system, Windows, MAC and Linux as long as you have a web server installed. And although it is optimized for linux, the processing and response times are extraordinary in any other. Although many parameters and servers are configurable, there are determining points for their deployment.</target>
             </trans-unit>
             <trans-unit id="scalability.section1_list.tool1">
                 <source>scalability.section1_list.tool1</source>
@@ -104,7 +104,7 @@
             </trans-unit>
             <trans-unit id="scalability.section2_parragraph">
                 <source>scalability.section2_parragraph</source>
-                <target>Symfony 4 in its version 4.1 was the PHP Framework on which this application was developed, for this reason you can use the relational database server of your choice, only with the small detail of adjusting the database generation strategy ; a very simple process for our specialists but in case of not having the necessary skills it can be extremely cumbersome. Milab's original source code is intended for the use of Postgresql as a database system.</target>
+                <target>Symfony 4 in its version 4.1 was the PHP Framework on which this application was developed, for this reason you can use the relational database server of your choice, only with the small detail of adjusting the database generation strategy ; a very simple process for our specialists but in case of not having the necessary skills it can be extremely cumbersome. SIGELAB's original source code is intended for the use of Postgresql as a database system.</target>
             </trans-unit>
             <trans-unit id="scalability.section3_header">
                 <source>scalability.section3_header</source>
@@ -120,7 +120,7 @@
             </trans-unit>
             <trans-unit id="scalability.section4_parragraph1">
                 <source>scalability.section4_parragraph1</source>
-                <target>Updates of the Milab source code will only be notified to clients who previously have been hired by the university for the acquisition, deployment and support of the application. For this reason, any non-compliance identified during the exploitation of the software will not be resolved by the software development team unless it is of interest to the software or comes from a client.</target>
+                <target>Updates of the SIGELAB source code will only be notified to clients who previously have been hired by the university for the acquisition, deployment and support of the application. For this reason, any non-compliance identified during the exploitation of the software will not be resolved by the software development team unless it is of interest to the software or comes from a client.</target>
             </trans-unit>
             <trans-unit id="scalability.section4_parragraph2">
                 <source>scalability.section4_parragraph2</source>
@@ -176,15 +176,15 @@
             <!--Pagina cookiespolicy-->
             <trans-unit id="cookiespolicy.introduction">
                 <source>cookiespolicy.introduction</source>
-                <target>At Milab, we believe that you have to be clear and open about the way we collect and use your data. To provide a higher level of transparency, this policy provides detailed information on how and when we use cookies. This Cookie Policy applies to any Milab product or service associated with this policy or that incorporates it by reference.</target>
+                <target>At SIGELAB, we believe that you have to be clear and open about the way we collect and use your data. To provide a higher level of transparency, this policy provides detailed information on how and when we use cookies. This Cookie Policy applies to any SIGELAB product or service associated with this policy or that incorporates it by reference.</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question1">
                 <source>cookiespolicy.question1</source>
-                <target>Does Milab use cookies?</target>
+                <target>Does SIGELAB use cookies?</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.response1">
                 <source>cookiespolicy.response1</source>
-                <target>Yes. As described in clause 1.8 of our Privacy Policy, we use cookies and other technologies to ensure that all users using Milab have the best possible experience. Cookies also help us maintain the security of accounts. When you continue to visit or use our services, you are accepting the use of cookies and similar technologies for the purposes described in this policy.</target>
+                <target>Yes. As described in clause 1.8 of our Privacy Policy, we use cookies and other technologies to ensure that all users using SIGELAB have the best possible experience. Cookies also help us maintain the security of accounts. When you continue to visit or use our services, you are accepting the use of cookies and similar technologies for the purposes described in this policy.</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question2">
                 <source>cookiespolicy.question2</source>
@@ -192,11 +192,11 @@
             </trans-unit>
             <trans-unit id="cookiespolicy.response2">
                 <source>cookiespolicy.response2</source>
-                <target>A cookie is a small file placed on your electronic device that enables the Milab functionalities. For example, cookies allow us to identify your device, ensure your access to Milab and our sites in general.</target>
+                <target>A cookie is a small file placed on your electronic device that enables the SIGELAB functionalities. For example, cookies allow us to identify your device, ensure your access to SIGELAB and our sites in general.</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question3">
                 <source>cookiespolicy.question3</source>
-                <target>When does Milab place cookies?</target>
+                <target>When does SIGELAB place cookies?</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.response3">
                 <source>cookiespolicy.response3</source>
@@ -204,11 +204,11 @@
             </trans-unit>
             <trans-unit id="cookiespolicy.question4">
                 <source>cookiespolicy.question4</source>
-                <target>What kind of cookies does Milab use?</target>
+                <target>What kind of cookies does SIGELAB use?</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.response4">
                 <source>cookiespolicy.response4</source>
-                <target>We use two types: permanent cookies and session cookies. A permanent cookie helps us to recognize you as a user, so it will be easier for you to return or interact with our services without having to log in again. Once you have logged in, a permanent cookie will remain in your browser and Milab will read it when you return to one of our websites. Session cookies last only one session (usually a visit to a website or a browser session).</target>
+                <target>We use two types: permanent cookies and session cookies. A permanent cookie helps us to recognize you as a user, so it will be easier for you to return or interact with our services without having to log in again. Once you have logged in, a permanent cookie will remain in your browser and SIGELAB will read it when you return to one of our websites. Session cookies last only one session (usually a visit to a website or a browser session).</target>
             </trans-unit>
             <trans-unit id="cookiespolicy.question5">
                 <source>cookiespolicy.question5</source>
@@ -216,7 +216,7 @@
             </trans-unit>
             <trans-unit id="cookiespolicy.response5">
                 <source>cookiespolicy.response5</source>
-                <target>Cookies can be used to recognize you when you visit Milab, remember your preferences and offer you a personalized experience based on your configuration. Cookies also allow your interactions in Milab to be faster and safer.</target>
+                <target>Cookies can be used to recognize you when you visit SIGELAB, remember your preferences and offer you a personalized experience based on your configuration. Cookies also allow your interactions in SIGELAB to be faster and safer.</target>
             </trans-unit>
             <!--Fin de pagina cookiespolicy-->
             <!--Pagina de privacidad-->
@@ -230,7 +230,7 @@
             </trans-unit>
             <trans-unit id="privacy.section1_parragraph">
                 <source>privacy.section1_parragraph</source>
-                <target>We record usage data when you visit or otherwise use our Services, including our websites, applications and platform technology (for example, our add-ons on other websites), such as when you view or click on content ( for example, a learning video) or in advertisements (on our websites and applications or outside of them), you perform a search, install one of our mobile applications, share articles or apply for jobs. We use login logs, device information and Internet Protocol ("IP") addresses to identify you and register your use in Milab.</target>
+                <target>We record usage data when you visit or otherwise use our Services, including our websites, applications and platform technology (for example, our add-ons on other websites), such as when you view or click on content ( for example, a learning video) or in advertisements (on our websites and applications or outside of them), you perform a search, install one of our mobile applications, share articles or apply for jobs. We use login logs, device information and Internet Protocol ("IP") addresses to identify you and register your use in SIGELAB.</target>
             </trans-unit>
             <trans-unit id="privacy.section1_details">
                 <source>privacy.section1_details</source>
@@ -280,7 +280,7 @@
             </trans-unit>
             <trans-unit id="privacypolicy.section1_parragraph">
                 <source>privacypolicy.section1_parragraph</source>
-                <target>Milab's goal is to connect professionals from around the world to help them be more productive and reach their work goals. Key to this mission is our commitment to be transparent with you about the data we collect about you and the way in which they are used and shared. By using our Services, you agree to our use of your data in accordance with the provisions of this Privacy Policy.</target>
+                <target>SIGELAB's goal is to connect professionals from around the world to help them be more productive and reach their work goals. Key to this mission is our commitment to be transparent with you about the data we collect about you and the way in which they are used and shared. By using our Services, you agree to our use of your data in accordance with the provisions of this Privacy Policy.</target>
             </trans-unit>
             <trans-unit id="privacypolicy.section2_header">
                 <source>privacypolicy.section2_header</source>
@@ -296,7 +296,7 @@
             </trans-unit>
             <trans-unit id="privacypolicy.section2_subsection1.parragraph">
                 <source>privacypolicy.section2_subsection1.parragraph</source>
-                <target>This Privacy Policy applies to Milab.com and other sites related to Milab, to applications, communications and services ("Services"), including Services offered outside. of the website, such as our advertising services and the "Request with Milab" and "Share on Milab" supplements, but services offered under a different privacy policy are excluded.</target>
+                <target>This Privacy Policy applies to SIGELAB.com and other sites related to SIGELAB, to applications, communications and services ("Services"), including Services offered outside. of the website, such as our advertising services and the "Request with SIGELAB" and "Share on SIGELAB" supplements, but services offered under a different privacy policy are excluded.</target>
             </trans-unit>
             <trans-unit id="privacypolicy.section2_details">
                 <source>privacypolicy.section2_details</source>
@@ -364,7 +364,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection1.parragraph">
                 <source>serviceterms.section1.subsection1.parragraph</source>
-                <target>The present terms (hereinafter "Terms of service") are binding and mandatory. They are applied to the use of the services offered or made available to users by Milab. The use of the services implies the express, full and unreserved acceptance of each and every one of the clauses of the Terms of Service in the version published at the same moment in which the user uses the services and other information provided on the site . If you do not agree with the Terms of Service, you must refrain from using the services.</target>
+                <target>The present terms (hereinafter "Terms of service") are binding and mandatory. They are applied to the use of the services offered or made available to users by SIGELAB. The use of the services implies the express, full and unreserved acceptance of each and every one of the clauses of the Terms of Service in the version published at the same moment in which the user uses the services and other information provided on the site . If you do not agree with the Terms of Service, you must refrain from using the services.</target>
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection1.details">
                 <source>serviceterms.section1.subsection1.details</source>
@@ -376,7 +376,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection2.parragraph">
                 <source>serviceterms.section1.subsection2.parragraph</source>
-                <target>This Agreement applies to milab.com, to the Milab brand applications and to other related sites, applications, communications and other services that they declare to be offered under this Agreement ("Services"), including data collection at website margin for those Services, such as our ads and add-ons. The users subscribed to our Services are «Members» and the unregistered users are «Visitors». This Agreement applies to both.</target>
+                <target>This Agreement applies to milab.com, to the SIGELAB brand applications and to other related sites, applications, communications and other services that they declare to be offered under this Agreement ("Services"), including data collection at website margin for those Services, such as our ads and add-ons. The users subscribed to our Services are «Members» and the unregistered users are «Visitors». This Agreement applies to both.</target>
             </trans-unit>
             <trans-unit id="serviceterms.section1.subsection3.header">
                 <source>serviceterms.section1.subsection3.header</source>
@@ -484,7 +484,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection2.parragraph">
                 <source>serviceterms.section3.subsection2.parragraph</source>
-                <target>Milab reserves the right to limit your use of the Services, including your number of contacts and your ability to contact other Members. Milab reserves the right to restrict, suspend or close your account if it considers that you may have breached this Agreement, the law or that you are improperly using the Services (for example, you have infringed the list of do's and don'ts) .</target>
+                <target>SIGELAB reserves the right to limit your use of the Services, including your number of contacts and your ability to contact other Members. SIGELAB reserves the right to restrict, suspend or close your account if it considers that you may have breached this Agreement, the law or that you are improperly using the Services (for example, you have infringed the list of do's and don'ts) .</target>
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection2.details">
                 <source>serviceterms.section3.subsection2.details</source>
@@ -496,7 +496,7 @@
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection3.parragraph">
                 <source>serviceterms.section3.subsection3.parragraph</source>
-                <target>Milab reserves all its intellectual property rights in the Services. The use of the Services does not give you the ownership of the same or the content or information that is displayed through them. The trademarks and logos used in connection with the Services are the trademarks of their respective owners.</target>
+                <target>SIGELAB reserves all its intellectual property rights in the Services. The use of the Services does not give you the ownership of the same or the content or information that is displayed through them. The trademarks and logos used in connection with the Services are the trademarks of their respective owners.</target>
             </trans-unit>
             <trans-unit id="serviceterms.section3.subsection3.details">
                 <source>serviceterms.section3.subsection3.details</source>

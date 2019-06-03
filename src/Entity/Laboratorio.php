@@ -32,6 +32,7 @@ class Laboratorio
      *
      * @ORM\Column(name="nombre", type="string", nullable=false)
      * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private $nombre;
 
@@ -54,7 +55,7 @@ class Laboratorio
      *
      * @ORM\ManyToOne(targetEntity="Facultad")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="facultad", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="facultad", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $facultad;
@@ -65,6 +66,7 @@ class Laboratorio
     public function __construct()
     {
         $this->idfacultad = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->enfuncionamiento=true;
     }
 
     /**

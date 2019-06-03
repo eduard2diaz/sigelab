@@ -2,18 +2,16 @@
 
 namespace App\Controller;
 
+use App\Entity\Pc;
 use App\Form\LaboratorioType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use App\Entity\Laboratorio;
-
-/*
- * @Route("/laboratorio")
- */
+use Knp\Snappy\Pdf;
 
 /**
  * @Route({
@@ -22,7 +20,7 @@ use App\Entity\Laboratorio;
  *     "fr": "/laboratoire",
  * })
  */
-class LaboratorioController extends Controller
+class LaboratorioController extends AbstractController
 {
 
     /**
@@ -30,7 +28,7 @@ class LaboratorioController extends Controller
      */
     public function index(Request $request): Response
     {
-        if ($this->isGranted('ROLE_ADMIN'))
+        if ($this->isGranted('ROLE_JEFETECNICOINSTITUCIONAL'))
             $laboratorios = $this->getDoctrine()->getRepository(Laboratorio::class)->findAll();
         else
             $laboratorios = $this->getUser()->getFacultad()->getIdlaboratorio()->toArray();
@@ -47,7 +45,7 @@ class LaboratorioController extends Controller
     /**
      * @Route("/new", name="laboratorio_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -60,9 +58,9 @@ class LaboratorioController extends Controller
             if ($form->isValid()) {
                 $em->persist($laboratorio);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('laboratory_register_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('laboratory_register_successfully'),
                     'nombre' => $laboratorio->getNombre(),
-                    'badge_texto' => $this->get('translator')->trans($laboratorio->getEnfuncionamiento() ? 'yes' : 'no'),
+                    'badge_texto' => $translator->trans($laboratorio->getEnfuncionamiento() ? 'yes' : 'no'),
                     'badge_color' => $laboratorio->getEnfuncionamiento() ? 'success' : 'danger',
                     'facultad' => $laboratorio->getFacultad()->getNombre(),
                     'id' => $laboratorio->getId(),
@@ -71,7 +69,7 @@ class LaboratorioController extends Controller
                 $page = $this->renderView('laboratorio/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
 
@@ -85,13 +83,13 @@ class LaboratorioController extends Controller
     /**
      * @Route("/{id}/edit", name="laboratorio_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Laboratorio $laboratorio): Response
+    public function edit(Request $request, Laboratorio $laboratorio, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
 
         $this->denyAccessUnlessGranted('EDIT',$laboratorio);
-        $form = $this->createForm(LaboratorioType::class, $laboratorio, array('esAdmin' => $this->isGranted('ROLE_ADMIN'), 'action' => $this->generateUrl('laboratorio_edit', array('id' => $laboratorio->getId()))));
+        $form = $this->createForm(LaboratorioType::class, $laboratorio, array('esJefeInstitucional' => $this->isGranted('ROLE_JEFETECNICOINSTITUCIONAL'), 'action' => $this->generateUrl('laboratorio_edit', array('id' => $laboratorio->getId()))));
         $form->handleRequest($request);
 
         if ($form->isSubmitted())
@@ -99,17 +97,19 @@ class LaboratorioController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($laboratorio);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('laboratory_update_successfully'),
-                    'badge_texto' => $this->get('translator')->trans($laboratorio->getEnfuncionamiento() ? 'yes' : 'no'),
+                return $this->json(array('mensaje' => $translator->trans('laboratory_update_successfully'),
+                    'badge_texto' => $translator->trans($laboratorio->getEnfuncionamiento() ? 'yes' : 'no'),
                     'badge_color' => $laboratorio->getEnfuncionamiento() ? 'success' : 'danger',
-                    'facultad' => $laboratorio->getFacultad()->getNombre(),));
+                    'facultad' => $laboratorio->getFacultad()->getNombre(),
+                    'nombre' => $laboratorio->getNombre(),
+                    ));
             } else {
                 $page = $this->renderView('laboratorio/_form.html.twig', array(
                     'form' => $form->createView(),
                     'form_id' => 'laboratorio_edit',
                     'action' => 'update_button',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('laboratorio/_new.html.twig', [
@@ -126,7 +126,7 @@ class LaboratorioController extends Controller
      */
     public function show(Request $request, Laboratorio $laboratorio): Response
     {
-        $this->denyAccessUnlessGranted('EDIT',$laboratorio);
+        $this->denyAccessUnlessGranted('VIEW',$laboratorio);
         $em = $this->getDoctrine()->getManager();
         $pcs = $em->getRepository('App:Pc')->findBy(array('laboratorio' => $laboratorio));
         if ($request->isXmlHttpRequest())
@@ -140,7 +140,7 @@ class LaboratorioController extends Controller
     /**
      * @Route("/{id}/delete",options={"expose"=true}, name="laboratorio_delete")
      */
-    public function delete(Request $request, Laboratorio $laboratorio): Response
+    public function delete(Request $request, Laboratorio $laboratorio, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -148,6 +148,24 @@ class LaboratorioController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($laboratorio);
         $em->flush();
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('laboratory_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('laboratory_delete_successfully')));
+    }
+
+    /**
+     * @Route("/{id}/exportar", name="laboratorio_exportar", methods="GET")
+     */
+    public function exportar(Laboratorio $laboratorio,Pdf $pdf): Response
+    {
+
+        $html = $this->renderView('laboratorio/_pdf.html.twig', array(
+            'laboratorio'  => $laboratorio->getNombre(),
+            'facultad'  => $laboratorio->getFacultad()->getNombre(),
+            'pcs'=>$this->getDoctrine()->getRepository(Pc::class)->findBy(['laboratorio'=>$laboratorio],['numero'=>'ASC'])
+        ));
+
+        return new PdfResponse(
+            $pdf->getOutputFromHtml($html),
+            'file.pdf'
+        );
     }
 }

@@ -4,17 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Pieza;
 use App\Form\PropiedadType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Periferico;
 use App\Entity\Propiedad;
-
-/*
- * @Route("/propiedad")
- */
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route({
@@ -23,7 +19,7 @@ use App\Entity\Propiedad;
  *     "fr": "/propriete"
  * })
  */
-class PropiedadController extends Controller
+class PropiedadController extends AbstractController
 {
 
     /**
@@ -45,7 +41,7 @@ class PropiedadController extends Controller
     /**
      * @Route("/new", name="propiedad_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -58,8 +54,8 @@ class PropiedadController extends Controller
             if ($form->isValid()) {
                 $em->persist($propiedad);
                 $em->flush();
-                $message=$this->get('translator')->trans('property_register_successfully');
-                return new JsonResponse(array('mensaje' => $message,
+                $message=$translator->trans('property_register_successfully');
+                return $this->json(array('mensaje' => $message,
                     'nombre' => $propiedad->getNombre(),
                     'id' => $propiedad->getId(),
                 ));
@@ -67,7 +63,7 @@ class PropiedadController extends Controller
                 $page = $this->renderView('propiedad/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
 
@@ -81,7 +77,7 @@ class PropiedadController extends Controller
     /**
      * @Route("/{id}/edit", name="propiedad_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Propiedad $propiedad): Response
+    public function edit(Request $request, Propiedad $propiedad, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -93,15 +89,15 @@ class PropiedadController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($propiedad);
                 $em->flush();
-                $message=$this->get('translator')->trans('property_update_successfully');
-                return new JsonResponse(array('mensaje' => $message, 'nombre' => $propiedad->getNombre()));
+                $message=$translator->trans('property_update_successfully');
+                return $this->json(array('mensaje' => $message, 'nombre' => $propiedad->getNombre()));
             } else {
                 $page = $this->renderView('propiedad/_form.html.twig', array(
                     'form' => $form->createView(),
                     'form_id' => 'propiedad_edit',
                     'action' => 'update_button',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('propiedad/_new.html.twig', [
@@ -116,7 +112,7 @@ class PropiedadController extends Controller
     /**
      * @Route("/{id}/delete",options={"expose"=true}, name="propiedad_delete")
      */
-    public function delete(Request $request, Propiedad $propiedad): Response
+    public function delete(Request $request, Propiedad $propiedad, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -124,8 +120,8 @@ class PropiedadController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($propiedad);
         $em->flush();
-        $message=$this->get('translator')->trans('property_delete_successfully');
-        return new JsonResponse(array('mensaje' => $message));
+        $message=$translator->trans('property_delete_successfully');
+        return $this->json(array('mensaje' => $message));
     }
 
     /**

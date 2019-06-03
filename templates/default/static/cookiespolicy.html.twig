@@ -1,15 +1,29 @@
-{% extends is_granted('IS_AUTHENTICATED_FULLY') ? 'layout/autenticado.html.twig':  'layout/anonimo.html.twig'  %}
+{% extends is_granted('IS_AUTHENTICATED_FULLY') ? 'layout/autenticado.html.twig':  'layout/anonimo.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/page/estatica.css','milab') }}"/>
+{% endblock stylesheets %}
 {% block body %}
-    <div class="block-information" style="padding: 3% 13%">
-        <h2 class="page-title">{{ 'cookiespolicy' | trans}}</h2>
-        <p>{{ 'cookiespolicy.introduction'|trans({},'estatica') }}</p>
-        <h3>{{ 'cookiespolicy.question1'|trans({},'estatica') }}</h3>
-        <p>{{ 'cookiespolicy.response1'|trans({},'estatica') }}</p>
-        <h3>{{ 'cookiespolicy.question2'|trans({},'estatica') }}</h3>
-        <p>{{ 'cookiespolicy.response2'|trans({},'estatica') }}</p>
-        <h3>{{ 'cookiespolicy.question3'|trans({},'estatica') }}</h3>
-        <p>{{ 'cookiespolicy.response3'|trans({},'estatica') }}</p>
-        <h3>{{ 'cookiespolicy.question4'|trans({},'estatica') }}</h3>
-        <p>{{ 'cookiespolicy.response4'|trans({},'estatica') }}</p>
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        {{ 'cookiespolicy'| trans }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <p>{{ 'cookiespolicy.introduction'|trans({},'estatica') }}</p>
+            <h4>{{ 'cookiespolicy.question1'|trans({},'estatica') }}</h4>
+            <p>{{ 'cookiespolicy.response1'|trans({},'estatica') }}</p>
+            <h4>{{ 'cookiespolicy.question2'|trans({},'estatica') }}</h4>
+            <p>{{ 'cookiespolicy.response2'|trans({},'estatica') }}</p>
+            <h4>{{ 'cookiespolicy.question3'|trans({},'estatica') }}</h4>
+            <p>{{ 'cookiespolicy.response3'|trans({},'estatica') }}</p>
+            <h4>{{ 'cookiespolicy.question4'|trans({},'estatica') }}</h4>
+            <p>{{ 'cookiespolicy.response4'|trans({},'estatica') }}</p>
+        </div>
     </div>
 {% endblock %}

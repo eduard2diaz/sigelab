@@ -3,17 +3,13 @@
 namespace App\Controller;
 
 use App\Form\TiporeparacionType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
-
 use App\Entity\Tiporeparacion;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
-/*
- * @Route("/tiporeparacion")
- */
 
 /**
  * @Route({
@@ -22,7 +18,7 @@ use App\Entity\Tiporeparacion;
  *     "fr": "/typeréparation"
  * }, options={"utf8": true})
  */
-class TiporeparacionController extends Controller
+class TiporeparacionController extends AbstractController
 {
 
     /**
@@ -44,28 +40,32 @@ class TiporeparacionController extends Controller
     /**
      * @Route("/new", name="tiporeparacion_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
 
         $tiporeparacion = new Tiporeparacion();
-        $em = $this->getDoctrine()->getManager();
         $form = $this->createForm(TiporeparacionType::class, $tiporeparacion, array('action' => $this->generateUrl('tiporeparacion_new')));
         $form->handleRequest($request);
+        
         if ($form->isSubmitted())
             if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
                 $em->persist($tiporeparacion);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('typeofrepair_register_successfully'),
-                    'nombre' => $tiporeparacion->getNombre(),
-                    'id' => $tiporeparacion->getId(),
-                ));
+                return $this->json(
+                    [
+                        'mensaje' => $translator->trans('typeofrepair_register_successfully'),
+                        'nombre' => $tiporeparacion->getNombre(),
+                        'id' => $tiporeparacion->getId(),
+                    ]
+                );
             } else {
                 $page = $this->renderView('tiporeparacion/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(['form' => $page, 'error' => true]);
             }
 
 
@@ -79,10 +79,11 @@ class TiporeparacionController extends Controller
     /**
      * @Route("/{id}/edit", name="tiporeparacion_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Tiporeparacion $tiporeparacion): Response
+    public function edit(Request $request, Tiporeparacion $tiporeparacion, TranslatorInterface $translator): Response
     {
         if(!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
+
         $form = $this->createForm(TiporeparacionType::class, $tiporeparacion, array('action' => $this->generateUrl('tiporeparacion_edit', array('id' => $tiporeparacion->getId()))));
         $form->handleRequest($request);
 
@@ -91,14 +92,18 @@ class TiporeparacionController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($tiporeparacion);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('typeofrepair_update_successfully'), 'nombre' => $tiporeparacion->getNombre()));
+                return $this->json(
+                    [
+                        'mensaje' => $translator->trans('typeofrepair_update_successfully'),
+                        'nombre' => $tiporeparacion->getNombre()
+                    ]);
             } else {
                 $page = $this->renderView('tiporeparacion/_form.html.twig', array(
                     'form' => $form->createView(),
                     'form_id' => 'tiporeparacion_edit',
                     'action' => 'update_button',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('tiporeparacion/_new.html.twig', [
@@ -113,7 +118,7 @@ class TiporeparacionController extends Controller
     /**
      * @Route("/{id}/delete",options={"expose"=true}, name="tiporeparacion_delete")
      */
-    public function delete(Request $request, Tiporeparacion $tiporeparacion): Response
+    public function delete(Request $request, Tiporeparacion $tiporeparacion, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -121,7 +126,7 @@ class TiporeparacionController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($tiporeparacion);
         $em->flush();
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('typeofrepair_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('typeofrepair_delete_successfully')));
     }
 
 }

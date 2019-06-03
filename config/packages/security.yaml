@@ -3,8 +3,9 @@ security:
         App\Entity\Usuario: { algorithm: bcrypt , cost: 13 }
 
     role_hierarchy:
-        ROLE_ADMIN:  [ROLE_JEFETECNICO, ROLE_PROFESOR]
+        ROLE_PROFESOR:  ROLE_ESTUDIANTE
         ROLE_JEFETECNICO:  ROLE_TECNICO
+        ROLE_JEFETECNICOINSTITUCIONAL:  ROLE_JEFETECNICO
 
     providers:
         usuarios:
@@ -12,6 +13,13 @@ security:
 
 
     firewalls:
+        api_area:
+            pattern:    ^/api/*
+            anonymous: ~
+            provider: usuarios
+            guard:
+                authenticators:
+                    - App\Security\ApiTokenAuthenticator
         secured_area:
             pattern:    ^/*
             user_checker: App\Security\UserChecker
@@ -20,6 +28,7 @@ security:
                 check_path: check
                 default_target_path: index
                 always_use_default_target_path: true
+             #   csrf_token_generator: security.csrf.token_manager
             logout:
                 path:   logout
                 target: index
@@ -29,17 +38,20 @@ security:
                 secret:  '%env(APP_SECRET)%'
                 lifetime: 604800 # 1 week in seconds
                 path: index
+            guard:
+                authenticators:
+                    - App\Security\LdapAuthenticator
+
     access_control:
-        - { path: ^/*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/translate, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/static, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/staticar, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/estatica, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #INICIO de INFORMACION QUE GESTIONA SOLAMENTE EL ADMIN
         - { path: ^/facultad, roles: ROLE_ADMIN }
         - { path: ^/faculty, roles: ROLE_ADMIN }
         - { path: ^/moyen, roles: ROLE_ADMIN }
-        - { path: ^/laboratorio/new, roles: ROLE_ADMIN }
-        - { path: ^/laboratory/new, roles: ROLE_ADMIN }
-        - { path: ^/laboratoire/new, roles: ROLE_ADMIN }
-        - { path: ^/laboratorio/\d+/delete, roles: ROLE_ADMIN }
-        - { path: ^/laboratory/\d+/delete, roles: ROLE_ADMIN }
-        - { path: ^/laboratoire/\d+/delete, roles: ROLE_ADMIN }
         - { path: ^/usuario$, roles: ROLE_ADMIN }
         - { path: ^/user$, roles: ROLE_ADMIN }
         - { path: ^/utilisateur$, roles: ROLE_ADMIN }
@@ -49,19 +61,40 @@ security:
         - { path: ^/usuario\d+/delete, roles: ROLE_ADMIN }
         - { path: ^/user\d+/delete, roles: ROLE_ADMIN }
         - { path: ^/utilisateur\d+/delete, roles: ROLE_ADMIN }
-        #INFORMACION QUE GESTIONA SOLAMENTE EL JEFE DE LOS TECNICOS
-        - { path: ^/propiedad, roles: ROLE_JEFETECNICO }
-        - { path: ^/property, roles: ROLE_JEFETECNICO }
-        - { path: ^/propriete, roles: ROLE_JEFETECNICO }
-        - { path: ^/periferico, roles: ROLE_JEFETECNICO }
-        - { path: ^/peripheral, roles: ROLE_JEFETECNICO }
-        - { path: ^/peripherique, roles: ROLE_JEFETECNICO }
-        - { path: ^/pieza, roles: ROLE_JEFETECNICO }
-        - { path: ^/piece, roles: ROLE_JEFETECNICO }
-        - { path: ^/pièce, roles: ROLE_JEFETECNICO }
-        - { path: ^/tiporeparacion, roles: ROLE_JEFETECNICO }
-        - { path: ^/typereparation, roles: ROLE_JEFETECNICO }
-        - { path: ^/typeréparation, roles: ROLE_JEFETECNICO }
+        #FIN de INFORMACION QUE GESTIONA SOLAMENTE EL ADMIN
+        #INICIO de INFORMACION QUE GESTIONA SOLAMENTE EL JEFE DE LOS TECNICOS
+        - { path: ^/laboratorio/new, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratory/new, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratoire/new, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratorio/\d+/edit, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratory/\d+/edit, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratoire/\d+/edit, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratorio/\d+/delete, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratory/\d+/delete, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/laboratoire/\d+/delete, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/propiedad/\d+/searchbypieza, roles: ROLE_TECNICO }
+        - { path: ^/property/\d+/searchbypieza, roles: ROLE_TECNICO }
+        - { path: ^/propriete/\d+/searchbypieza, roles: ROLE_TECNICO }
+        - { path: ^/propiedad/\d+/searchbyperiferico, roles: ROLE_TECNICO }
+        - { path: ^/property/\d+/searchbyperiferico, roles: ROLE_TECNICO }
+        - { path: ^/propriete/\d+/searchbyperiferico, roles: ROLE_TECNICO }
+        - { path: ^/propiedad, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/property, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/propriete, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/periferico, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/peripheral, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/peripherique, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/pieza/\d+/searchbypieza, roles: ROLE_TECNICO }
+        - { path: ^/piece/\d+/searchbypieza, roles: ROLE_TECNICO }
+        - { path: ^/pièce/\d+/searchbypieza, roles: ROLE_TECNICO }
+        - { path: ^/pieza, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/piece, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/pièce, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/tiporeparacion, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/typereparation, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        - { path: ^/typeréparation, roles: ROLE_JEFETECNICOINSTITUCIONAL }
+        #FIN INFORMACION QUE GESTIONA SOLAMENTE EL JEFE DE LOS TECNICOS
+
         - { path: ^/pc/\d+/new, roles: ROLE_JEFETECNICO }
         - { path: ^/computadora/\d+/new, roles: ROLE_JEFETECNICO }
         - { path: ^/ordinateur/\d+/new, roles: ROLE_JEFETECNICO }
@@ -77,7 +110,8 @@ security:
         - { path: ^/reparacion/\d+/delete, roles: ROLE_JEFETECNICO }
         - { path: ^/reparation/\d+/delete, roles: ROLE_JEFETECNICO }
         - { path: ^/reparer/\d+/delete, roles: ROLE_JEFETECNICO }
-        #INFORMACION QUE GESTIONAN LOS TECNICOS DE LABORATORIO
+
+        #INICIO de INFORMACION QUE GESTIONAN LOS TECNICOS DE LABORATORIO
         - { path: ^/laboratorio, roles: ROLE_TECNICO }
         - { path: ^/laboratory, roles: ROLE_TECNICO }
         - { path: ^/laboratoire, roles: ROLE_TECNICO }
@@ -96,11 +130,17 @@ security:
         - { path: ^/reparacion, roles: ROLE_TECNICO }
         - { path: ^/reparation, roles: ROLE_TECNICO }
         - { path: ^/reparer, roles: ROLE_TECNICO }
+        #FIN de INFORMACION QUE GESTIONAN LOS TECNICOS DE LABORATORIO
+
         #INFORMACION QUE GESTIONAN LOS ESTUDIANTES Y PROFESORES
-        - { path: ^/reservacion/laboratorio, roles: ROLE_PROFESOR }
-        - { path: ^/reservation/laboratory, roles: ROLE_PROFESOR }
-        - { path: ^/reservation/laboratoire, roles: ROLE_PROFESOR }
-        - { path: ^/reservation/pc, roles: ROLE_ESTUDIANTE }
-        - { path: ^/reservacion/computadora, roles: ROLE_ESTUDIANTE }
-        - { path: ^/reservation/calculateur, roles: ROLE_ESTUDIANTE }
+        - { path: ^/reservacion/laboratorio, roles: [ROLE_PROFESOR, ROLE_TECNICO] }
+        - { path: ^/reservation/laboratory, roles:  [ROLE_PROFESOR, ROLE_TECNICO] }
+        - { path: ^/reservation/laboratoire, roles: [ROLE_PROFESOR, ROLE_TECNICO] }
+        - { path: ^/reservation/pc/, roles: [ROLE_ESTUDIANTE, ROLE_TECNICO] }
+        - { path: ^/reservacion/computadora/, roles: [ROLE_ESTUDIANTE, ROLE_TECNICO] }
+        - { path: ^/reservation/calculateur/, roles: [ROLE_ESTUDIANTE, ROLE_TECNICO] }
+        - { path: ^/machinetime, roles: ROLE_TECNICO }
+        - { path: ^/tiempomaquina, roles: ROLE_TECNICO }
+        - { path: ^/tempsmachine, roles: ROLE_TECNICO }
+        - { path: ^/api/requesttoken, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/*, roles: IS_AUTHENTICATED_FULLY }

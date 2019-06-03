@@ -8,9 +8,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Notificacion;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * @Route("/notificacion")
+ * @Route({
+ *     "en": "/notification",
+ *     "es": "/notificacion",
+ *     "fr": "/notificationr",
+ * })
  */
 class NotificacionController extends AbstractController
 {
@@ -23,11 +28,11 @@ class NotificacionController extends AbstractController
         if ($request->isXmlHttpRequest()) {
             if ($request->query->get('_format') == 'json') {
 
-                if (null == $this->getUser()->getUltimologout()) {
-                    $notificacions = $this->getDoctrine()->getRepository(Notificacion::class)->findBy(['destinatario' => $this->getUser()->getId()], ['fecha' => 'DESC'], 5);
+                if (null == $this->getUser()->getLastlogout()) {
+                    $notificacions = $this->getDoctrine()->getRepository(Notificacion::class)->findBy(['destinatario' => $this->getUser()->getId(),'leida'=>false], ['fecha' => 'DESC'], 5);
                 } else {
-                    $consulta = $this->getDoctrine()->getManager()->createQuery('SELECT n FROM App:Notificacion n JOIN n.destinatario u WHERE u.id= :usuario AND n.fecha>= :fecha');
-                    $consulta->setParameters(['usuario' => $this->getUser()->getId(), 'fecha' => $this->getUser()->getUltimologout()]);
+                    $consulta = $this->getDoctrine()->getManager()->createQuery('SELECT n FROM App:Notificacion n JOIN n.destinatario u WHERE u.id= :usuario AND n.fecha>= :fecha  AND n.leida= FALSE');
+                    $consulta->setParameters(['usuario' => $this->getUser()->getId(), 'fecha' => $this->getUser()->getLastlogout()]);
                     $consulta->setMaxResults(5);
                     $notificacions = $consulta->getResult();
                 }
@@ -48,11 +53,6 @@ class NotificacionController extends AbstractController
         $notificacions = $this->getDoctrine()->getRepository(Notificacion::class)->findBy(['destinatario' => $this->getUser()], ['fecha' => 'DESC']);
         return $this->render('notificacion/index.html.twig', [
             'notificacions' => $notificacions,
-
-            'user_id' => $this->getUser()->getId(),
-            'user_foto' => null != $this->getUser()->getRutaFoto() ? $this->getUser()->getRutaFoto() : null,
-            'user_nombre' => $this->getUser()->__toString(),
-            'user_correo' => $this->getUser()->getEmail(),
         ]);
     }
 
@@ -64,7 +64,14 @@ class NotificacionController extends AbstractController
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
 
-        $this->denyAccessUnlessGranted('DELETE',$notificacion);
+        $this->denyAccessUnlessGranted('VIEW',$notificacion);
+
+        if(!$notificacion->getLeida()){
+            $em=$this->getDoctrine()->getManager();
+            $notificacion->setLeida(true);
+            $em->persist($notificacion);
+            $em->flush();
+        }
         return $this->render('notificacion/_show.html.twig', [
             'notificacion' => $notificacion,
         ]);
@@ -73,7 +80,7 @@ class NotificacionController extends AbstractController
     /**
      * @Route("/{id}/delete",name="notificacion_delete")
      */
-    public function delete(Request $request, Notificacion $notificacion): Response
+    public function delete(Request $request, Notificacion $notificacion, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -82,9 +89,7 @@ class NotificacionController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $em->remove($notificacion);
         $em->flush();
-        return $this->json(array('mensaje' => 'La notificación fue eliminada satisfactoriamente'));
-
-
+        return $this->json(array('mensaje' => $translator->trans('notificacion_delete_successfully')));
     }
 
 }

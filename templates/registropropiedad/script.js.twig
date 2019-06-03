@@ -34,6 +34,8 @@
 
     var configurarDataTableRegistroPropiedad = function () {
         tablepropiedad = $('table#tablepropiedad').DataTable({
+            pageLength: 3,
+            lengthMenu: [[3,5,10], [3,5,10]],
             "pagingType": "simple_numbers",
             "language": {
                 url: datatable_url
@@ -117,7 +119,7 @@
                     objeto = tablepropiedad.row.add({
                     "propiedad": data['propiedad'],
                     "valor": data['valor'],
-                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicionpropiedad' data-href="+ Routing.generate('registropropiedad_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_registropropiedad' data-href="+ Routing.generate('registropropiedad_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
+                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicionpropiedad' data-href="+ Routing.generate('registropropiedad_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_registropropiedad' data-href="+ Routing.generate('registropropiedad_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                     });
                     objeto.draw();
                     tablepropiedad.page(pagina).draw('page');

@@ -30,6 +30,7 @@ class Propiedad
      *
      * @ORM\Column(name="nombre", type="string", nullable=false)
      * @Assert\NotBlank()
+     * @Assert\Length(max=255)
      */
     private $nombre;
 

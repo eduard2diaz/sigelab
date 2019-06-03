@@ -21,6 +21,7 @@ class MensajeType extends AbstractType
         $builder
         ->add('iddestinatario',null,array('choices'=>array(),'required'=>true,'label'=>'message_tofield','attr'=>array('placeholder'=>'message_tofield_placeholder',)))
         ->add('descripcion',TextareaType::class,array('required'=>true,'label'=>'message','attr'=>array('rows'=>5,'autocomplete'=>'off','placeholder'=>'message_messagefield_placeholder','class'=>'form-control input-xxlarge')))
+        ->add('asunto',TextType::class,array('required'=>true,'label'=>'message_subject','attr'=>['class'=>'form-control']))
         ;
         $factory=$builder->getFormFactory();
         $builder->addEventSubscriber(new AddDestinatarioFieldSubscriber($factory,$this->em));

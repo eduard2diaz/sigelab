@@ -13,21 +13,21 @@
         <tr>
             <td>{{ i }}</td>
             <td>{{ periferico.nombre }}</td>
-            <td>{{ periferico.tipo }}</td>
+            <td>{{ ('peripheral_type_'~periferico.tipo) | trans}}</td>
             <td>
                 <ul class="nav nav-pills" >
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-default edicion" data-href="{{ path('periferico_show', { 'id': periferico.id }) }}">
+                        <a class="btn btn-sm btn-default text-uppercase edicion" data-href="{{ path('periferico_show', { 'id': periferico.id }) }}">
                             <i class="flaticon-eye"></i>{{ 'visualize' |trans }}
                         </a>
                     </li>
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-info edicion" data-href="{{ path('periferico_edit', { 'id': periferico.id }) }}">
+                        <a class="btn btn-sm btn-info text-uppercase edicion" data-href="{{ path('periferico_edit', { 'id': periferico.id }) }}">
                             <i class="flaticon-edit-1"></i>{{ 'edit' |trans }}
                         </a>
                     </li>
                     <li class="nav-item m-tabs__item">
-                        <a class="btn btn-sm btn-danger eliminar_periferico" data-href="{{ path('periferico_delete', { 'id': periferico.id }) }}">
+                        <a class="btn btn-sm btn-danger text-uppercase eliminar_periferico" data-href="{{ path('periferico_delete', { 'id': periferico.id }) }}">
                             <i class="flaticon-delete-1"></i>{{ 'delete' |trans }}
                         </a>
                     </li>

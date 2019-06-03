@@ -4,7 +4,7 @@
         }, jQuery.validator.format(jQuery.validator.messages['compareDate']));
 
         jQuery.validator.addMethod("checkTime", function(value, element, params) {
-        return moment(value).format('HH') <17  && moment(value).format('HH') >8;
+        return moment(value).format('HH') <17  && moment(value).format('HH') >7;
         }, jQuery.validator.format(jQuery.validator.messages['checkTime']));
 
         var reservacionlaboratorio = function () {
@@ -146,7 +146,7 @@
                     "fechafin": data['fechafin'],
                     "laboratorio": data['laboratorio'],
                     "profesor": data['profesor'],
-                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicion' data-href="+ Routing.generate('reservacion_laboratorio_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_reservacionlaboratorio' data-href="+ Routing.generate('reservacion_laboratorio_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete'></i>{{ 'delete'|trans }}</a></li></ul>",
+                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicion' data-href="+ Routing.generate('reservacion_laboratorio_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_reservacionlaboratorio' data-href="+ Routing.generate('reservacion_laboratorio_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                 });
                     objeto.draw();
                     table.page(pagina).draw('page');

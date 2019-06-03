@@ -4,7 +4,7 @@
         <body>
             <trans-unit id="contact_link">
                 <source>contact_link</source>
-                <target>Contact avec Milab</target>
+                <target>Contact avec SIGELAB</target>
             </trans-unit>
             <trans-unit id="refresh_link">
                 <source>refresh_link</source>

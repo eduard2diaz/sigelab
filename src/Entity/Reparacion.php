@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -43,7 +44,7 @@ class Reparacion
      * @var float
      *
      * @ORM\Column(name="precio", type="float", precision=10, scale=0)
-     * @Assert\Range(min=1)
+     * @Assert\Range(min=0)
      */
     private $precio;
 
@@ -52,7 +53,7 @@ class Reparacion
      *
      * @ORM\ManyToOne(targetEntity="Usuario")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="usuario", referencedColumnName="id",onDelete="Cascade")
      * })
      */
     private $usuario;
@@ -231,5 +232,21 @@ class Reparacion
     public function getTiporeparacion()
     {
         return $this->tiporeparacion;
+    }
+
+    /**
+     * @Assert\Callback
+     */
+    public function validar(ExecutionContextInterface $context)
+    {
+        $currentDate=new \DateTime();
+        if(null==$this->getTiporeparacion()){
+            $context->setNode($context, 'tiporeparacion', null, 'data.tiporeparacion');
+            $context->addViolation('reparationpc_selecttype');
+        }
+        if ($currentDate->format('d-m-Y') != $this->getFecha()->format('d-m-Y')) {
+            $context->setNode($context, 'fecha', null, 'data.fecha');
+            $context->addViolation('reservationlaboratorio_error_date_check');
+        }
     }
 }

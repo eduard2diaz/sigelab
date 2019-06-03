@@ -2,22 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\Rol;
 use App\Entity\Usuario;
 use App\Form\UsuarioType;
-use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use App\Tool\FileStorageManager;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Doctrine\ORM\EntityRepository;
-
-/*
- * @Route("/usuario")
- */
+use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * @Route({
@@ -26,7 +19,7 @@ use Doctrine\ORM\EntityRepository;
  *     "fr": "/utilisateur"
  * })
  */
-class UsuarioController extends Controller
+class UsuarioController extends AbstractController
 {
     /**
      * @Route("/", name="usuario_index", methods="GET")
@@ -46,7 +39,7 @@ class UsuarioController extends Controller
     /**
      * @Route("/new", name="usuario_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -60,19 +53,20 @@ class UsuarioController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($usuario);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('user_register_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('user_register_successfully'),
                     'nombre' => $usuario->getNombre(),
                     'apellido' => $usuario->getApellido(),
                     'usuario' => $usuario->getUsuario(),
-                    'badge_texto' => $this->get('translator')->trans($usuario->getActivo() ? 'yes' : 'no'),
+                    'badge_texto' => $translator->trans($usuario->getActivo() ? 'yes' : 'no'),
                     'badge_color' => $usuario->getActivo() ? 'success' : 'danger',
                     'id' => $usuario->getId(),
                 ));
             } else {
                 $page = $this->renderView('usuario/_form.html.twig', array(
                     'form' => $form->createView(),
+                    'usuario' => $usuario,
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
 
@@ -85,7 +79,7 @@ class UsuarioController extends Controller
     /**
      * @Route("/{id}/edit", name="usuario_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Usuario $usuario): Response
+    public function edit(Request $request, Usuario $usuario, TranslatorInterface $translator,  UserPasswordEncoderInterface $encoder): Response
     {
         if (!$request->isXmlHttpRequest() )
             throw $this->createAccessDeniedException();
@@ -101,15 +95,28 @@ class UsuarioController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 if (null == $usuario->getPassword())
                     $usuario->setPassword($passwordOriginal);
-                else
-                    $this->get('tool.password_encoder')->updatePassword($usuario);
+                else{
+                    $newpassword=$encoder->encodePassword($usuario,$usuario->getPassword());
+                    $usuario->setPassword($newpassword);
+                }
+
+                $ruta = $this->getParameter('storage_directory');
+                if ($usuario->getFile() != null) {
+                    if ($usuario->getRutaFoto() != null){
+                        $rutaArchivo = $ruta . DIRECTORY_SEPARATOR . $usuario->getRutaFoto();
+                        FileStorageManager::removeUpload($rutaArchivo);
+                    }
+                    $usuario->setRutaFoto(FileStorageManager::Upload($ruta,$usuario->getFile()));
+                    $usuario->setFile(null);
+                }
+
                 $em->persist($usuario);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('user_update_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('user_update_successfully'),
                     'nombre' => $usuario->getNombre(),
                     'apellidos' => $usuario->getApellido(),
                     'usuario' => $usuario->getUsuario(),
-                    'badge_texto' => $this->get('translator')->trans($usuario->getActivo() ? 'yes' : 'no'),
+                    'badge_texto' => $translator->trans($usuario->getActivo() ? 'yes' : 'no'),
                     'badge_color' => $usuario->getActivo() ? 'success' : 'danger',
                    ));
             } else {
@@ -117,8 +124,9 @@ class UsuarioController extends Controller
                     'form' => $form->createView(),
                     'action' => 'update_button',
                     'form_id' => 'usuario_edit',
+                    'usuario' => $usuario,
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true));
+                return $this->json(array('form' => $page, 'error' => true));
             }
 
         return $this->render('usuario/_new.html.twig', [
@@ -144,7 +152,7 @@ class UsuarioController extends Controller
     /**
      * @Route("/{id}/delete", name="usuario_delete",options={"expose"=true})
      */
-    public function delete(Request $request, Usuario $usuario): Response
+    public function delete(Request $request, Usuario $usuario, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -154,7 +162,7 @@ class UsuarioController extends Controller
         $em->remove($usuario);
         $em->flush();
 
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('user_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('user_delete_successfully')));
     }
 
     /**
@@ -169,8 +177,8 @@ class UsuarioController extends Controller
         if($request->get('q')!=null) {
             $em = $this->getDoctrine()->getManager();
             $parameter = $request->get('q');
-            $query = $em->createQuery('SELECT u.id, u.nombre as text FROM App:Usuario u WHERE u.nombre LIKE :nombre ORDER BY u.nombre ASC')
-                ->setParameter('nombre', '%' . $parameter . '%');
+            $query = $em->createQuery('SELECT u.id, u.nombre as text FROM App:Usuario u WHERE upper(u.nombre) LIKE :nombre ORDER BY u.nombre ASC')
+                ->setParameter('nombre', '%' . strtoupper($parameter) . '%');
             $result = $query->getResult();
             return new Response(json_encode($result));
         }

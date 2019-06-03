@@ -10,10 +10,10 @@
     "sZeroRecords":    "Aucun &eacute;l&eacute;ment &agrave; afficher",
 	"sEmptyTable":     "Aucune donn&eacute;e disponible dans le tableau",
 	"oPaginate": {
-		"sFirst":      "Premier",
-		"sPrevious":   "Pr&eacute;c&eacute;dent",
-		"sNext":       "Suivant",
-		"sLast":       "Dernier"
+		"sFirst":    "<i class=\"la la-angle-double-left\"></i>",
+		"sLast":     "<i class=\"la la-angle-double-left\"></i>",
+		"sNext":     "<i class=\"la la-angle-right\"></i>",
+		"sPrevious": "<i class=\"la la-angle-left\"></i>"
 	},
 	"oAria": {
 		"sSortAscending":  ": activer pour trier la colonne par ordre croissant",

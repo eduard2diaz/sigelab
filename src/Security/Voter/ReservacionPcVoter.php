@@ -12,7 +12,8 @@ class ReservacionPcVoter extends Voter
 {
     private $decisionManager;
 
-    public function __construct(AccessDecisionManagerInterface $decisionManager) {
+    public function __construct(AccessDecisionManagerInterface $decisionManager)
+    {
         $this->decisionManager = $decisionManager;
     }
 
@@ -21,7 +22,7 @@ class ReservacionPcVoter extends Voter
         // replace with your own logic
         // https://symfony.com/doc/current/security/voters.html
         return in_array($attribute, ['EDIT', 'DELETE'])
-            && $subject instanceof ReservacionPc ;
+            && $subject instanceof ReservacionPc;
     }
 
     protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
@@ -36,8 +37,12 @@ class ReservacionPcVoter extends Voter
         switch ($attribute) {
             case 'EDIT':
             case 'DELETE':
-                if($this->decisionManager->decide($token, array('ROLE_ADMIN')) || $subject->getUsuario()->getId()==$token->getUser()->getId())
-                    return true;
+                $hoy = new \DateTime('today');
+                $hoy = $hoy->format('d-m-Y');
+                $hora = new \DateTime('now');
+                $hora = $hora->format('H');
+                $fechareservacion = $subject->getFecha()->format('d-m-Y');
+                    return $this->decisionManager->decide($token, array('ROLE_ESTUDIANTE')) && $subject->getUsuario()->getId() == $token->getUser()->getId() && ($hoy==$fechareservacion && $hora<20);
                 break;
         }
 

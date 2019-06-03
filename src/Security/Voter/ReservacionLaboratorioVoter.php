@@ -20,7 +20,7 @@ class ReservacionLaboratorioVoter extends Voter
     {
         // replace with your own logic
         // https://symfony.com/doc/current/security/voters.html
-        return in_array($attribute, ['EDIT', 'DELETE'])
+        return in_array($attribute, ['NEW','EDIT', 'DELETE'])
             && $subject instanceof ReservacionLaboratorio ;
     }
 
@@ -34,11 +34,14 @@ class ReservacionLaboratorioVoter extends Voter
         }
 
         switch ($attribute) {
+            case 'NEW':
+                return $this->decisionManager->decide($token, array('ROLE_PROFESOR'));
+            break;
             case 'EDIT':
             case 'DELETE':
-                if($this->decisionManager->decide($token, array('ROLE_ADMIN')) || $subject->getUsuario()->getId()==$token->getUser()->getId())
-                    return true;
-                break;
+                $hoy = new \DateTime('now');
+                return $this->decisionManager->decide($token, array('ROLE_JEFETECNICO')) || ($this->decisionManager->decide($token, array('ROLE_PROFESOR')) && $subject->getUsuario()->getId() == $token->getUser()->getId() && $subject->getFechainicio()> $hoy) ;
+            break;
         }
 
         return false;

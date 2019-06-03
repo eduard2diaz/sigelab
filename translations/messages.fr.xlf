@@ -56,6 +56,10 @@
                             <source>reservations</source>
                             <target>Réservations</target>
                         </trans-unit>
+                        <trans-unit id="tmachine">
+                            <source>tmachine</source>
+                            <target>T.machine</target>
+                        </trans-unit>
                         <!--INICIO DEL FOOTER-->
                         <trans-unit id="account">
                             <source>account</source>
@@ -67,7 +71,7 @@
                         </trans-unit>
                         <trans-unit id="principles">
                             <source>principles</source>
-                            <target>Principes de Milab</target>
+                            <target>Principes de SIGELAB</target>
                         </trans-unit>
                         <trans-unit id="accesibility">
                             <source>accesibility</source>
@@ -99,7 +103,7 @@
                         </trans-unit>
                         <trans-unit id="about">
                             <source>about</source>
-                            <target>À propos de Milab</target>
+                            <target>À propos de SIGELAB</target>
                         </trans-unit>
                         <trans-unit id="aboutus">
                             <source>aboutus</source>
@@ -125,6 +129,34 @@
                             <source>privacypolicy</source>
                             <target>Politique de confidentialité</target>
                         </trans-unit>
+                        <trans-unit id="all_right_reserved">
+                            <source>all_right_reserved</source>
+                            <target>Tous les droits</target>
+                        </trans-unit>
+                        <trans-unit id="statics">
+                            <source>statics</source>
+                            <target>Statistiques</target>
+                        </trans-unit>
+                        <trans-unit id="report_reservationbyfaculty">
+                            <source>report_reservationbyfaculty</source>
+                            <target>Réservation par faculté</target>
+                        </trans-unit>
+                        <trans-unit id="report_reservationbylaboratory">
+                            <source>report_reservationbylaboratory</source>
+                            <target>Réservation par laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="report_machinetimebyfaculty">
+                            <source>report_machinetimebyfaculty</source>
+                            <target>Temps machine par faculté</target>
+                        </trans-unit>
+                        <trans-unit id="report_machinetimebylaboratory">
+                            <source>report_machinetimebylaboratory</source>
+                            <target>Temps machine par laboratoire</target>
+                        </trans-unit>
+                        <trans-unit id="report_nodatafound">
+                            <source>report_nodatafound</source>
+                            <target>Aucune donn</target>
+                        </trans-unit>
                         <!--FIN DEL FOOTER-->
 
                         <!--INICIO DE INDEX.HTML-->
@@ -134,7 +166,7 @@
                         </trans-unit>
                         <trans-unit id="loginform_password_placeholder">
                             <source>loginform_password_placeholder</source>
-                            <target>Password</target>
+                            <target>Mot de passe</target>
                         </trans-unit>
                         <trans-unit id="loginform_rememberme_placeholder">
                             <source>loginform_rememberme_placeholder</source>
@@ -158,7 +190,7 @@
                         </trans-unit>
                         <trans-unit id="promo1_ad2">
                             <source>promo1_ad2</source>
-                            <target>Plus d'informations sur Milab</target>
+                            <target>Plus d'informations sur SIGELAB</target>
                         </trans-unit>
                         <!--FIN DE INDEX.HTML-->
 
@@ -197,7 +229,7 @@
                         </trans-unit>
                         <trans-unit id="visualize">
                             <source>visualize</source>
-                            <target>Visualizar</target>
+                            <target>Visualiser</target>
                         </trans-unit>
                         <trans-unit id="row_number">
                             <source>row_number</source>
@@ -226,6 +258,10 @@
                         <trans-unit id="value_field">
                             <source>value_field</source>
                             <target>Valeur</target>
+                        </trans-unit>
+                        <trans-unit id="Contraseña">
+                            <source>Contraseña</source>
+                            <target>Mot de passe</target>
                         </trans-unit>
                         <trans-unit id="mac_field">
                             <source>mac_field</source>
@@ -318,6 +354,26 @@
                         <trans-unit id="list">
                             <source>list</source>
                             <target>Liste</target>
+                        </trans-unit>
+                        <trans-unit id="manage">
+                            <source>manage</source>
+                            <target>Administrer</target>
+                        </trans-unit>
+                        <trans-unit id="search">
+                            <source>search</source>
+                            <target>Chercher le MAC</target>
+                        </trans-unit>
+                        <trans-unit id="viewmore">
+                            <source>viewmore</source>
+                            <target>Voir plus</target>
+                        </trans-unit>
+                        <trans-unit id="noresult">
+                            <source>noresult</source>
+                            <target>Aucun résultat trouvé</target>
+                        </trans-unit>
+                        <trans-unit id="removephoto">
+                            <source>removephoto</source>
+                            <target>Éliminée</target>
                         </trans-unit>
                         <!--FIN PROPOSITO GENERAL-->
 
@@ -762,17 +818,33 @@
                         <!--FIN DE RESERVACION-->
 
                         <!--INICIO  DE RESERVACION LABORATORIO-->
+                        <trans-unit id="reservationlaboratorio_title">
+                            <source>reservationlaboratorio_title</source>
+                            <target>Réservation de laboratoire</target>
+                        </trans-unit>
                         <trans-unit id="reservationlaboratorio_error_laboratorio_blank">
                             <source>reservationlaboratorio_error_laboratorio_blank</source>
                             <target>S´il vous plaît,il/elle sélectionne un laboratoire</target>
                         </trans-unit>
+                        <trans-unit id="reservationlaboratorio_error_laboratorio_ungrantedaccess">
+                            <source>reservationlaboratorio_error_laboratorio_ungrantedaccess</source>
+                            <target>S´il vous plaît,il/elle sélectionne un laboratoire with access</target>
+                        </trans-unit>
+                        <trans-unit id="reservationlaboratorio_error_laboratorio_inactive">
+                            <source>reservationlaboratorio_error_laboratorio_inactive</source>
+                            <target>S´il vous plaît,il/elle sélectionne un laboratoire active</target>
+                        </trans-unit>
                         <trans-unit id="reservationlaboratorio_error_startdate_superior">
                             <source>reservationlaboratorio_error_startdate_superior</source>
-                            <target>La date de fin débit etre plus grande ou égale que la date de commencement</target>
+                            <target>La date de fin débit etre plus grande que la date de commencement</target>
                         </trans-unit>
                         <trans-unit id="reservationlaboratorio_error_time_check">
                             <source>reservationlaboratorio_error_time_check</source>
                             <target>Vérifie l´heure.</target>
+                        </trans-unit>
+                        <trans-unit id="reservationlaboratorio_error_date_check">
+                            <source>reservationlaboratorio_error_date_check</source>
+                            <target>Vérifie l´date.</target>
                         </trans-unit>
                         <trans-unit id="reservationlaboratorio_error_range_existe">
                             <source>reservationlaboratorio_error_range_existe(%laboratorio%,%from%,%to%)</source>
@@ -781,6 +853,10 @@
                         <!--FIN  DE RESERVACION LABORATORIO-->
 
                         <!--INICIO  DE RESERVACION PC-->
+                        <trans-unit id="reservationpc_title">
+                            <source>reservationpc_title</source>
+                            <target>Réservations de Ordinateur</target>
+                        </trans-unit>
                         <trans-unit id="reservation_error_noavailablepc">
                             <source>reservation_error_noavailablepc</source>
                             <target>Aucun ordinateur n'a été trouvé</target>
@@ -866,10 +942,11 @@
                             <source>reparationpc_details</source>
                             <target>Détails de réparation</target>
                         </trans-unit>
+                        <trans-unit id="reparationpc_selecttype">
+                            <source>reparationpc_selecttype</source>
+                            <target>Sélectionnez l' réparation</target>
+                        </trans-unit>
                         <!--FIN  DE REPARACION PC-->
-
-
-
                         <!--INICIO USUARIO-->
                         <trans-unit id="users">
                             <source>users</source>
@@ -933,7 +1010,7 @@
                         </trans-unit>
                         <trans-unit id="user_form_rol_error_incompatibility">
                             <source>user_form_rol_error_incompatibility</source>
-                            <target>L'utilisateur peut être technicien ou chef de techniciens mais pas les deux</target>
+                            <target>Verifier les roles</target>
                         </trans-unit>
                         <!--FIN USUARIO-->
                         <!--INICIO MENSAJE-->
@@ -952,6 +1029,10 @@
                         <trans-unit id="sendmessage">
                             <source>sendmessage</source>
                             <target>envoyer un message</target>
+                        </trans-unit>
+                        <trans-unit id="send_button">
+                            <source>send_button</source>
+                            <target>Envoyer</target>
                         </trans-unit>
                         <trans-unit id="message_register_tooltip">
                             <source>message_register_tooltip</source>
@@ -976,6 +1057,10 @@
                         <trans-unit id="message_tofield">
                             <source>message_tofield</source>
                             <target>Pour</target>
+                        </trans-unit>
+                        <trans-unit id="message_subject">
+                            <source>message_subject</source>
+                            <target>Subjectr</target>
                         </trans-unit>
                         <trans-unit id="message_tofield_placeholder">
                             <source>message_tofield_placeholder</source>
@@ -1009,7 +1094,99 @@
                             <source>Tienes 1 mensaje nuevo | Tienes %total% mensajes nuevos</source>
                             <target>Tu as 1 message neuf | Tu as %total% message neuf</target>
                         </trans-unit>
+                        <trans-unit id="message_recent_empty">
+                            <source>message_recent_empty</source>
+                            <target>II n'y a pas de message récent</target>
+                        </trans-unit>
                         <!--FIN MENSAJE-->
+                        <!--INICIO DE NOTIFICACIONES-->
+                        <trans-unit id="notification">
+                            <source>notification</source>
+                            <target>Notificationer</target>
+                        </trans-unit>
+                        <trans-unit id="notifications">
+                            <source>notifications</source>
+                            <target>Notificationers</target>
+                        </trans-unit>
+                        <trans-unit id="notification_viewall">
+                            <source>notification_viewall</source>
+                            <target>Voir tous</target>
+                        </trans-unit>
+                        <trans-unit id="notification_recent_empty">
+                            <source>notification_recent_empty</source>
+                            <target>II n'y a pas de notifications récent</target>
+                        </trans-unit>
+                        <trans-unit id="notification_details">
+                            <source>notification_details</source>
+                            <target>Detalles de la notificación</target>
+                        </trans-unit>
+                        <trans-unit id="notification_delete_title">
+                            <source>notification_delete_title</source>
+                            <target>Supprimer la notification</target>
+                        </trans-unit>
+                        <trans-unit id="notification_delete_message">
+                            <source>notification_delete_message</source>
+                            <target>Asurez-vous de voulor supprimer cette notification?</target>
+                        </trans-unit>
+                        <trans-unit id="notificacion_delete_successfully">
+                            <source>notificacion_delete_successfully</source>
+                            <target>La notification a été supprimée avec succés </target>
+                        </trans-unit>
+                        <!--FIN DE NOTIFICACIONES-->
+                        <!--INICIO Tiempo de maquina-->
+                        <trans-unit id="machine_time">
+                            <source>machine_time</source>
+                            <target>Temp machine</target>
+                        </trans-unit>
+                        <trans-unit id="machine_times">
+                            <source>machine_times</source>
+                            <target>Temps machine</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_register_tooltip">
+                            <source>machine_time_register_tooltip</source>
+                            <target>Enregistrer une nouvelle heure de la machine</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_new_title">
+                            <source>machine_time_new_title</source>
+                            <target>Nouveau temps machine</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_register_successfully">
+                            <source>machine_time_register_successfully</source>
+                            <target>Le temps machine a été enregistré avec succés</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_update_successfully">
+                            <source>machine_time_update_successfully</source>
+                            <target>Le temps machine a été mise á jour avec succés</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_delete_successfully">
+                            <source>machine_time_delete_successfully</source>
+                            <target>Le temps machine a été enlevé avec succés</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_delete_title">
+                            <source>machine_time_delete_title</source>
+                            <target>Éliminer le temps machine</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_delete_message">
+                            <source>machine_time_delete_message</source>
+                            <target>Asseurez-vous que vous voulez éliminer ce temps machine?</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_edit_title">
+                            <source>machine_time_edit_title</source>
+                            <target>Modifier le temps machine</target>
+                        </trans-unit>
+                        <trans-unit id="machine_time_details">
+                            <source>machine_time_details</source>
+                            <target>Details de leure de la machine</target>
+                        </trans-unit>
+                        <trans-unit id="tiempomaquina_error_existe">
+                            <source>tiempomaquina_error_existe(%from%)</source>
+                            <target>ll y a un tempos machine por la date %from%</target>
+                        </trans-unit>
+                        <trans-unit id="tiempomaquina_error_range_existe">
+                            <source>tiempomaquina_error_range_existe(%from%,%to%)</source>
+                            <target>ll y aun temps machine les dates %from% et %to%</target>
+                        </trans-unit>
+                        <!--FIN Tiempo de maquina-->
         </body>
     </file>
 </xliff>

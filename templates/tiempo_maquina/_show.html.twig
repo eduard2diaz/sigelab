@@ -1,0 +1,36 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">{{ 'machine_time_details' |trans }}</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        </div>
+        <div>
+            <table class="table" style="margin-bottom: 0px">
+                <tr>
+                    <th>{{ 'user'| trans }}</th>
+                    <td>{{ tiempo_maquina.usuario }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'laboratory'| trans }}</th>
+                    <td>{{ tiempo_maquina.laboratorio }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'pc'| trans }}</th>
+                    <td>{{ tiempo_maquina.pc }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'startdate_field'| trans }}</th>
+                    <td>{{ tiempo_maquina.fechaInicio | date('d-m-Y H:i')}}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'enddate_field'| trans }}</th>
+                    <td>{{ tiempo_maquina.fechaFin is null ? '' : tiempo_maquina.fechaFin | date('d-m-Y H:i')}}</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-sm btn-metal" data-dismiss="modal"> <i class="flaticon-cancel"></i> {{ 'close'| trans }}</a>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,3 @@
-
-
 {
 	"sEmptyTable":     "No data available in table",
 	"sInfo":           "Showing _START_ to _END_ of _TOTAL_ entries",
@@ -13,10 +11,10 @@
 	"sSearch":         "Search:",
 	"sZeroRecords":    "No matching records found",
 	"oPaginate": {
-		"sFirst":    "First",
-		"sLast":     "Last",
-		"sNext":     "Next",
-		"sPrevious": "Previous"
+		"sFirst":    "<i class=\"la la-angle-double-left\"></i>",
+		"sLast":     "<i class=\"la la-angle-double-left\"></i>",
+		"sNext":     "<i class=\"la la-angle-right\"></i>",
+		"sPrevious": "<i class=\"la la-angle-left\"></i>"
 	},
 	"oAria": {
 		"sSortAscending":  ": activate to sort column ascending",

@@ -210,18 +210,24 @@
             l.stop();
         },
         success: function (data) {
+            console.log(data);
             if (data['error']) {
                 padre.html(data['form']);
             configurarFormularioEdit();
             } else {
                 if (data['mensaje'])
                     toastr.success(data['mensaje']);
-                $('div#pc_info').html(data['html']);
+                if(data['cambiolaboratorio']==false){
+                    $('div#pc_info').html(data['html']);
+                    var pagina = table.page();
+                    obj.parents('tr').children('td:nth-child(1)').html(data['numero']);
+                    obj.parents('tr').children('td:nth-child(2)').html(data['mac']);
+                    obj.parents('tr').children('td:nth-child(3)').html(data['estado']);
+                }else{
+                    table.row(obj.parents('tr')).remove().draw('page');
+                    $('div#basicmodal').modal('hide');
+                }
                 $('div#extramodal').modal('hide');
-                var pagina = table.page();
-                obj.parents('tr').children('td:nth-child(1)').html(data['numero']);
-                obj.parents('tr').children('td:nth-child(2)').html(data['mac']);
-                obj.parents('tr').children('td:nth-child(3)').html(data['estado']);
             }
         },
         error: function ()

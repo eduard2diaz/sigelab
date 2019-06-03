@@ -37,6 +37,8 @@
 
     var configurarDataTableRegistroPieza = function () {
         tablepieza = $('table#tablepieza').DataTable({
+            pageLength: 3,
+            lengthMenu: [[3,5,10], [3,5,10]],
             "pagingType": "simple_numbers",
             "language": {
                 url: datatable_url
@@ -130,7 +132,7 @@
                     "pieza":  data['pieza'],
                     "propiedad":  data['propiedad'],
                     "valor": data['valor'],
-                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info edicionpieza' data-href="+ Routing.generate('registropieza_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger eliminar_registropieza' data-href="+ Routing.generate('registropieza_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
+                    "acciones": "<ul class='nav nav-pills'><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-info text-uppercase edicionpieza' data-href="+ Routing.generate('registropieza_edit.'+_locale,{id:data['id']}) +"><i class='flaticon-edit-1'></i>{{ 'edit'|trans }}</a></li><li class='nav-item m-tabs__item'><a class='btn btn-sm btn-danger text-uppercase eliminar_registropieza' data-href="+ Routing.generate('registropieza_delete.'+_locale,{id:data['id']}) +"><i class='flaticon-delete-1'></i>{{ 'delete'|trans }}</a></li></ul>",
                     });
                     pieza.draw();
                     tablepieza.page(pagina).draw('page');

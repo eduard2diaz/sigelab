@@ -35,7 +35,7 @@ class NotificacionService
         if(null==$destinatario || null==$descripcion)
             throw new \Exception('No fueron enviados suficientes parámetros');
 
-        $destinatario=$this->getEm()->getRepository('App:Autor')->find($destinatario);
+        $destinatario=$this->getEm()->getRepository('App:Usuario')->find($destinatario);
         if(null==$destinatario)
             throw new \Exception('El destinatario no existe');
 

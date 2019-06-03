@@ -5,15 +5,13 @@ namespace App\Controller;
 use App\Entity\Laboratorio;
 use App\Entity\Pc;
 use App\Form\PcType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
-/*
- * @Route("/pc")
- */
+use Symfony\Contracts\Translation\TranslatorInterface;
+use Knp\Snappy\Pdf;
 
 /**
  * @Route({
@@ -22,12 +20,12 @@ use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
  *     "fr": "/ordinateur"
  * })
  */
-class PcController extends Controller
+class PcController extends AbstractController
 {
     /**
      * @Route("/{laboratorio}/new", name="pc_new", methods="GET|POST")
      */
-    public function new(Request $request, Laboratorio $laboratorio): Response
+    public function new(Request $request, Laboratorio $laboratorio, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -43,17 +41,17 @@ class PcController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($pc);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('pc_register_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('pc_register_successfully'),
                     'numero' => $pc->getNumero(),
                     'mac' => $pc->getMac(),
-                    'estado' => $this->get('translator')->trans($pc->getEstadoToString()),
+                    'estado' => $translator->trans($pc->getEstadoToString()),
                     'id' => $pc->getId(),
                 ));
             } else {
                 $page = $this->renderView('pc/_form.html.twig', array(
                     'form' => $form->createView(),
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
         return $this->render('pc/_new.html.twig', [
@@ -75,31 +73,41 @@ class PcController extends Controller
     }
 
     /**
+     * @Route("/{id}/ajaxdetails", name="pc_ajaxdetails",options={"expose"=true}, methods="GET")
+     */
+    public function ajaxdetails(Request $request, Pc $pc): Response
+    {
+        if (!$request->isXmlHttpRequest())
+            throw $this->createAccessDeniedException();
+
+        return $this->render('pc/_details.html.twig', ['pc' => $pc]);
+    }
+
+    /**
      * @Route("/{id}/exportar", name="pc_exportar", methods="GET")
      */
-    public function exportar(Pc $pc): Response
+    public function exportar(Pc $pc,Pdf $pdf): Response
     {
         $html = $this->renderView('pc/_pdf.html.twig', array(
             'pc'  => $pc
         ));
 
         return new PdfResponse(
-            $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
+            $pdf->getOutputFromHtml($html),
             'file.pdf'
         );
     }
 
-
-
     /**
      * @Route("/{id}/edit", name="pc_edit",options={"expose"=true}, methods="GET|POST")
      */
-    public function edit(Request $request, Pc $pc): Response
+    public function edit(Request $request, Pc $pc, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
 
         $this->denyAccessUnlessGranted('EDIT',$pc);
+        $laboratorioOriginal=$pc->getLaboratorio()->getId();
         $form = $this->createForm(PcType::class, $pc, array('es_jefe_tecnico'=>$this->isGranted('ROLE_JEFETECNICO'),'action' => $this->generateUrl('pc_edit', array('id' => $pc->getId()))));
         $form->handleRequest($request);
 
@@ -108,11 +116,12 @@ class PcController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($pc);
                 $em->flush();
-                return new JsonResponse(array('mensaje' => $this->get('translator')->trans('pc_update_successfully'),
+                return $this->json(array('mensaje' => $translator->trans('pc_update_successfully'),
                     'numero' => $pc->getNumero(),
                     'mac' => $pc->getMac(),
-                    'estado' => $this->get('translator')->trans($pc->getEstadoToString()),
-                    'html'=>$this->renderView('pc/_info.html.twig',['pc'=>$pc])
+                    'estado' => $translator->trans($pc->getEstadoToString()),
+                    'html'=>$this->renderView('pc/_info.html.twig',['pc'=>$pc]),
+                    'cambiolaboratorio'=>$pc->getLaboratorio()->getId()!=$laboratorioOriginal
                 ));
             } else {
                 $page = $this->renderView('pc/_form.html.twig', array(
@@ -120,7 +129,7 @@ class PcController extends Controller
                     'action' => 'update_button',
                     'form_id' => 'pc_edit',
                 ));
-                return new JsonResponse(array('form' => $page, 'error' => true,));
+                return $this->json(array('form' => $page, 'error' => true,));
             }
 
         return $this->render('pc/_new.html.twig', [
@@ -135,7 +144,7 @@ class PcController extends Controller
     /**
      * @Route("/{id}/delete", name="pc_delete",options={"expose"=true})
      */
-    public function delete(Request $request, Pc $pc): Response
+    public function delete(Request $request, Pc $pc, TranslatorInterface $translator): Response
     {
         if (!$request->isXmlHttpRequest())
             throw $this->createAccessDeniedException();
@@ -144,6 +153,62 @@ class PcController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($pc);
         $em->flush();
-        return new JsonResponse(array('mensaje' => $this->get('translator')->trans('pc_delete_successfully')));
+        return $this->json(array('mensaje' => $translator->trans('pc_delete_successfully')));
+    }
+
+    /**
+     * @Route("/{laboratorio}/findbylaboratorio", name="pc_findbylaboratorio",options={"expose"=true})
+     */
+    public function findbylaboratorio(Request $request, Laboratorio $laboratorio): Response
+    {
+        if (!$request->isXmlHttpRequest())
+           throw $this->createAccessDeniedException();
+
+        $em = $this->getDoctrine()->getManager();
+        $consulta=$em->createQuery('SELECT p.id, p.numero FROM App:Pc p JOIN p.laboratorio l WHERE l.id= :id AND p.estado=0');
+        $consulta->setParameter('id',$laboratorio->getId());
+        $result=$consulta->getResult();
+        return $this->json($result);
+    }
+
+    /**
+     * @Route("/search", name="pc_search",options={"expose"=true})
+     */
+    public function search(Request $request/*,PaginatorInterface $paginator*/)
+    {
+        $query = $request->get('query');
+        if(!$query || $query=='')
+            throw new \LogicException('Falta el parámetro query');
+
+        $em = $this->getDoctrine()->getManager();
+        if ($request->isXmlHttpRequest()) {
+            $content = '';
+            $consulta = $em->createQuery('SELECT p.id, p.numero, p.mac FROM App:Pc p WHERE p.mac like :parametro');
+            $consulta->setParameter('parametro', '%' . $query . '%');
+            $consulta->setMaxResults(2);
+            //Obtengo el listado de pc
+            $pcs = $consulta->getResult();
+            $content = $this->renderView('pc/ajax/search_quickresult.html.twig', ['query'=>$query,'pcs' => $pcs]);
+            return new Response($content);
+        }
+
+        return new Response(1);
+        $consulta = $em->createQuery('SELECT u.id, u.nombre,u.rutaFoto,u.ultimoLogin, u.ultimoLogout, i.nombre as institucion,p.nombre as pais, 1 as esAutor FROM App:Autor u JOIN u.institucion i join i.pais p WHERE u.nombre like :parametro');
+        $consulta->setParameter('parametro', '%' . $query . '%');
+        $usuarios = $consulta->getResult();
+
+        $consulta = $em->createQuery('SELECT p.id, p.titulo, a.nombre as autor, 0 as esAutor FROM App:Publicacion p JOIN p.autor a WHERE p.estado=1 AND p.titulo like :parametro');
+        $consulta->setParameter('parametro', '%' . $query . '%');
+        $publicaciones = $consulta->getResult();
+
+        $pagination = $paginator->paginate(
+        //$consulta,
+            array_merge($usuarios,$publicaciones), /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            10 /*limit per page*/
+        );
+        return $this->render('publicacion/search_result.html.twig', array('pagination' => $pagination));
+
+
     }
 }

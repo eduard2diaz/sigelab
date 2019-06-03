@@ -1,12 +1,13 @@
-{% extends 'layout/userprofile.html.twig' %}
-{% block profile_content %}
+{% extends 'layout/autenticado.html.twig' %}
+{% block page_title %}{{ 'notifications' | trans }}{% endblock page_title %}
+{% block body %}
     <div class="m-portlet m-portlet--mobile">
         <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
                 <div class="m-portlet__head-title">
                     <span class="m-portlet__head-icon"><i class="flaticon-list-3"></i></span>
                     <h3 class="m-portlet__head-text">
-                        Notificaciones
+                        {{ 'list' |trans }}
                     </h3>
                 </div>
             </div>
@@ -14,8 +15,8 @@
             <div class="m-portlet__head-tools">
                 <ul class="m-portlet__nav">
                     <li class="m-portlet__nav-item">
-                        <a data-href="{{ path('notificacion_index') }}" class="btn btn-sm m-btn" id="notificacion_tablerefrescar">
-                            <span><i class="flaticon-refresh"></i></span> Refrescar
+                        <a data-href="{{ path('notificacion_index') }}" class="btn btn-sm m-btn text-uppercase" id="notificacion_tablerefrescar">
+                            <span><i class="flaticon-refresh"></i></span> {{ 'refresh' | trans }}
                         </a>
                     </li>
                 </ul>
@@ -32,7 +33,7 @@
 
 {% block javascripts %}
     {{parent()}}
-    <script src="{{ asset('script/entity/notificacion.js','codice') }}"></script>
+    {% include 'notificacion/script.js.twig' %}
     <script>
         var total ={{notificacions |length }}
             notificacion.init();
